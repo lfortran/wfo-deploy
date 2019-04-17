@@ -11,13 +11,12 @@
     
     
     <item>
-      <title>About LFortran</title>
-      <link>https://www.lfortran.org/about/</link>
+      <title>Download</title>
+      <link>https://www.lfortran.org/download/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.lfortran.org/about/</guid>
-      <description>Interactive Fortran compiler.
-Docs https://docs.lfortran.org/</description>
+      <guid>https://www.lfortran.org/download/</guid>
+      <description>Git Repository Main repository: https://gitlab.com/lfortran/lfortran</description>
     </item>
     
     <item>
