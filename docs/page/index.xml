@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on LFortran</title>
-    <link>https://www.fortran.org/page/</link>
+    <link>https://www.lfortran.org/page/</link>
     <description>Recent content in Pages on LFortran</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://www.fortran.org/page/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.lfortran.org/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About LFortran</title>
-      <link>https://www.fortran.org/page/about/</link>
+      <link>https://www.lfortran.org/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.fortran.org/page/about/</guid>
+      <guid>https://www.lfortran.org/page/about/</guid>
       <description>Interactive Fortran compiler.
 Docs https://docs.lfortran.org/</description>
     </item>
     
     <item>
       <title>LFortran Blog</title>
-      <link>https://www.fortran.org/page/blog/</link>
+      <link>https://www.lfortran.org/page/blog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.fortran.org/page/blog/</guid>
+      <guid>https://www.lfortran.org/page/blog/</guid>
       <description></description>
     </item>
     

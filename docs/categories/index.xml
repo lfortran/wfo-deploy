@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on LFortran</title>
-    <link>https://www.fortran.org/categories/</link>
+    <link>https://www.lfortran.org/categories/</link>
     <description>Recent content in Categories on LFortran</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://www.fortran.org/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.lfortran.org/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
