@@ -3,12 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.fortran.org/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.fortran.org/page/about/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.fortran.org/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.fortran.org/</loc>
+    <loc>https://www.fortran.org/page/blog/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.fortran.org/page/</loc>
     <priority>0</priority>
   </url>
   
