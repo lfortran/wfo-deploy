@@ -4,6 +4,18 @@
   
   <url>
     <loc>https://www.lfortran.org/</loc>
+    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.lfortran.org/download/</loc>
+    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.lfortran.org/page/</loc>
+    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -13,16 +25,7 @@
   </url>
   
   <url>
-    <loc>https://www.lfortran.org/download/</loc>
-  </url>
-  
-  <url>
     <loc>https://www.lfortran.org/blog/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.lfortran.org/page/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
