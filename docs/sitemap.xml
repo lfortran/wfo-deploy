@@ -20,12 +20,41 @@
   </url>
   
   <url>
+    <loc>https://www.lfortran.org/benefits/benefit-2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.lfortran.org/benefits/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.lfortran.org/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://www.lfortran.org/benefits/benefit-5/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.lfortran.org/benefits/benefit-1/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.lfortran.org/benefits/benefit-4/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.lfortran.org/blog/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.lfortran.org/benefits/benefit-6/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.lfortran.org/benefits/benefit-3/</loc>
   </url>
   
   <url>
