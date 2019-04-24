@@ -20,14 +20,5 @@
       <description>Git Repository Main repository: https://gitlab.com/lfortran/lfortran</description>
     </item>
     
-    <item>
-      <title>LFortran Blog</title>
-      <link>https://lfortran.org/blog/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lfortran.org/blog/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
