@@ -21,66 +21,12 @@
     </item>
     
     <item>
-      <title>Basic mathematics in the core language</title>
-      <link>https://lfortran.org/benefits/benefit-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lfortran.org/benefits/benefit-2/</guid>
-      <description>Rich array operations, complex numbers, exponentiation, special functions, &amp;hellip;</description>
-    </item>
-    
-    <item>
-      <title>Established language</title>
-      <link>https://lfortran.org/benefits/benefit-5/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lfortran.org/benefits/benefit-5/</guid>
-      <description>Fortran is an established language, building on 62 years of expertise. Widely used for High Performance Computing (HPC).</description>
-    </item>
-    
-    <item>
-      <title>Fortran is fast</title>
-      <link>https://lfortran.org/benefits/benefit-1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lfortran.org/benefits/benefit-1/</guid>
-      <description>Fortran is built from the ground up to translate mathematics into simple, readable, and fast code.</description>
-    </item>
-    
-    <item>
-      <title>Interactive</title>
-      <link>https://lfortran.org/benefits/benefit-4/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lfortran.org/benefits/benefit-4/</guid>
-      <description>LFortran allows to use Fortran interactively just like Python, Julia or MATLAB. It works in a Jupyter notebook.</description>
-    </item>
-    
-    <item>
       <title>LFortran Blog</title>
       <link>https://lfortran.org/blog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lfortran.org/blog/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Open source</title>
-      <link>https://lfortran.org/benefits/benefit-6/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lfortran.org/benefits/benefit-6/</guid>
-      <description>Fortran has many excellent open source compilers such as GFortran, Flang or LFortran.</description>
-    </item>
-    
-    <item>
-      <title>Simple but powerful</title>
-      <link>https://lfortran.org/benefits/benefit-3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lfortran.org/benefits/benefit-3/</guid>
-      <description>More restricting (and higher level) than languages like C or C++, so that the resulting code is easier to maintain and write and easier for the compilers to optimize. There is one canonical way to do things.</description>
     </item>
     
   </channel>
