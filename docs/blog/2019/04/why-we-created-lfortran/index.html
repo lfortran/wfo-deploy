@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138613977-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-138613977-1');
+</script>
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Why We Created LFortran - LFortran</title>
+  <meta property="og:title" content="Why We Created LFortran" />
+  <meta name="twitter:title" content="Why We Created LFortran" />
+  <meta name="description" content="We recently open sourced LFortran, an interactive Fortran compiler built on top of LLVM that we have been developing for the last 1.5 years. It is a work in progress and at the link you can find what works already, what is planned and a roadmap.
+Here is our motivation.
+Why are almost no new scientific or engineering software projects started in Fortran? Usually (in our neck of the woods) C&#43;&#43; is chosen instead.">
+  <meta property="og:description" content="We recently open sourced LFortran, an interactive Fortran compiler built on top of LLVM that we have been developing for the last 1.5 years. It is a work in progress and at the link you can find what works already, what is planned and a roadmap.
+Here is our motivation.
+Why are almost no new scientific or engineering software projects started in Fortran? Usually (in our neck of the woods) C&#43;&#43; is chosen instead.">
+  <meta name="twitter:description" content="We recently open sourced LFortran, an interactive Fortran compiler built on top of LLVM that we have been developing for the last 1.5 years. It is a work in progress and at the link you can find what …"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "LFortran",
+    
+    "url": "https:\/\/lfortran.org\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/lfortran.org\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/lfortran.org\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/lfortran.org\/blog\/2019\/04\/why-we-created-lfortran\/",
+          "name": "Why we created l fortran"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "[Ondřej Čertík](https:\/\/ondrejcertik.com\/), [Peter Brady](https:\/\/github.com\/pbrady), [Pieter Swart](https:\/\/cnls.lanl.gov\/External\/people\/Pieter_Swart.php)"
+  },
+  "headline": "Why We Created LFortran",
+  "description" : "We recently open sourced LFortran, an interactive Fortran compiler built on top of LLVM that we have been developing for the last 1.5 years. It is a work in progress and at the link you can find what works already, what is planned and a roadmap.\nHere is our motivation.\nWhy are almost no new scientific or engineering software projects started in Fortran? Usually (in our neck of the woods) C\x2b\x2b is chosen instead.",
+  "inLanguage" : "en",
+  "wordCount":  1257 ,
+  "datePublished" : "2019-04-30T00:00:00",
+  "dateModified" : "2019-04-30T00:00:00",
+  "image" : "https:\/\/lfortran.org\/",
+  "keywords" : [ "Fortran, Announcement" ],
+  "mainEntityOfPage" : "https:\/\/lfortran.org\/blog\/2019\/04\/why-we-created-lfortran\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/lfortran.org\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/lfortran.org\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Why We Created LFortran" />
+<meta property="og:description" content="We recently open sourced LFortran, an interactive Fortran compiler built on top of LLVM that we have been developing for the last 1.5 years. It is a work in progress and at the link you can find what works already, what is planned and a roadmap.
+Here is our motivation.
+Why are almost no new scientific or engineering software projects started in Fortran? Usually (in our neck of the woods) C&#43;&#43; is chosen instead.">
+<meta property="og:url" content="https://lfortran.org/blog/2019/04/why-we-created-lfortran/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="LFortran" />
+  <meta name="twitter:title" content="Why We Created LFortran" />
+  <meta name="twitter:description" content="We recently open sourced LFortran, an interactive Fortran compiler built on top of LLVM that we have been developing for the last 1.5 years. It is a work in progress and at the link you can find what …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://lfortran.org/blog/2019/04/why-we-created-lfortran/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LFortran" />
+
+  <meta name="generator" content="Hugo 0.55.3" />
+  <link rel="alternate" href="https://lfortran.org/index.xml" type="application/rss+xml" title="LFortran"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://lfortran.org/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://lfortran.org/css/syntax.css" /><link rel="stylesheet" href="https://lfortran.org/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+
+
+<style>
+h2 {
+    font-size: 20px;
+}
+p, li {
+    text-align: justify;
+}
+img {
+    display: inline;
+}
+h1.h1heading {
+    text-align: center;
+}
+#benefit i {
+    margin-right: 20px;
+}
+#benefit {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#benefits {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+</style>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://lfortran.org/">LFortran</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Download" href="/download/">Download</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Documentation" href="https://docs.lfortran.org/">Documentation</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Blog" href="/blog/">Blog</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Why We Created LFortran</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on April 30, 2019
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1257&nbsp;words
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;<a href="https://ondrejcertik.com/">Ondřej Čertík</a>, <a href="https://github.com/pbrady">Peter Brady</a>, <a href="https://cnls.lanl.gov/External/people/Pieter_Swart.php">Pieter Swart</a>
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p>We recently open sourced <a href="https://lfortran.org/" title="LFortran Webpage">LFortran</a>, an interactive Fortran compiler built on
+top of LLVM that we have been developing for the last 1.5 years. It is a work
+in progress and at the link you can find what works already, what is planned
+and a roadmap.</p>
+
+<p>Here is our motivation.</p>
+
+<h1 id="why-are-almost-no-new-scientific-or-engineering-software-projects-started-in-fortran">Why are almost no new scientific or engineering software projects started in Fortran?</h1>
+
+<p>Usually (in our neck of the woods) C++ is chosen instead. The following are the
+most cited reasons for such a choice:</p>
+
+<ul>
+<li>lack of GPU support (no <a href="https://github.com/kokkos/kokkos">Kokkos</a> equivalent)</li>
+<li>Need for more advanced data structures than a multidimensional array</li>
+<li>Better, more modern tools in C++ (testing, IDE support, &hellip;)</li>
+<li>Lack of generic programming in Fortran (e.g., to write a single subroutine
+that works for both single and double precision)</li>
+<li>More libraries that one can readily use in C++</li>
+<li>C++ after C++11 is actively maintained, has a wide community</li>
+<li>Fortran has a bad reputation at CS departments.</li>
+</ul>
+
+<h1 id="fortran-usage">Fortran usage</h1>
+
+<p>Fortran used to be a very popular language for scientific computing from 1960s
+all the way through 1980s and early 1990s. The lack of interactivity forced
+many new users to pick other languages and tools, including MATLAB and later
+Python and Julia. The growing lack of modern tools and a growing failure of
+Fortran compilers to develop to their full potential (such as GPU support, IDE
+support, etc.) is forcing developers of large production codes to move to C++.</p>
+
+<h1 id="how-to-fix-that">How to fix that</h1>
+
+<h2 id="interactivity">Interactivity</h2>
+
+<p>One approach is to take a language like Python and try to make it as fast as
+possible, while preserving the interactivity and ease of use. One is forced to
+modify the language a bit so that the compiler can reason about types. That is
+the approach that Julia took.</p>
+
+<p>The other approach is to take our current compiled production languages: C++
+and Fortran and try to see how interactive one can make them without
+sacrificing speed (i.e., without modifying the language). For C++ this has been
+done using the <a href="https://github.com/root-project/cling">cling</a> interactive compiler. However, the C++ syntax is not as
+intuitive as Fortran or Python (both of which have a very similar syntax for
+array operations). The Fortran language when used interactively (e.g., in a
+Jupyter notebook) allows similar look and feel as Python or MATLAB, enabling
+rapid prototyping and exploratory workflow. The same code however offers
+superior performance when compiled with a good mature compiler, such as the
+Intel Fortran compiler, because it is just Fortran after all.</p>
+
+<h2 id="compiler">Compiler</h2>
+
+<p>We believe the root of the problem is a lack of a modern Fortran compiler with
+the following features:</p>
+
+<ul>
+<li>Open source (permissive license)</li>
+<li>Create executables (static and dynamic binaries)</li>
+<li>Interactive usage (Jupyter notebook)</li>
+<li>Multiplatform:
+
+<ul>
+<li>First class native support for Windows, Mac, Linux and HPC</li>
+<li>Works well with other (especially C++, but also Fortran!) compilers: MSVC,
+g++, clang++, gfortran, Intel Fortran&hellip;</li>
+<li>GPU support (similarly how NumBa works on GPU via LLVM)</li>
+</ul></li>
+<li>Able to compile the latest Fortran standard (2018)</li>
+<li>Designed as a library, modular design with a priority of being easy to
+contribute to</li>
+<li>Large and active community around the compiler that contributes to the
+development, thus supporting many tools that people build on top:
+
+<ul>
+<li>IDE support</li>
+<li>Language interoperability: automatic wrappers to and from other languages
+(C, C++, Python, Julia, MATLAB, &hellip;)</li>
+<li>Code refactoring</li>
+<li>Automatic transformation of code to older Fortran standard that other
+Fortran compilers can compile &mdash; allowing developers to use the latest
+standard, and still be able to use current Fortran compilers</li>
+<li>Better debugger (<code>IPython.embed()</code> for Fortran)</li>
+<li>New real types: arbitrary precision floating point, automatic
+differentiation type, interval arithmetics (<a href="http://arblib.org/">Arb</a>) etc.</li>
+<li>&ldquo;Safe mode&rdquo;: the compiler will warn about &ldquo;obsolete&rdquo; usage, and will check
+arrays, pointers and other things to never segfault in Debug mode</li>
+<li>Allow projects to restrict what Fortran features are allowed and not
+allowed for their particular project (the compiler will give errors on the
+CI when new pull request contains forbidden code)</li>
+</ul></li>
+</ul>
+
+<p>Having such a compiler will catalyze creation of modern tools based on it, and
+by nurturing and encouraging the community to build upon it, this has a
+potential to make Fortran cool again.</p>
+
+<p>Currently a lot of Fortran users use Fortran because they have to (for legacy
+codes), but are not necessarily very excited about it. The aim of LFortran is
+to make people want to use Fortran, want to try the newest toys (whether
+Jupyter Notebook, or interactive debugging, or nice IDE support, MATLAB, Julia
+or Python style interactive exploratory development workflow, etc.). Bring the
+excitement of new modern things into Fortran. However, underneath it is still
+the same old Fortran, and one can still use the mature, stable and well-tested
+Fortran compilers that produce highly optimized binaries, such as Intel
+Fortran, which is still the state-of-the-art when it comes to performance.</p>
+
+<h1 id="how-to-bootstrap-it">How to bootstrap it</h1>
+
+<p>The first users will be people who develop algorithms (in Python, MATLAB or
+Julia) that initially will be ok that only a subset of Fortran works for now.
+As we build a community of users and eventually developers, the Fortran
+compiler will support more and more features, until the whole Fortran 2018
+standard works, but that will take years.</p>
+
+<p>However, our compiler can parse GFortran module files, and so very soon it will
+be possible to literally &ldquo;use&rdquo; any module compiled by GFortran, interactively.
+That will allow the use of production codes right away, and also for anything
+that LFortran does not yet implement one could then simply write a module,
+compile with GFortran and use it in LFortran.</p>
+
+<p>When Ondřej started <a href="https://sympy.org/">SymPy</a>, he was facing very analogous challenges: Computer
+Algebra Systems (such as Maxima, Axiom and others) were notorious for being
+huge and complicated, hard to contribute to (thus very small developer
+community), and hard to use as a library. But starting a project from scratch
+would mean it would take 10 years before the SymPy library could be usable by
+users used to all the rich and mature features of Maple, Mathematica, Maxima or
+Axiom. But Ondřej has done it anyway, the first users were people who only
+needed a subset of the features, but wanted to use a modern, well-designed
+library that is easy to use and easy to develop.</p>
+
+<p>We are developing LFoftran in the same way: first only a subset of Fortran is
+implemented, but the library either delivers or is close to delivering on all
+the other features listed above (interactivity, language interoperability,
+etc.) to make it useful for the first users and recruit developers from our
+first users.</p>
+
+<p>The other approach to attract developers is that the compiler uses modern
+design and technologies: LLVM, interactivity of a compiled language, Jupyter
+notebooks, simple syntax and semantic representation of the language, etc.</p>
+
+<p>Fortran already has a large community, which is an advantage (people already
+know Fortran), but also a disadvantage (LFortran will only become useful to
+most of the current Fortran community only in several years). As such, we want
+to recruit the initial community from Python, MATLAB and Julia users, who know
+and appreciate the advantage of exploratory work, and who develop new research
+algorithms. Only as LFortran becomes more and more mature, the current Fortran
+community will be able to use it also.</p>
+
+<p>We expect the main key factor in Fortran uptake will be when people can see
+that you can use Fortran in the modern ways like you can do Python or Julia,
+and by providing modern nice features and tools in the compiler, attracting
+talent from the Python scientific community as well as the compiler community
+(LLVM and other).</p>
+
+<!-- LA-UR-19-23884 -->
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://lfortran.org//tags/fortran/">Fortran</a>&nbsp;
+            
+              <a href="https://lfortran.org//tags/announcement/">Announcement</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2019
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://lfortran.org/">LFortran</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+           
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://lfortran.org/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://lfortran.org/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+
