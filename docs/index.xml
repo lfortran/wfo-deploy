@@ -31,5 +31,15 @@ Why are almost no new scientific or engineering software projects started in For
       <description>Git Repository Main repository: https://gitlab.com/lfortran/lfortran</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://lfortran.org/index_intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lfortran.org/index_intro/</guid>
+      <description>LFortran is a modern open-source (BSD licensed) interactive Fortran compiler built on top of LLVM. It can execute user&amp;rsquo;s code interactively to allow exploratory work (much like Python, MATLAB or Julia) as well as compile to binaries with the goal to run user&amp;rsquo;s code on modern architectures such as multi-core CPUs and GPUs. LFortran is in development, see below for the current status and a roadmap.
+Main repository at GitLab: https://gitlab.</description>
+    </item>
+    
   </channel>
 </rss>
