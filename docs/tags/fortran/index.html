@@ -258,10 +258,10 @@ h2.h2heading {
   <i class="fas fa-calendar"></i>&nbsp;Posted on May 7, 2019
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;0&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;448&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;0&nbsp;words
   
   
     &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;<a href="https://pls.llnl.gov/people/staff-bios/physics/pask-j">John Pask</a>, <a href="https://ondrejcertik.com/">Ondřej Čertík</a>
@@ -273,9 +273,73 @@ h2.h2heading {
               </p>
               <div class="post-entry">
                 
-                  We received a lot of positive feedback on our LFortran announcement. Most generally like the idea and tool, and expressed interest to hear a bit more on why we think Fortran is a superior language in its domain and why it makes sense to use Fortran for new projects.
-Why Fortran? Fortran was designed from the ground up to naturally and simply translate mathematics to code that compiles and runs at maximum speed.
-                  <a href="https://lfortran.org/blog/2019/05/why-to-use-fortran-for-new-projects/" class="post-read-more">[Read More]</a>
+                  
+
+<p>We received a lot of positive feedback on our LFortran <a href="https://lfortran.org/blog/2019/04/why-we-created-lfortran/">announcement</a>. Most
+generally like the idea and tool, and expressed interest to hear a bit more on
+why we think Fortran is a superior language in its domain and why it makes
+sense to use Fortran for new projects.</p>
+
+<h2 id="why-fortran">Why Fortran?</h2>
+
+<p>Fortran was designed from the ground up to naturally and simply translate
+mathematics to code that compiles and runs at maximum speed. And being
+specifically targeted for such fundamentally computational tasks, it contains a
+broad range of key functionality within the language itself, standard across
+all platforms, with no need for external libraries that may or may not be well
+optimized or maintained, at present or down the road.</p>
+
+<p>Some highlights:</p>
+
+<ul>
+<li>Multidimensional arrays which can be allocated and indexed as the
+math/science dictates (not restricted to start at 0 or 1) and can be sliced
+as desired (as, e.g., in MATLAB);</li>
+<li>Operators which operate naturally upon the aforementioned arrays/matrices, as
+they do scalars;</li>
+<li>Complex numbers;</li>
+<li>Special functions;</li>
+<li>Structures and pointers for more general data representation.</li>
+</ul>
+
+<p>Because the essentials are contained in the language itself, it is simple to
+read and write, without need of choosing from among or deciphering a
+proliferation of external classes to do the same thing. And because the
+essentials are self-contained, compilers can provide detailed compile-time
+(e.g., argument mismatch) and run-time (e.g., memory access) checks, as well as
+highly optimized executables, directly from natural, readable code without need
+of extensive optimization heroics by the developer.</p>
+
+<p>If you are interested in learning more, please see our webpage at
+<a href="https://www.fortran90.org/">fortran90.org</a> with recommended practices for writing code, side by side
+comparison with Python/NumPy, links to other online Fortran resources and
+books, and an FAQ.</p>
+
+<p>The above distinguishing aspects, among many others, have made Fortran the
+language of choice in high-performance computing for decades. Indeed, by virtue
+of the simplicity of expressing the desired mathematics and corresponding ease
+of maintenance by application scientists/engineers (i.e., by the users
+themselves), the majority of HPC application codes in widest use today are
+written mostly or completely in Fortran (e.g., 7 out of the top 10 HPC codes
+from this 2017 <a href="https://www.nvidia.com/content/intersect-360-HPC-application-support.pdf">NVIDIA survey</a> are written in Fortran). And yet, new projects
+are being started in Fortran less and less, despite its manifest advantages.</p>
+
+<p>The reasons for this, we believe, are clear, ranging from lack of freely
+available and modern tooling to lack of exposure in the education pipeline, as
+elaborated in our previous blog post.</p>
+
+<p>The goal of this project is to address these needs and, in so doing, bring the
+significant advantages of Fortran to the full range of computational science
+and engineering applications which stand to benefit.</p>
+
+<p><strong>Trackbacks:</strong></p>
+
+<ul>
+<li><a href="https://twitter.com/OndrejCertik/status/1125782465493123072">Twitter</a></li>
+</ul>
+
+<!-- LA-UR-19-24165 -->
+
                 
               </div>
 
@@ -305,10 +369,10 @@ Why Fortran? Fortran was designed from the ground up to naturally and simply tra
   <i class="fas fa-calendar"></i>&nbsp;Posted on April 30, 2019
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;0&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1271&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;0&nbsp;words
   
   
     &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;<a href="https://ondrejcertik.com/">Ondřej Čertík</a>, <a href="https://github.com/pbrady">Peter Brady</a>, <a href="https://cnls.lanl.gov/External/people/Pieter_Swart.php">Pieter Swart</a>
@@ -320,10 +384,177 @@ Why Fortran? Fortran was designed from the ground up to naturally and simply tra
               </p>
               <div class="post-entry">
                 
-                  We recently open sourced LFortran, an interactive Fortran compiler built on top of LLVM that we have been developing for the last 1.5 years. It is a work in progress and at the link you can find what works already, what is planned and a roadmap.
-Here is our motivation.
-Why are almost no new scientific or engineering software projects started in Fortran? Usually (in our neck of the woods) C++ is chosen instead.
-                  <a href="https://lfortran.org/blog/2019/04/why-we-created-lfortran/" class="post-read-more">[Read More]</a>
+                  
+
+<p>We recently open sourced <a href="https://lfortran.org/" title="LFortran Webpage">LFortran</a>, an interactive Fortran compiler built on
+top of LLVM that we have been developing for the last 1.5 years. It is a work
+in progress and at the link you can find what works already, what is planned
+and a roadmap.</p>
+
+<p>Here is our motivation.</p>
+
+<h1 id="why-are-almost-no-new-scientific-or-engineering-software-projects-started-in-fortran">Why are almost no new scientific or engineering software projects started in Fortran?</h1>
+
+<p>Usually (in our neck of the woods) C++ is chosen instead. The following are the
+most cited reasons for such a choice:</p>
+
+<ul>
+<li>lack of GPU support (no <a href="https://github.com/kokkos/kokkos">Kokkos</a> equivalent)</li>
+<li>Need for more advanced data structures than a multidimensional array</li>
+<li>Better, more modern tools in C++ (testing, IDE support, &hellip;)</li>
+<li>Lack of generic programming in Fortran (e.g., to write a single subroutine
+that works for both single and double precision)</li>
+<li>More libraries that one can readily use in C++</li>
+<li>C++ after C++11 is actively maintained, has a wide community</li>
+<li>Fortran has a bad reputation at CS departments.</li>
+</ul>
+
+<h1 id="fortran-usage">Fortran usage</h1>
+
+<p>Fortran used to be a very popular language for scientific computing from 1960s
+all the way through 1980s and early 1990s. The lack of interactivity forced
+many new users to pick other languages and tools, including MATLAB and later
+Python and Julia. The growing lack of modern tools and a growing failure of
+Fortran compilers to develop to their full potential (such as GPU support, IDE
+support, etc.) is forcing developers of large production codes to move to C++.</p>
+
+<h1 id="how-to-fix-that">How to fix that</h1>
+
+<h2 id="interactivity">Interactivity</h2>
+
+<p>One approach is to take a language like Python and try to make it as fast as
+possible, while preserving the interactivity and ease of use. One is forced to
+modify the language a bit so that the compiler can reason about types. That is
+the approach that Julia took.</p>
+
+<p>The other approach is to take our current compiled production languages: C++
+and Fortran and try to see how interactive one can make them without
+sacrificing speed (i.e., without modifying the language). For C++ this has been
+done using the <a href="https://github.com/root-project/cling">cling</a> interactive compiler. However, the C++ syntax is not as
+intuitive as Fortran or Python (both of which have a very similar syntax for
+array operations). The Fortran language when used interactively (e.g., in a
+Jupyter notebook) allows similar look and feel as Python or MATLAB, enabling
+rapid prototyping and exploratory workflow. The same code however offers
+superior performance when compiled with a good mature compiler, such as the
+Intel Fortran compiler, because it is just Fortran after all.</p>
+
+<h2 id="compiler">Compiler</h2>
+
+<p>We believe the root of the problem is a lack of a modern Fortran compiler with
+the following features:</p>
+
+<ul>
+<li>Open source (permissive license)</li>
+<li>Create executables (static and dynamic binaries)</li>
+<li>Interactive usage (Jupyter notebook)</li>
+<li>Multiplatform:
+
+<ul>
+<li>First class native support for Windows, Mac, Linux and HPC</li>
+<li>Works well with other (especially C++, but also Fortran!) compilers: MSVC,
+g++, clang++, gfortran, Intel Fortran&hellip;</li>
+<li>GPU support (similarly how NumBa works on GPU via LLVM)</li>
+</ul></li>
+<li>Able to compile the latest Fortran standard (2018)</li>
+<li>Designed as a library, modular design with a priority of being easy to
+contribute to</li>
+<li>Large and active community around the compiler that contributes to the
+development, thus supporting many tools that people build on top:
+
+<ul>
+<li>IDE support</li>
+<li>Language interoperability: automatic wrappers to and from other languages
+(C, C++, Python, Julia, MATLAB, &hellip;)</li>
+<li>Code refactoring</li>
+<li>Automatic transformation of code to older Fortran standard that other
+Fortran compilers can compile &mdash; allowing developers to use the latest
+standard, and still be able to use current Fortran compilers</li>
+<li>Better debugger (<code>IPython.embed()</code> for Fortran)</li>
+<li>New real types: arbitrary precision floating point, automatic
+differentiation type, interval arithmetics (<a href="http://arblib.org/">Arb</a>) etc.</li>
+<li>&ldquo;Safe mode&rdquo;: the compiler will warn about &ldquo;obsolete&rdquo; usage, and will check
+arrays, pointers and other things to never segfault in Debug mode</li>
+<li>Allow projects to restrict what Fortran features are allowed and not
+allowed for their particular project (the compiler will give errors on the
+CI when new pull request contains forbidden code)</li>
+</ul></li>
+</ul>
+
+<p>Having such a compiler will catalyze creation of modern tools based on it, and
+by nurturing and encouraging the community to build upon it, this has a
+potential to make Fortran cool again.</p>
+
+<p>Currently a lot of Fortran users use Fortran because they have to (for legacy
+codes), but are not necessarily very excited about it. The aim of LFortran is
+to make people want to use Fortran, want to try the newest toys (whether
+Jupyter Notebook, or interactive debugging, or nice IDE support, MATLAB, Julia
+or Python style interactive exploratory development workflow, etc.). Bring the
+excitement of new modern things into Fortran. However, underneath it is still
+the same old Fortran, and one can still use the mature, stable and well-tested
+Fortran compilers that produce highly optimized binaries, such as Intel
+Fortran, which is still the state-of-the-art when it comes to performance.</p>
+
+<h1 id="how-to-bootstrap-it">How to bootstrap it</h1>
+
+<p>The first users will be people who develop algorithms (in Python, MATLAB or
+Julia) that initially will be ok that only a subset of Fortran works for now.
+As we build a community of users and eventually developers, the Fortran
+compiler will support more and more features, until the whole Fortran 2018
+standard works, but that will take years.</p>
+
+<p>However, our compiler can parse GFortran module files, and so very soon it will
+be possible to literally &ldquo;use&rdquo; any module compiled by GFortran, interactively.
+That will allow the use of production codes right away, and also for anything
+that LFortran does not yet implement one could then simply write a module,
+compile with GFortran and use it in LFortran.</p>
+
+<p>When Ondřej started <a href="https://sympy.org/">SymPy</a>, he was facing very analogous challenges: Computer
+Algebra Systems (such as Maxima, Axiom and others) were notorious for being
+huge and complicated, hard to contribute to (thus very small developer
+community), and hard to use as a library. But starting a project from scratch
+would mean it would take 10 years before the SymPy library could be usable by
+users used to all the rich and mature features of Maple, Mathematica, Maxima or
+Axiom. But Ondřej has done it anyway, the first users were people who only
+needed a subset of the features, but wanted to use a modern, well-designed
+library that is easy to use and easy to develop.</p>
+
+<p>We are developing LFortran in the same way: first only a subset of Fortran is
+implemented, but the library either delivers or is close to delivering on all
+the other features listed above (interactivity, language interoperability,
+etc.) to make it useful for the first users and recruit developers from our
+first users.</p>
+
+<p>The other approach to attract developers is that the compiler uses modern
+design and technologies: LLVM, interactivity of a compiled language, Jupyter
+notebooks, simple syntax and semantic representation of the language, etc.</p>
+
+<p>Fortran already has a large community, which is an advantage (people already
+know Fortran), but also a disadvantage (LFortran will only become useful to
+most of the current Fortran community only in several years). As such, we want
+to recruit the initial community from Python, MATLAB and Julia users, who know
+and appreciate the advantage of exploratory work, and who develop new research
+algorithms. Only as LFortran becomes more and more mature, the current Fortran
+community will be able to use it also.</p>
+
+<p>We expect the main key factor in Fortran uptake will be when people can see
+that you can use Fortran in the modern ways like you can do Python or Julia,
+and by providing modern nice features and tools in the compiler, attracting
+talent from the Python scientific community as well as the compiler community
+(LLVM and other).</p>
+
+<p><strong>Trackbacks:</strong></p>
+
+<ul>
+<li><a href="https://twitter.com/OndrejCertik/status/1123238987643047936">Twitter</a></li>
+<li><a href="https://news.ycombinator.com/item?id=19795262">Hacker News I</a></li>
+<li><a href="https://news.ycombinator.com/item?id=19788526">Hacker News II</a></li>
+<li><a href="https://www.reddit.com/r/fortran/comments/bjbkc7/why_we_created_lfortran_interactive_fortran/">Reddit I</a></li>
+<li><a href="https://www.reddit.com/r/programming/comments/bjayc0/why_we_created_lfortran_interactive_fortran/">Reddit II</a></li>
+<li><a href="http://degenerateconic.com/fortran-and-llvm/">Jacob Williams</a></li>
+</ul>
+
+<!-- LA-UR-19-23884 -->
+
                 
               </div>
 

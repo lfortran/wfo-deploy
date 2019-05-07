@@ -17,8 +17,7 @@
       <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://lfortran.org/blog/2019/05/why-to-use-fortran-for-new-projects/</guid>
-      <description>We received a lot of positive feedback on our LFortran announcement. Most generally like the idea and tool, and expressed interest to hear a bit more on why we think Fortran is a superior language in its domain and why it makes sense to use Fortran for new projects.
-Why Fortran? Fortran was designed from the ground up to naturally and simply translate mathematics to code that compiles and runs at maximum speed.</description>
+      <description></description>
     </item>
     
     <item>
@@ -27,9 +26,7 @@ Why Fortran? Fortran was designed from the ground up to naturally and simply tra
       <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>https://lfortran.org/blog/2019/04/why-we-created-lfortran/</guid>
-      <description>We recently open sourced LFortran, an interactive Fortran compiler built on top of LLVM that we have been developing for the last 1.5 years. It is a work in progress and at the link you can find what works already, what is planned and a roadmap.
-Here is our motivation.
-Why are almost no new scientific or engineering software projects started in Fortran? Usually (in our neck of the woods) C++ is chosen instead.</description>
+      <description></description>
     </item>
     
     <item>
