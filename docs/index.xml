@@ -32,14 +32,5 @@ Here is our motivation.
 Why are almost no new scientific or engineering software projects started in Fortran? Usually (in our neck of the woods) C++ is chosen instead.</description>
     </item>
     
-    <item>
-      <title>Download</title>
-      <link>https://lfortran.org/download/</link>
-      <pubDate>Wed, 17 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://lfortran.org/download/</guid>
-      <description>Git Repository Main repository: https://gitlab.com/lfortran/lfortran</description>
-    </item>
-    
   </channel>
 </rss>
