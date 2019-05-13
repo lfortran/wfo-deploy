@@ -114,6 +114,13 @@ h2.h2heading {
   color: #0085a1;
   text-decoration: underline;
 }
+
+[data-toggle="collapse"].collapsed .if-not-collapsed {
+  display: none;
+}
+[data-toggle="collapse"]:not(.collapsed) .if-collapsed {
+  display: none;
+}
 </style>
 
 
@@ -257,6 +264,7 @@ h2.h2heading {
     The recommended way to install from source is to use the release tarballs.
 
     <h2>Releases</h2>
+    Latest release:
     <ul>
         
         <li>
@@ -265,7 +273,23 @@ h2.h2heading {
         </li>
         
     </ul>
+    All releases:
+    <a href="#all_releases" class="collapsed" data-toggle="collapse">
+        <span class="if-collapsed">show <i class="fas fa-caret-down"></i></span>
+        <span class="if-not-collapsed">hide <i class="fas fa-caret-up"></i></span>
+    </a>
+    <div id="all_releases" class="collapse">
+        <ul>
+            
+            <li>
+                <a href="https://lfortran.github.io/tarballs/release/lfortran-0.1.11.tar.gz">lfortran-0.1.11.tar.gz</a>
+                (May 11, 2019)
+            </li>
+            
+        </ul>
+    </div>
     <h2>Development Versions</h2>
+    Latest development version in master:
     <ul>
         
         <li>
@@ -273,32 +297,47 @@ h2.h2heading {
             (May 11, 2019)
         </li>
         
-        <li>
-            <a href="https://lfortran.github.io/tarballs/dev/lfortran-0.0&#43;git7e14008.tar.gz">lfortran-0.0&#43;git7e14008.tar.gz</a>
-            (May 11, 2019)
-        </li>
-        
-        <li>
-            <a href="https://lfortran.github.io/tarballs/dev/lfortran-0.0&#43;gitf7dea1a.tar.gz">lfortran-0.0&#43;gitf7dea1a.tar.gz</a>
-            (May 11, 2019)
-        </li>
-        
-        <li>
-            <a href="https://lfortran.github.io/tarballs/dev/lfortran-0.0&#43;git5d45234.tar.gz">lfortran-0.0&#43;git5d45234.tar.gz</a>
-            (May 11, 2019)
-        </li>
-        
-        <li>
-            <a href="https://lfortran.github.io/tarballs/dev/lfortran-0.0&#43;git6eca514.tar.gz">lfortran-0.0&#43;git6eca514.tar.gz</a>
-            (May 11, 2019)
-        </li>
-        
-        <li>
-            <a href="https://lfortran.github.io/tarballs/dev/lfortran-0.0&#43;git9f9d491.tar.gz">lfortran-0.0&#43;git9f9d491.tar.gz</a>
-            (May 10, 2019)
-        </li>
-        
     </ul>
+    All development versions:
+    <a href="#all_dev_versions" class="collapsed" data-toggle="collapse">
+        <span class="if-collapsed">show <i class="fas fa-caret-down"></i></span>
+        <span class="if-not-collapsed">hide <i class="fas fa-caret-up"></i></span>
+    </a>
+    <div id="all_dev_versions" class="collapse">
+        <ul>
+            
+            <li>
+                <a href="https://lfortran.github.io/tarballs/dev/lfortran-0.0&#43;gitc6ae983.tar.gz">lfortran-0.0&#43;gitc6ae983.tar.gz</a>
+                (May 11, 2019)
+            </li>
+            
+            <li>
+                <a href="https://lfortran.github.io/tarballs/dev/lfortran-0.0&#43;git7e14008.tar.gz">lfortran-0.0&#43;git7e14008.tar.gz</a>
+                (May 11, 2019)
+            </li>
+            
+            <li>
+                <a href="https://lfortran.github.io/tarballs/dev/lfortran-0.0&#43;gitf7dea1a.tar.gz">lfortran-0.0&#43;gitf7dea1a.tar.gz</a>
+                (May 11, 2019)
+            </li>
+            
+            <li>
+                <a href="https://lfortran.github.io/tarballs/dev/lfortran-0.0&#43;git5d45234.tar.gz">lfortran-0.0&#43;git5d45234.tar.gz</a>
+                (May 11, 2019)
+            </li>
+            
+            <li>
+                <a href="https://lfortran.github.io/tarballs/dev/lfortran-0.0&#43;git6eca514.tar.gz">lfortran-0.0&#43;git6eca514.tar.gz</a>
+                (May 11, 2019)
+            </li>
+            
+            <li>
+                <a href="https://lfortran.github.io/tarballs/dev/lfortran-0.0&#43;git9f9d491.tar.gz">lfortran-0.0&#43;git9f9d491.tar.gz</a>
+                (May 10, 2019)
+            </li>
+            
+        </ul>
+    </div>
       
 
 <h1 id="git-repository">Git Repository</h1>
