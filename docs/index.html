@@ -271,12 +271,14 @@ h2.h2heading {
   <div role="main" class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <p>LFortran is in development (alpha stage), see below for the current status and
-a roadmap.  LFortran is a modern open-source (BSD licensed) interactive Fortran
-compiler built on top of LLVM. It can execute user&rsquo;s code interactively to
-allow exploratory work (much like Python, MATLAB or Julia) as well as compile
-to binaries with the goal to run user&rsquo;s code on modern architectures such as
+        <p>LFortran is a modern open-source (BSD licensed) interactive Fortran compiler
+built on top of LLVM. It can execute user&rsquo;s code interactively to allow
+exploratory work (much like Python, MATLAB or Julia) as well as compile to
+binaries with the goal to run user&rsquo;s code on modern architectures such as
 multi-core CPUs and GPUs.</p>
+
+<p><strong>LFortran is in development (alpha stage), see below for the current status and
+a roadmap.</strong></p>
 
 <p>Main repository at GitLab:
 <a href="https://gitlab.com/lfortran/lfortran">https://gitlab.com/lfortran/lfortran</a><br />
@@ -369,8 +371,9 @@ Or it can be used from the command-line in an interactive prompt (REPL).</p></li
 LFortran is structured around two independent modules, AST and ASR, both of
 which are standalone (completely independent of the rest of LFortran) and
 users are encouraged to use them independently for other applications and
-build tools on top. See the <a href="design.md">Design</a>
-and <a href="developer_tutorial.md">Developer Tutorial</a> documents for more details.</p></li>
+build tools on top. See the <a href="https://docs.lfortran.org/design/">Design</a>
+and <a href="https://docs.lfortran.org/developer_tutorial/">Developer Tutorial</a>
+documents for more details.</p></li>
 
 <li><p><strong>Interoperation with GFortran</strong><br />
 LFortran can parse GFortran module files into an ASR and generate a Fortran
@@ -406,8 +409,11 @@ to run on multi-core CPUs and GPUs, see
 <a href="https://gitlab.com/lfortran/lfortran/issues/57">#57</a>.</p></li>
 
 <li><p><strong>Full Fortran 2018 support</strong><br />
-Currently only a subset of Fortran is implemented, but the goal is to have
-a full implementation of the latest Fortran 2018 standard, see
+Currently only a subset of Fortran is implemented (we plan to document
+exactly what is supported
+<a href="https://gitlab.com/lfortran/lfortran/issues/92">#92</a>, in the meantime it
+is just a bit more than what is presented in the
+<a href="https://nbviewer.jupyter.org/gist/certik/f1d28a486510810d824869ab0c491b1c">notebook</a>), but the goal is to have a full implementation of the latest Fortran 2018 standard, see
 <a href="https://gitlab.com/lfortran/lfortran/issues/58">#58</a>.</p></li>
 </ul>
 
@@ -433,7 +439,7 @@ This will allow right away to use production codes with LFortran.</p></li>
 <p>a) Implement more Fortran features, until eventually full Fortran 2018 is
 supported (<a href="https://gitlab.com/lfortran/lfortran/issues/58">#58</a>).</p>
 
-<p>b) Gradually move to C++ for robustness and speed
+<p>b) Gradually rewrite the compiler in C++ for robustness and speed
 (<a href="https://gitlab.com/lfortran/lfortran/issues/70">#70</a>).
 The Python API will not change (or only minimally), so the user experience
 from Python will not change.</p>
