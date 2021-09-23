@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138613977-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-138613977-1');
+</script>
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>LFortran Minimum Viable Product (MVP) - LFortran</title>
+  <meta property="og:title" content="LFortran Minimum Viable Product (MVP)" />
+  <meta name="twitter:title" content="LFortran Minimum Viable Product (MVP)" />
+  <meta name="description" content="After a little over 2 years from our initial announcement, we are releasing LFortran MVP today.
+We have set our goal to release MVP in September 2021. We were initially hoping to compile at least some production codes for MVP. While we did not quite get there yet, after wrapping up and documenting where we are and writing a demo Fortran project that works with the MVP, it turns out LFortran is already quite usable and it can compile quite a lot of computational Fortran code if you are willing to work around some of the current limitations.">
+  <meta property="og:description" content="After a little over 2 years from our initial announcement, we are releasing LFortran MVP today.
+We have set our goal to release MVP in September 2021. We were initially hoping to compile at least some production codes for MVP. While we did not quite get there yet, after wrapping up and documenting where we are and writing a demo Fortran project that works with the MVP, it turns out LFortran is already quite usable and it can compile quite a lot of computational Fortran code if you are willing to work around some of the current limitations.">
+  <meta name="twitter:description" content="After a little over 2 years from our initial announcement, we are releasing LFortran MVP today.
+We have set our goal to release MVP in September 2021. We were initially hoping to compile at least some …"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "LFortran",
+    
+    "url": "https:\/\/lfortran.org\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/lfortran.org\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/lfortran.org\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/lfortran.org\/blog\/2021\/09\/lfortran-minimum-viable-product-mvp\/",
+          "name": "L fortran minimum viable product ( m v p)"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "[Ondřej Čertík](https:\/\/ondrejcertik.com\/), Gagandeep Singh, Thirumalai Shaktivel, Rohit Goswami, Dominic Poerio, Harris M. Snyder, Andrew Best, Jacob Marks, Himanshu Pandey, Carlos Une, Nikhil Maan, Sebastian Ehlert, Ankit Pandey, Mengjia Lyu, Scot Halverson, Laurence Kedward, Milan Curcic"
+  },
+  "headline": "LFortran Minimum Viable Product (MVP)",
+  "description" : "After a little over 2 years from our initial announcement, we are releasing LFortran MVP today.\nWe have set our goal to release MVP in September 2021. We were initially hoping to compile at least some production codes for MVP. While we did not quite get there yet, after wrapping up and documenting where we are and writing a demo Fortran project that works with the MVP, it turns out LFortran is already quite usable and it can compile quite a lot of computational Fortran code if you are willing to work around some of the current limitations.",
+  "inLanguage" : "en",
+  "wordCount":  1891 ,
+  "datePublished" : "2021-09-23T00:00:00",
+  "dateModified" : "2021-09-23T00:00:00",
+  "image" : "https:\/\/lfortran.org\/",
+  "keywords" : [ "LFortran, MVP" ],
+  "mainEntityOfPage" : "https:\/\/lfortran.org\/blog\/2021\/09\/lfortran-minimum-viable-product-mvp\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/lfortran.org\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/lfortran.org\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="LFortran Minimum Viable Product (MVP)" />
+<meta property="og:description" content="After a little over 2 years from our initial announcement, we are releasing LFortran MVP today.
+We have set our goal to release MVP in September 2021. We were initially hoping to compile at least some production codes for MVP. While we did not quite get there yet, after wrapping up and documenting where we are and writing a demo Fortran project that works with the MVP, it turns out LFortran is already quite usable and it can compile quite a lot of computational Fortran code if you are willing to work around some of the current limitations.">
+<meta property="og:url" content="https://lfortran.org/blog/2021/09/lfortran-minimum-viable-product-mvp/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="LFortran" />
+  <meta name="twitter:title" content="LFortran Minimum Viable Product (MVP)" />
+  <meta name="twitter:description" content="After a little over 2 years from our initial announcement, we are releasing LFortran MVP today.
+We have set our goal to release MVP in September 2021. We were initially hoping to compile at least some …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://lfortran.org/blog/2021/09/lfortran-minimum-viable-product-mvp/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LFortran" />
+
+  <meta name="generator" content="Hugo 0.75.1" />
+  <link rel="alternate" href="https://lfortran.org/index.xml" type="application/rss+xml" title="LFortran"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://lfortran.org/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://lfortran.org/css/syntax.css" /><link rel="stylesheet" href="https://lfortran.org/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+
+
+<style>
+h2 {
+    font-size: 20px;
+}
+p, li {
+    text-align: justify;
+}
+img {
+    display: inline;
+}
+h1.h1heading {
+    text-align: center;
+}
+h2.h2heading {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    margin: 0 0 0;
+}
+#benefit i {
+    margin-right: 20px;
+}
+#benefit {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#benefits {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.post-heading .post-meta a {
+  color: #008AFF;
+}
+.post-heading .post-meta a:hover, a:focus {
+  color: #0085a1;
+  text-decoration: underline;
+}
+
+[data-toggle="collapse"].collapsed .if-not-collapsed {
+  display: none;
+}
+[data-toggle="collapse"]:not(.collapsed) .if-collapsed {
+  display: none;
+}
+</style>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://lfortran.org/">LFortran</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Download" href="/download/">Download</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Documentation" href="https://docs.lfortran.org/">Documentation</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Blog" href="/blog/">Blog</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>LFortran Minimum Viable Product (MVP)</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on September 23, 2021
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;9&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1891&nbsp;words
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;<a href="https://ondrejcertik.com/">Ondřej Čertík</a>, Gagandeep Singh, Thirumalai Shaktivel, Rohit Goswami, Dominic Poerio, Harris M. Snyder, Andrew Best, Jacob Marks, Himanshu Pandey, Carlos Une, Nikhil Maan, Sebastian Ehlert, Ankit Pandey, Mengjia Lyu, Scot Halverson, Laurence Kedward, Milan Curcic
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>After a little over 2 years from our initial <a href="https://lfortran.org/blog/2019/04/why-we-created-lfortran/">announcement</a>, we are releasing
+LFortran MVP today.</p>
+<p>We have set our goal to release MVP in September 2021. We were initially hoping
+to compile at least some production codes for MVP. While we did not quite get
+there yet, after wrapping up and documenting where we are and writing a demo
+Fortran project that works with the MVP, it turns out LFortran is already quite
+usable and it can compile quite a lot of computational Fortran code if you are
+willing to work around some of the current limitations. In this blog post we
+will describe in detail the current status of LFortran.</p>
+<p>We are looking for new contributors to help us get over the finish line sooner.
+If you are interested, please get in touch. We will be happy to teach you
+anything you need to know. It is not difficult to contribute.</p>
+<h1 id="current-status">Current Status</h1>
+<p>We have created a status page to document the exact status of each Fortran
+feature:</p>
+<ul>
+<li><a href="https://docs.lfortran.org/progress/">https://docs.lfortran.org/progress/</a></li>
+</ul>
+<p>This page is automatically generated by running test programs. Feel free to
+submit more test cases to us to make the Fortran test suite more complete.</p>
+<p>For each feature we list if it can be parsed to AST, semantics (AST to ASR),
+generate code (LLVM) and run the generated binary.</p>
+<p>To give a quick overview:</p>
+<ul>
+<li>
+<p>LFortran has a complete Fortran 2018 parser that can parse any production
+code that we tried to AST. If you discover something that cannot be parsed,
+please <a href="https://gitlab.com/lfortran/lfortran/-/issues">report</a> a bug and we will fix it.</p>
+</li>
+<li>
+<p>It can format AST back as Fortran code (<code>lfortran fmt</code>). Including comments,
+although there are still a few issues to polish in the source formatter.</p>
+</li>
+<li>
+<p>A large subset of Fortran can be transformed from AST to ASR, almost every
+feature has at least a prototype working (including features like classes,
+<code>do concurrent</code>, etc.). But to make the feature actually useful, one must
+implement enough use cases, and we have opted to focus first on a subset
+of Fortran features roughly corresponding to Fortran 95.</p>
+</li>
+<li>
+<p>An even smaller subset can be compiled from ASR to LLVM.</p>
+</li>
+<li>
+<p>Interfacing with C using <code>iso_c_binding</code> works well.</p>
+</li>
+<li>
+<p>LFortran has a runtime library written in Fortran itself, it has three
+sections:</p>
+<ul>
+<li><code>builtin</code>: functions that must be implemented by the LLVM backend such as
+<code>size</code>, <code>len</code>, <code>lbound</code> etc.</li>
+<li><code>pure</code>: functions that are implemented in pure Fortran and only depend on
+<code>pure</code> or <code>builtin</code>.</li>
+<li><code>impure</code>: functions still implemented in Fortran, but that use
+<code>iso_c_binding</code> to call implementations in C.
+The LFortran runtime library is a standalone Fortran project that you can
+compile with any Fortran (and C) compiler. We would love if you contributed
+to it. All you need to know is Fortran (and optionally C).</li>
+</ul>
+</li>
+<li>
+<p>So far we have mainly concentrated on compiling valid Fortran code. If you
+try invalid code, errors are not always reported yet and the error messages
+are not always the best (basic error messages such as a missing variable
+declaration work). Once we can compile production codes, we will work on
+error messages. Our goal is Rust style error messages, where it is a compiler
+bug if the error message is not clear.</p>
+</li>
+</ul>
+<h1 id="mvp-demo-fortran-project">MVP Demo Fortran Project</h1>
+<p>To show what LFortran can already compile, we created this demo:</p>
+<ul>
+<li><a href="https://gitlab.com/lfortran/examples/mvp_demo">https://gitlab.com/lfortran/examples/mvp_demo</a></li>
+</ul>
+<p>You can clone the repository and compile it using <a href="https://github.com/fortran-lang/fpm/">fpm</a> (Fortran Package Manager):</p>
+<pre><code>git clone https://gitlab.com/lfortran/examples/mvp_demo.git
+cd mvp_demo
+conda create -n mvp_demo -c conda-forge fpm=0.4.0 lfortran=0.14.0
+conda activate mvp_demo
+fpm run --all --compiler=lfortran
+fpm test --compiler=lfortran
+</code></pre>
+<p>This compiles and runs all example programs and tests. The demo uses the
+following Fortran features:</p>
+<ul>
+<li>Program, modules, subroutines, functions</li>
+<li>Arrays, passing to functions as arguments, allocatable arrays</li>
+<li>Interfacing C using <code>iso_c_binding</code>, file IO implemented in C and wrapped</li>
+<li>Saving a mesh and values into a file</li>
+<li>Types: <code>integer</code>, <code>real</code> (double precision)</li>
+<li>If, select case, do loop</li>
+<li>Intrinsic functions: <code>sin</code>, <code>abs</code>, <code>kind</code>, <code>trim</code>, <code>size</code></li>
+</ul>
+<p>LFortran supports a lot more, see the previous section.</p>
+<h1 id="notebooks">Notebooks</h1>
+<p>LFortran is a compiler, but from the start it has been designed to also work
+interactively, on a command line or a Jupyter notebook, by extending the parser
+(AST) and semantic part (ASR) to be able to represent a small extension of
+Fortran to also allow declarations, statements and expressions at the global
+scope (besides the standard Fortran programs, modules, functions and
+subroutines).</p>
+<p>We took the tutorial from <a href="https://fortran-lang.org/learn/quickstart">https://fortran-lang.org/learn/quickstart</a> and ported
+it to Jupyter notebooks powered by LFortran:</p>
+<ul>
+<li><a href="https://gitlab.com/lfortran/lfortran/-/tree/master/share/lfortran/nb">https://gitlab.com/lfortran/lfortran/-/tree/master/share/lfortran/nb</a></li>
+</ul>
+<p>We noticed that the tutorial was already often written in an &ldquo;executable&rdquo; form,
+just without means to actually execute it.</p>
+<p>The features available in interactive form are sometimes a little more limited
+than what is possible to compile into a binary.</p>
+<h1 id="speed-of-compilation">Speed of compilation</h1>
+<p>LFortran is very fast. We have used our experience with optimizing
+<a href="https://github.com/symengine/symengine">SymEngine</a>
+and ensured that internal data structures in LFortran are performing. To judge
+the speed of compilation, one can use the x86 backend. This backend is only in
+a prototype stage, but it shows what is possible. We can take the following
+benchmark <a href="https://gist.github.com/certik/e73be48423cf9bdf9b1e4b6554ad31df">bench3.f90</a>:</p>
+<pre><code>$ time gfortran bench3.f90
+0.74s user 0.06s system 94% cpu 0.842 total
+$ time lfortran bench3.f90
+0.72s user 0.03s system 97% cpu 0.776 total
+$ time lfortran --backend=x86 bench3.f90
+0.04s user 0.01s system 87% cpu 0.058 total
+$ time lfortran --backend=cpp bench3.f90
+0.80s user 0.08s system 93% cpu 0.948 total
+</code></pre>
+<p>In all cases the binary produces:</p>
+<pre><code>$ ./a.out
+10045
+</code></pre>
+<p>As you can see on this particular file, we are about 14x faster than GFortran
+with the x86 backend, and comparable with the default LLVM backend. Even the
+C++ translation backend, which first produces C++ code and then calls clang++
+is roughly comparable to GFortran.</p>
+<p>We expect the speedup to be lower for more realistic files and projects, but
+this is promising. Our goal is very fast compilation in Debug mode. For that
+will need to finish the x86 backend and also add an ARM backend. We will work
+on this after we are done with our LLVM backend, which is currently our main
+focus.</p>
+<p>On a more realistic code  <a href="https://gitlab.com/lfortran/examples/mvp_demo/-/blob/c54a4e5e97251634bac9406d412780699f7b8bf2/app/sin_benchmark.f90">sin_benchmark.f90</a> (see the next section for details):</p>
+<pre><code>$ time gfortran sin_benchmark.f90
+0.08s user 0.04s system 74% cpu 0.153 total
+$ time lfortran sin_benchmark.f90
+0.06s user 0.03s system 82% cpu 0.110 total
+</code></pre>
+<p>Only the LLVM backend can currently compile this code. And the overall speed is
+currently slightly faster than GFortran.</p>
+<p>The LLVM backend is unfortunately quite slow. But the great advantage of LLVM
+is that it can optimize code very well, as you can see in the next section. For
+this reason the LLVM backend will be a great backend for Release mode as well
+as for interactive use and for supporting many platforms.</p>
+<h1 id="performance-of-the-generated-code">Performance of the generated code</h1>
+<p>People often ask us about the performance of the generated code. We can now
+answer that. On the 2019 MacBook Pro (Intel based):</p>
+<pre><code>$ lfortran --version
+LFortran version: 0.14.0
+Platform: macOS
+Default target: x86_64-apple-darwin20.3.0
+$ lfortran --fast sin_benchmark.f90
+$ time ./a.out
+./a.out  1.02s user 0.00s system 99% cpu 1.032 total
+
+$ gfortran --version
+GNU Fortran (GCC) 9.3.0
+$ gfortran -Ofast sin_benchmark.f90
+$ time ./a.out
+./a.out  1.03s user 0.00s system 99% cpu 1.035 total
+</code></pre>
+<p>You can try it yourself and see on your computer.</p>
+<p>This is just a very simple code that implements a sin(x) function and then
+benchmarks it. We have not implemented any optimizations in LFortran itself
+yet, all the optimizations come from LLVM. We recommend not to read into these
+numbers too much until we put serious effort in LFortran&rsquo;s optimizations, but
+the fact that we are already competitive with GFortran is a sign that we are on
+the right track.</p>
+<p>Note: for some reason GFortran does not use the fused multiply-add (fma)
+instructions. One can force it as follows (<code>-march=native</code> does not work, but
+<code>-march=skylake</code> does):</p>
+<pre><code>$ gfortran -O3 -march=skylake -ffast-math -funroll-loops sin_benchmark.f90
+$ time ./a.out
+./a.out  0.73s user 0.00s system 99% cpu 0.739 total
+</code></pre>
+<p>Neither does LFortran yet, if somebody knows how to make LLVM combine add/mul
+into fma using the C++ api, please let us know. One way to force LLVM to create
+fma is by optimizing the LLVM code that LFortran emits using Clang as follows:</p>
+<pre><code>$ lfortran --show-llvm sin_benchmark.f90 &gt; sin_benchmark.ll
+$ clang -O3 -march=native -ffast-math -funroll-loops -c sin_benchmark.ll -o sin_benchmark.o
+$ lfortran -o a.out sin_benchmark.o
+$ time ./a.out
+./a.out  0.47s user 0.00s system 99% cpu 0.472 total
+</code></pre>
+<p>Again, we urge not to draw too many conclusions from these numbers. But they
+are encouraging.</p>
+<p>Our plan is to implement optimizations at the ASR level as ASR-&gt;ASR
+transformations. That will allow users to see the optimized version of their
+codes as Fortran code (by transforming ASR-&gt;AST and AST-&gt;Fortran source) and
+will be able to verify that the compiler has optimized everything that can be
+done at the Fortran level. And if not, they can report a bug, or rework their
+code, or help the compiler with some command line options or possibly pragmas.
+Only then the code should be lowered to LLVM and LLVM should apply its
+optimizations.</p>
+<h2 id="performance-of-intrinsic-functions-like-sinx">Performance of intrinsic functions like sin(x)</h2>
+<p>Our goal for intrinsic functions (such as <code>sin(x)</code>) is to ship with (at least)
+two versions:</p>
+<ul>
+<li>Accuracy first, performance second</li>
+<li>Performance first, accuracy second</li>
+</ul>
+<p>The accuracy first versions are currently called from <code>libm</code>, those versions
+are typically very accurate (usually either correctly rounded to all digits, or
+one floating point number next to the correctly rounded one). Those will be
+used by default in the Debug mode.</p>
+<p>In Release mode, on the other hand, you will be able to switch to a very fast
+implementation of these functions, implemented in the <code>pure</code> section of the
+runtime library. Those functions are still accurate (to about 1e-15 relative
+accuracy), but not necessarily to the last bit. Also their argument range is
+sometimes reduced, for example the <code>sin(x)</code> function might only work for <code>|x| &lt; 1e10</code> or so. We are still working out the exact details, but our preliminary
+work shows that it is possible to implement these in Fortran and get close to
+optimal (vectorized) performance.</p>
+<p>The basic idea is that in Debug mode LFortran could (in the future) check the
+argument to <code>sin(x)</code> and if it is out of the range of the performance first
+version, it would emit a warning. You then compile and run your production code
+in Debug mode and run it on production data. If you don&rsquo;t see any warnings or
+errors, you know that if you switch to the performance first versions of
+intrinsics, they will work. The accuracy itself should be sufficient in most
+cases, but it will be slightly less than the accuracy first versions. We would
+like to figure out a way to also have the compiler assist in checking the
+accuracy in Debug mode. If you have ideas how to do that, please let us know.</p>
+<h1 id="google-summer-of-code-gsoc">Google Summer of Code (GSoC)</h1>
+<p>We had three GSoC students this year, here are their updates and final reports:</p>
+<ul>
+<li><a href="https://gitlab.com/Thirumalai-Shaktivel">Thirumalai Shaktivel</a>
+(<a href="https://twitter.com/sh0ck_thi">@sh0ck_thi</a>): weekly
+<a href="https://fortran-lang.discourse.group/t/lfortran-gsoc-student-progress-thirumalai-shaktivel-ast-project/1271">reports</a></li>
+<li><a href="https://gitlab.com/czgdp18071">Gagandeep Singh</a>
+(<a href="https://twitter.com/czgdp1807">@czgdp1807</a>): weekly
+<a href="https://fortran-lang.discourse.group/t/weekly-blog-posts-for-supporting-arrays-and-allocatables-in-lfortran/1277">reports</a></li>
+<li><a href="https://gitlab.com/HaoZeke">Rohit Goswami</a>
+(<a href="https://twitter.com/rg0swami">@rg0swami</a>): weekly
+<a href="https://fortran-lang.discourse.group/t/gsoc-weekly-lfortran-and-computational-chemistry/1382">reports</a></li>
+</ul>
+<p>They have all done excellent progress and finished their projects. Their
+contributions were very beneficial to LFortran.</p>
+<h1 id="conclusions">Conclusions</h1>
+<p>Please test the MVP and let us know what you think. If you are interested in
+contributing, we will get you up to speed.</p>
+<p>Thank you everybody who has supported us over the years and helped us get to
+this point.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://lfortran.org//tags/lfortran/">LFortran</a>&nbsp;
+            
+              <a href="https://lfortran.org//tags/mvp/">MVP</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://lfortran.org/blog/2019/05/why-to-use-fortran-for-new-projects/" data-toggle="tooltip" data-placement="top" title="Why to Use Fortran For New Projects">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2021
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://lfortran.org/">LFortran</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+           
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://lfortran.org/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://lfortran.org/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+

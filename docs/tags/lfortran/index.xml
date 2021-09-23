@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LFortran</title>
+    <link>https://lfortran.org/tags/lfortran/</link>
+    <description>Recent content on LFortran</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/tags/lfortran/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LFortran Minimum Viable Product (MVP)</title>
+      <link>https://lfortran.org/blog/2021/09/lfortran-minimum-viable-product-mvp/</link>
+      <pubDate>Thu, 23 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://lfortran.org/blog/2021/09/lfortran-minimum-viable-product-mvp/</guid>
+      <description>After a little over 2 years from our initial announcement, we are releasing LFortran MVP today.
+We have set our goal to release MVP in September 2021. We were initially hoping to compile at least some production codes for MVP. While we did not quite get there yet, after wrapping up and documenting where we are and writing a demo Fortran project that works with the MVP, it turns out LFortran is already quite usable and it can compile quite a lot of computational Fortran code if you are willing to work around some of the current limitations.</description>
+    </item>
+    
+  </channel>
+</rss>
