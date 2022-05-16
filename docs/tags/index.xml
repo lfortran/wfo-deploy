@@ -6,11 +6,20 @@
     <description>Recent content in Tags on LFortran</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GSoD</title>
+      <link>https://lfortran.org/tags/gsod/</link>
+      <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://lfortran.org/tags/gsod/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>LFortran</title>
       <link>https://lfortran.org/tags/lfortran/</link>
-      <pubDate>Thu, 23 Sep 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://lfortran.org/tags/lfortran/</guid>
       <description></description>

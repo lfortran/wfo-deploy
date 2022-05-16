@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GSoD on LFortran</title>
+    <link>https://lfortran.org/tags/gsod/</link>
+    <description>Recent content in GSoD on LFortran</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/tags/gsod/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LFortran Google Season of Docs (GSoD)</title>
+      <link>https://lfortran.org/blog/2022/05/lfortran-google-season-of-docs-gsod/</link>
+      <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://lfortran.org/blog/2022/05/lfortran-google-season-of-docs-gsod/</guid>
+      <description>LFortran has evolved rapidly since its inception and is now close to beta status. Several key project progress goals are on track with the help of external support; and the recent GSoD support will galvanize the documentation and ease the onboarding of new contributors to the language and LFortran&amp;rsquo;s unique tooling.
+At the heart of the L-family of compilers (LFortran, LPython) lies the idea that there are invariants across languages which can be documented and worked with.</description>
+    </item>
+    
+  </channel>
+</rss>
