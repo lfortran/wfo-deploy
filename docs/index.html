@@ -22,17 +22,17 @@
   <meta name="twitter:title" content="LFortran" />
   <meta name="description" content="Feature Highlights LFortran is in development, there are features that work today, and there are features that are being implemented.
 Works today   Full Fortran 2018 parser
-The LFortran&rsquo;s parser should now be able to parse any Fortran 2018 syntax to AST (Abstract Syntax Tree) and format it back as Fortran source code (lfortran fmt).
+LFortran can parse any Fortran 2018 syntax to AST (Abstract Syntax Tree) and format it back as Fortran source code (lfortran fmt).
   Interactive, Jupyter support
 LFortran can be used as a Jupyter kernel, allowing Python/Julia-style rapid prototyping and an exploratory workflow (conda install jupyter lfortran).">
   <meta property="og:description" content="Feature Highlights LFortran is in development, there are features that work today, and there are features that are being implemented.
 Works today   Full Fortran 2018 parser
-The LFortran&rsquo;s parser should now be able to parse any Fortran 2018 syntax to AST (Abstract Syntax Tree) and format it back as Fortran source code (lfortran fmt).
+LFortran can parse any Fortran 2018 syntax to AST (Abstract Syntax Tree) and format it back as Fortran source code (lfortran fmt).
   Interactive, Jupyter support
 LFortran can be used as a Jupyter kernel, allowing Python/Julia-style rapid prototyping and an exploratory workflow (conda install jupyter lfortran).">
   <meta name="twitter:description" content="Feature Highlights LFortran is in development, there are features that work today, and there are features that are being implemented.
 Works today   Full Fortran 2018 parser
-The LFortran&rsquo;s parser …"><script type="application/ld+json">
+LFortran can parse any …"><script type="application/ld+json">
 {
     "@context": "http://schema.org",
     "@type": "WebSite",
@@ -56,7 +56,7 @@ The LFortran&rsquo;s parser …"><script type="application/ld+json">
 <meta property="og:title" content="LFortran" />
 <meta property="og:description" content="Feature Highlights LFortran is in development, there are features that work today, and there are features that are being implemented.
 Works today   Full Fortran 2018 parser
-The LFortran&rsquo;s parser should now be able to parse any Fortran 2018 syntax to AST (Abstract Syntax Tree) and format it back as Fortran source code (lfortran fmt).
+LFortran can parse any Fortran 2018 syntax to AST (Abstract Syntax Tree) and format it back as Fortran source code (lfortran fmt).
   Interactive, Jupyter support
 LFortran can be used as a Jupyter kernel, allowing Python/Julia-style rapid prototyping and an exploratory workflow (conda install jupyter lfortran).">
 <meta property="og:url" content="https://lfortran.org/" />
@@ -65,7 +65,7 @@ LFortran can be used as a Jupyter kernel, allowing Python/Julia-style rapid prot
   <meta name="twitter:title" content="LFortran" />
   <meta name="twitter:description" content="Feature Highlights LFortran is in development, there are features that work today, and there are features that are being implemented.
 Works today   Full Fortran 2018 parser
-The LFortran&rsquo;s parser …">
+LFortran can parse any …">
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:card" content="summary" />
   <meta property="og:url" content="https://lfortran.org/" />
@@ -357,9 +357,8 @@ features that are being implemented.</p>
 <ul>
 <li>
 <p><strong>Full Fortran 2018 parser</strong><br>
-The LFortran&rsquo;s parser should now be able to parse any Fortran 2018 syntax
-to AST (Abstract Syntax Tree) and format it back as Fortran source code
-(<code>lfortran fmt</code>).</p>
+LFortran can parse any Fortran 2018 syntax to AST (Abstract Syntax Tree)
+and format it back as Fortran source code (<code>lfortran fmt</code>).</p>
 </li>
 <li>
 <p><strong>Interactive, Jupyter support</strong><br>
@@ -379,24 +378,19 @@ on top. See the <a href="https://docs.lfortran.org/design/">Design</a> and
 more details.</p>
 </li>
 <li>
-<p><strong>Initial interoperation with GFortran</strong><br>
-LFortran has a prototype parser for GFortran module files and generation of
-a Fortran wrapper that allows using the module with any Fortran compiler.
-This feature is still under development.</p>
-</li>
-<li>
 <p><strong>Create executables</strong><br>
 It can create executables just like other Fortran compilers.</p>
 </li>
 <li>
-<p><strong>Runs on Linux, Mac and Windows</strong><br>
-All three platforms are regularly tested by our CI.</p>
+<p><strong>Runs on Linux, Mac, Windows and WebAssembly</strong><br>
+All four platforms are regularly tested by our CI.</p>
 </li>
 <li>
 <p><strong>Several backends</strong>
 The LLVM can be used to compile to binaries and for interactive usage. The
 C++ backend translates Fortran code to a readable C++ code. The x86 backend
-allows very fast compilation directly to x86 machine code.</p>
+allows very fast compilation directly to x86 machine code. The WebAssembly
+backend can quickly generate WASM.</p>
 </li>
 </ul>
 <h2 id="under-development">Under Development</h2>
@@ -410,24 +404,14 @@ LLVM to machine code. We are now working on extending the subset that
 LFortran can fully compile until we reach full Fortran 2018 support.</p>
 </li>
 <li>
-<p><strong>Native interoperation with other languages (and other Fortran compilers)</strong><br>
-Import libraries written in other languages (such as C or Python) with the
-<code>use</code> statement, see <a href="https://gitlab.com/lfortran/lfortran/issues/44" title="Bridge to Python and other languages">#44</a>. Add support for module files generated with
-other Fortran compilers, see <a href="https://gitlab.com/lfortran/lfortran/issues/56" title="Add support for other Fortran compilers">#56</a>. This will allow LFortran to run a large
-array of production codes. Provide automatic wrappers of any Fortran module
-to other languages.</p>
-</li>
-<li>
 <p><strong>Support for diverse hardware</strong><br>
 LLVM makes it possible to run LFortran on diverse hardware and take
 advantage of native Fortran language constructs (such as <code>do concurrent</code>)
-on multi-core CPUs and GPUs, see <a href="https://gitlab.com/lfortran/lfortran/issues/57" title="Modern architectures support">#57</a>.</p>
+on multi-core CPUs and GPUs.</p>
 </li>
 </ul>
-<p>Please vote on issues in our <a href="https://gitlab.com/lfortran/lfortran/-/issues">issue tracker</a> that you want us to prioritize
-(feel free to create new ones if we are missing anything).
-You can follow the <a href="https://gitlab.com/lfortran/lfortran/-/boards">issue boards</a> to see what issues we are currently working
-on.</p>
+<p>Please vote on issues in our <a href="https://github.com/lfortran/lfortran/issues">issue tracker</a> that you want us to prioritize
+(feel free to create new ones if we are missing anything).</p>
 
         
       </div>
