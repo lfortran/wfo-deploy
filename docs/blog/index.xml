@@ -6,7 +6,17 @@
     <description>Recent content in LFortran Blog on LFortran</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LFortran Breakthrough: Now Building Legacy and Modern Minpack</title>
+      <link>https://lfortran.org/blog/2023/05/lfortran-breakthrough-now-building-legacy-and-modern-minpack/</link>
+      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://lfortran.org/blog/2023/05/lfortran-breakthrough-now-building-legacy-and-modern-minpack/</guid>
+      <description>Two days ago on April 30, 2023 was the 4th anniversary of LFortran&amp;rsquo;s initial release. Our initial prototype in 2019 was in Python. Since then we have rewritten to C++ for speed and robustness. In 2021 we announced an MVP.
+In this update, we are happy to announce that LFortran can compile and run both legacy and modern Minpack. We&amp;rsquo;ll start off by taking a look at the current compilation status and benchmarks of minpack.</description>
+    </item>
+    
     <item>
       <title>LFortran Google Season of Docs (GSoD)</title>
       <link>https://lfortran.org/blog/2022/05/lfortran-google-season-of-docs-gsod/</link>
