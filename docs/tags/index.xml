@@ -6,20 +6,29 @@
     <description>Recent content in Tags on LFortran</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Announcement</title>
       <link>https://lfortran.org/tags/announcement/</link>
-      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://lfortran.org/tags/announcement/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>fastGPT</title>
+      <link>https://lfortran.org/tags/fastgpt/</link>
+      <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://lfortran.org/tags/fastgpt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Fortran</title>
       <link>https://lfortran.org/tags/fortran/</link>
-      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://lfortran.org/tags/fortran/</guid>
       <description></description>

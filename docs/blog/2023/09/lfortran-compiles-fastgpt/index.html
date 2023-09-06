@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138613977-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-138613977-1');
+</script>
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>LFortran Compiles fastGPT - </title>
+
+  <meta name="description" content="In our last blog post from May 2023, we announced that LFortran can compile legacy and modern Minpack. Today, we are happy to announce that LFortran can compile and run fastGPT. This is our third code that we can compile and the progress bar towards beta at lfortran.org has progressed to 3/10.
+LFortran is still alpha, meaning that users expect frequent bugs and breaking changes. Alpha users are enthusiastic partners in the effort to reach beta and dilligently report issues."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "LFortran",
+    
+    "url": "https:\/\/lfortran.org\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/lfortran.org\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/lfortran.org\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/lfortran.org\/blog\/2023\/09\/lfortran-compiles-fastgpt\/",
+          "name": "Lfortran compiles fast gpt"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "[Ondřej Čertík](https:\/\/ondrejcertik.com\/), [Brian Beckman](https:\/\/www.linkedin.com\/in\/brianbeckman), [Pranav Goswami](https:\/\/www.linkedin.com\/in\/pranavgoswami1\/), [Ubaid Shaikh](https:\/\/Shaikh-Ubaid.github.io\/), [Gagandeep Singh](https:\/\/github.com\/czgdp1807), [Smit Lunagariya](https:\/\/www.linkedin.com\/in\/smit-lunagariya-356b93179\/), [Thirumalai Shaktivel](https:\/\/www.linkedin.com\/in\/thirumalai-shaktivel\/), [Harshita Kalani](https:\/\/github.com\/HarshitaKalani), [Sarthak Gupta](https:\/\/github.com\/gptsarthak), [Luthfan Lubis](https:\/\/github.com\/ansharlubis), [Anutosh Bhat](https:\/\/github.com\/anutosh491), [Virendra Kabra](https:\/\/www.linkedin.com\/in\/virendrakabra\/), [Dylon Edwards](https:\/\/www.linkedin.com\/in\/dylon-edwards-0936bb39\/)"
+  },
+  "headline": "LFortran Compiles fastGPT",
+  "description" : "In our last blog post from May 2023, we announced that LFortran can compile legacy and modern Minpack. Today, we are happy to announce that LFortran can compile and run fastGPT. This is our third code that we can compile and the progress bar towards beta at lfortran.org has progressed to 3\/10.\nLFortran is still alpha, meaning that users expect frequent bugs and breaking changes. Alpha users are enthusiastic partners in the effort to reach beta and dilligently report issues.",
+  "inLanguage" : "en",
+  "wordCount":  900 ,
+  "datePublished" : "2023-09-06T00:00:00",
+  "dateModified" : "2023-09-06T00:00:00",
+  "image" : "https:\/\/lfortran.org\/",
+  "keywords" : [ "Fortran, Announcement, fastGPT" ],
+  "mainEntityOfPage" : "https:\/\/lfortran.org\/blog\/2023\/09\/lfortran-compiles-fastgpt\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/lfortran.org\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/lfortran.org\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="LFortran Compiles fastGPT" />
+<meta property="og:description" content="In our last blog post from May 2023, we announced that LFortran can compile legacy and modern Minpack. Today, we are happy to announce that LFortran can compile and run fastGPT. This is our third code that we can compile and the progress bar towards beta at lfortran.org has progressed to 3/10.
+LFortran is still alpha, meaning that users expect frequent bugs and breaking changes. Alpha users are enthusiastic partners in the effort to reach beta and dilligently report issues.">
+<meta property="og:url" content="https://lfortran.org/blog/2023/09/lfortran-compiles-fastgpt/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="LFortran" />
+
+  <meta name="twitter:title" content="LFortran Compiles fastGPT" />
+  <meta name="twitter:description" content="In our last blog post from May 2023, we announced that LFortran can compile legacy and modern Minpack. Today, we are happy to announce that LFortran can compile and run fastGPT. This is our third code …">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="generator" content="Hugo 0.96.0" />
+  <link rel="alternate" href="https://lfortran.org/index.xml" type="application/rss+xml" title="LFortran"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://lfortran.org/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://lfortran.org/css/syntax.css" /><link rel="stylesheet" href="https://lfortran.org/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+
+
+<style>
+h2 {
+    font-size: 20px;
+}
+p, li {
+    text-align: justify;
+}
+img {
+    display: inline;
+}
+h1.h1heading {
+    text-align: center;
+}
+h2.h2heading {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    margin: 0 0 0;
+}
+#benefit i {
+    margin-right: 20px;
+}
+#benefit {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#benefits {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.post-heading .post-meta a {
+  color: #008AFF;
+}
+.post-heading .post-meta a:hover, a:focus {
+  color: #0085a1;
+  text-decoration: underline;
+}
+
+[data-toggle="collapse"].collapsed .if-not-collapsed {
+  display: none;
+}
+[data-toggle="collapse"]:not(.collapsed) .if-collapsed {
+  display: none;
+}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-138613977-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://lfortran.org/">LFortran</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Download" href="/download/">Download</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Documentation" href="https://docs.lfortran.org/">Documentation</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Blog" href="/blog/">Blog</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>LFortran Compiles fastGPT</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on September 6, 2023
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;900&nbsp;words
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;<a href="https://ondrejcertik.com/">Ondřej Čertík</a>, <a href="https://www.linkedin.com/in/brianbeckman">Brian Beckman</a>, <a href="https://www.linkedin.com/in/pranavgoswami1/">Pranav Goswami</a>, <a href="https://Shaikh-Ubaid.github.io/">Ubaid Shaikh</a>, <a href="https://github.com/czgdp1807">Gagandeep Singh</a>, <a href="https://www.linkedin.com/in/smit-lunagariya-356b93179/">Smit Lunagariya</a>, <a href="https://www.linkedin.com/in/thirumalai-shaktivel/">Thirumalai Shaktivel</a>, <a href="https://github.com/HarshitaKalani">Harshita Kalani</a>, <a href="https://github.com/gptsarthak">Sarthak Gupta</a>, <a href="https://github.com/ansharlubis">Luthfan Lubis</a>, <a href="https://github.com/anutosh491">Anutosh Bhat</a>, <a href="https://www.linkedin.com/in/virendrakabra/">Virendra Kabra</a>, <a href="https://www.linkedin.com/in/dylon-edwards-0936bb39/">Dylon Edwards</a>
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>In our last <a href="https://lfortran.org/blog/2023/05/lfortran-breakthrough-now-building-legacy-and-modern-minpack/">blog post</a> from May 2023, we announced that <a href="https://lfortran.org/">LFortran</a> can compile legacy and modern Minpack. Today, we are happy to announce that LFortran can compile and run <a href="https://github.com/certik/fastGPT">fastGPT</a>. This is our third code that we can compile and the progress bar towards beta at <a href="https://lfortran.org/">lfortran.org</a> has progressed to 3/10.</p>
+<p>LFortran is still alpha, meaning that users expect frequent bugs and breaking changes. Alpha users are enthusiastic partners in the effort to reach beta and dilligently report issues. In beta, users will expect LFortran to compile their codes, but users will still be partners in reporting remaining issues.</p>
+<h1 id="fastgpt-overview">fastGPT Overview</h1>
+<p>We <a href="https://ondrejcertik.com/blog/2023/03/fastgpt-faster-than-pytorch-in-300-lines-of-fortran/">introduced
+fastGPT</a>
+on March 14, 2023, a fast GPT-2 inference engine written in Fortran (faster and
+easier to maintain array-oriented operations than Python) and highly inspired
+by picoGPT (very small and readable). We demonstrated that fastGPT can
+achieve very good performance when compared to picoGPT and PyTorch on
+an Apple silicon chip and highlighted the combination of speed and readability
+achieved through Fortran&rsquo;s numerical array-oriented operations. For example, by
+using Fortran we are able to ensure that the dimensions of all the arrays are
+correct (Fortran syntax makes sure of this during compilation). The generated
+binary is therefore always theoretically correct. In addition, since Fortran is
+a compiled programming language with a syntax similar to NumPy, performance
+gains are naturally expected.
+See <a href="https://github.com/certik/fastGPT">fastGPT</a> and the <a href="https://ondrejcertik.com/blog/2023/03/fastgpt-faster-than-pytorch-in-300-lines-of-fortran/">blog-post</a> for more details.</p>
+<p>Today, LFortran is able to fully compile and run this array-oriented algorithm and get exactly the same results as GFortran. There is one small workaround, we do not support namelists yet. Here is the fastGPT <a href="https://github.com/certik/fastGPT/pull/67">PR</a> that you can use, together with instructions on how to build it. As you can see, the whole code compiles unmodified, including the many array manipulations in <a href="https://github.com/certik/fastGPT/blob/c2148fbd909c82ec72eaccc00d8ddc51e9106144/gpt2.f90">gpt2.f90</a> as well as all the string manipulations in <a href="https://github.com/certik/fastGPT/blob/main/tokenizer.f90">tokenizer.f90</a>. We now <a href="https://github.com/lfortran/lfortran/blob/c5c5d63c1c0be7646d10c9f5288ba2ddae130bd8/.github/workflows/CI.yml#L472">test</a> both Debug and Release builds of <code>fastGPT</code> at our LFortran CI for every commit.</p>
+<p>Here is the result of the gpt binary compiled using LFortran (v0.20.3)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ OMP_NUM_THREADS<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> ./gpt2
+</span></span><span style="display:flex;"><span>Loading the model...
+</span></span><span style="display:flex;"><span>    done. Time:   0.111s, Model file version: 1
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Model parameters:
+</span></span><span style="display:flex;"><span>n_vocab = 50257
+</span></span><span style="display:flex;"><span>n_ctx   =  1024
+</span></span><span style="display:flex;"><span>n_embd  =   768
+</span></span><span style="display:flex;"><span>n_layer =    12
+</span></span><span style="display:flex;"><span>n_head  =    12
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Input text
+</span></span><span style="display:flex;"><span>Alan Turing theorized that computers would one day become very powerful, but even he could not imagine
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Encoding: tokenizing input text into tokens (currently slow)...
+</span></span><span style="display:flex;"><span>    done. Time:   0.50s
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Input parameters:
+</span></span><span style="display:flex;"><span>n_seq                =  19
+</span></span><span style="display:flex;"><span>n_tokens_to_generate =  20
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Input tokens:
+</span></span><span style="display:flex;"><span> 36235 39141 18765  1143   326  9061   561   530  1110  1716   845  3665    11   475   772   339   714   407  5967
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Decoded input as text:
+</span></span><span style="display:flex;"><span>Alan Turing theorized that computers would one day become very powerful, but even he could not imagine
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Running model...
+</span></span><span style="display:flex;"><span> how they would be able to do so.
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>&#34;I think that the most important thing is
+</span></span><span style="display:flex;"><span>    done. Time:   0.924s (1.0x)
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Output tokens:
+</span></span><span style="display:flex;"><span>   703   484   561   307  1498   284   466   523    13   198   198     1    40   892   326   262   749  1593  1517   318
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Decoded output as text:
+</span></span><span style="display:flex;"><span> how they would be able to do so.
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>&#34;I think that the most important thing is
+</span></span></code></pre></div><h1 id="benchmark">Benchmark</h1>
+<p>Here are some preliminary benchmarks, doing &ldquo;make gpt2&rdquo; and
+&ldquo;time OMP_NUM_THREADS=1 ./gpt2&rdquo;. All times are in seconds.</p>
+<h4 id="apple-macbook-pro-m1-max">Apple MacBook Pro M1 Max</h4>
+<table>
+<thead>
+<tr>
+<th>Compiler</th>
+<th>Compile Time</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GFortran 11.3.0</td>
+<td>1.008</td>
+<td>1.143</td>
+</tr>
+<tr>
+<td>LFortran 0.20.3</td>
+<td>0.622</td>
+<td>1.207</td>
+</tr>
+<tr>
+<td>GFortran 11.3.0 (Optimized)</td>
+<td>2.720</td>
+<td>0.483</td>
+</tr>
+<tr>
+<td>LFortran 0.20.3 (Optimized)</td>
+<td>0.821</td>
+<td>1.115</td>
+</tr>
+</tbody>
+</table>
+<h4 id="apple-macbook-pro-m2-pro-16-gb-memory-ventura-1351-22g90">Apple MacBook Pro M2 Pro (16 GB Memory), Ventura 13.5.1 (22G90)</h4>
+<p><strong>fastGPT Debug build</strong></p>
+<table>
+<thead>
+<tr>
+<th>Compiler</th>
+<th>Compile Time</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GFortran 11.3.0</td>
+<td>1.740</td>
+<td>1.060</td>
+</tr>
+<tr>
+<td>LFortran 0.20.3</td>
+<td>0.623</td>
+<td>1.400</td>
+</tr>
+<tr>
+<td>GFortran 11.3.0 (Optimized)</td>
+<td>2.096</td>
+<td>0.993</td>
+</tr>
+<tr>
+<td>LFortran 0.20.3 (Optimized)</td>
+<td>0.844</td>
+<td>1.087</td>
+</tr>
+</tbody>
+</table>
+<p><strong>fastGPT Release build</strong></p>
+<table>
+<thead>
+<tr>
+<th>Compiler</th>
+<th>Compile Time</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GFortran 11.3.0</td>
+<td>2.283</td>
+<td>0.983</td>
+</tr>
+<tr>
+<td>LFortran 0.20.3</td>
+<td>0.654</td>
+<td>1.402</td>
+</tr>
+<tr>
+<td>GFortran 11.3.0 (Optimized)</td>
+<td>2.282</td>
+<td>0.982</td>
+</tr>
+<tr>
+<td>LFortran 0.20.3 (Optimized)</td>
+<td>0.824</td>
+<td>1.095</td>
+</tr>
+</tbody>
+</table>
+<h4 id="apple-macbook-pro-m1-pro">Apple MacBook Pro M1 Pro</h4>
+<table>
+<thead>
+<tr>
+<th>Compiler</th>
+<th>Compile Time</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GFortran 12.3.0</td>
+<td>2.448</td>
+<td>1.011</td>
+</tr>
+<tr>
+<td>LFortran 0.20.3</td>
+<td>0.680</td>
+<td>1.246</td>
+</tr>
+<tr>
+<td>GFortran 12.3.0 (Optimized)</td>
+<td>2.443</td>
+<td>1.014</td>
+</tr>
+<tr>
+<td>LFortran 0.20.3 (Optimized)</td>
+<td>0.861</td>
+<td>1.128</td>
+</tr>
+</tbody>
+</table>
+<p>For optimization, we used <code>-O3 -march=native -ffast-math -funroll-loops</code>
+options for GFortran and <code>--fast</code> option for LFortran. We measured the total
+execution time, which includes loading the model from disk, tokenization
+(encoding), GPT-2 inference and decoding.</p>
+<p>As can be seen, LFortran is faster to compile than GFortran. The runtime is
+comparable, GFortran generally being faster. Once we reach beta, we will focus
+on optimizations. Currently, our main focus is to just compile codes, and as
+long as the runtime is within a factor of 2x or so from GFortran, it is good
+enough for now (you can see above that LFortran is often within 20% from
+GFortran for runtime performance).</p>
+<h1 id="whats-next">What’s Next?</h1>
+<p>Right now we can compile 3 codes, and our goal is to compile 10 third-party codes in order to bring LFortran from alpha to beta. This is our main focus. We have been working on compiling several other codes, and we will announce them once they fully compile and run. Some of the codes that we want to compile as part of the 10 codes are the Fortran Package Manager (fpm) as well as large parts of SciPy.</p>
+<p>We are always looking for more contributors; if you are interested, please get in touch. Furthermore, if you&rsquo;re enthusiastic about enhancing fastGPT&rsquo;s capabilities, we invite you to collaborate on parallelizing the CPU execution and optimizing its performance on GPU hardware.</p>
+<h1 id="acknowledgements">Acknowledgements</h1>
+<p>We want to thank:</p>
+<ul>
+<li><a href="https://www.gsitechnology.com/">GSI Technology</a></li>
+<li><a href="https://lanl.gov/">LANL</a></li>
+<li><a href="https://numfocus.org/">NumFOCUS</a></li>
+<li><a href="https://sovereigntechfund.de/en/">Sovereign Tech Fund (STF)</a></li>
+<li><a href="https://quantstack.net/">QuantStack</a></li>
+<li><a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a></li>
+<li>Our GitHub, OpenCollective and NumFOCUS sponsors</li>
+<li>All our contributors (59 so far!)</li>
+</ul>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://lfortran.org//tags/fortran/">Fortran</a>&nbsp;
+            
+              <a href="https://lfortran.org//tags/announcement/">Announcement</a>&nbsp;
+            
+              <a href="https://lfortran.org//tags/fastgpt/">fastGPT</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://lfortran.org/blog/2023/05/lfortran-breakthrough-now-building-legacy-and-modern-minpack/" data-toggle="tooltip" data-placement="top" title="LFortran Breakthrough: Now Building Legacy and Modern Minpack">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2023
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://lfortran.org/">LFortran</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+           
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://lfortran.org/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://lfortran.org/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+

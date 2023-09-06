@@ -3,22 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://lfortran.org/</loc>
-    <lastmod>2023-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url><url>
     <loc>https://lfortran.org/tags/announcement/</loc>
-    <lastmod>2023-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lfortran.org/tags/fastgpt/</loc>
+    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lfortran.org/tags/fortran/</loc>
-    <lastmod>2023-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lfortran.org/blog/</loc>
-    <lastmod>2023-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://lfortran.org/blog/2023/05/lfortran-breakthrough-now-building-legacy-and-modern-minpack/</loc>
-    <lastmod>2023-05-02T00:00:00+00:00</lastmod>
+    <loc>https://lfortran.org/blog/2023/09/lfortran-compiles-fastgpt/</loc>
+    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lfortran.org/tags/</loc>
+    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lfortran.org/blog/2023/05/lfortran-breakthrough-now-building-legacy-and-modern-minpack/</loc>
     <lastmod>2023-05-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lfortran.org/tags/gsod/</loc>

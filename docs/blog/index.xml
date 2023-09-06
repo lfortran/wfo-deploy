@@ -6,7 +6,17 @@
     <description>Recent content in LFortran Blog on LFortran</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LFortran Compiles fastGPT</title>
+      <link>https://lfortran.org/blog/2023/09/lfortran-compiles-fastgpt/</link>
+      <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://lfortran.org/blog/2023/09/lfortran-compiles-fastgpt/</guid>
+      <description>In our last blog post from May 2023, we announced that LFortran can compile legacy and modern Minpack. Today, we are happy to announce that LFortran can compile and run fastGPT. This is our third code that we can compile and the progress bar towards beta at lfortran.org has progressed to 3/10.
+LFortran is still alpha, meaning that users expect frequent bugs and breaking changes. Alpha users are enthusiastic partners in the effort to reach beta and dilligently report issues.</description>
+    </item>
+    
     <item>
       <title>LFortran Breakthrough: Now Building Legacy and Modern Minpack</title>
       <link>https://lfortran.org/blog/2023/05/lfortran-breakthrough-now-building-legacy-and-modern-minpack/</link>
