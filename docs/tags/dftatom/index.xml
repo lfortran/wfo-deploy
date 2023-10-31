@@ -13,9 +13,9 @@
       <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://lfortran.org/blog/2023/10/lfortran-compiles-dftatom/</guid>
-      <description>LFortran Compiles dftatom After compiling fastGPT in September 2023, today we are happy to announce that LFortran can compile and run dftatom without any modifications, and dftatom&amp;rsquo;s continuous integration (CI) now tests every commit with LFortran, along side GFortran.
+      <description>After compiling fastGPT in September 2023, today we are happy to announce that LFortran can compile and run dftatom without any modifications, and dftatom&amp;rsquo;s continuous integration (CI) now tests every commit with LFortran, along side GFortran.
 This is the fourth full third-party production-grade code that LFortran can compile. The progress bar towards beta has thus reached 4/10.
-It can compile the main application in Debug mode twice faster than GFortran.</description>
+It can compile the main application in Debug mode twice faster than GFortran. In Release mode the runtime performance is within a factor of 2x slower than GFortran&amp;rsquo;s Release mode (all optimizations on).</description>
     </item>
     
   </channel>
