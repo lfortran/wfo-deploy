@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138613977-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-138613977-1');
+</script>
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>LFortran Compiles dftatom - </title>
+
+  <meta name="description" content="LFortran Compiles dftatom After compiling fastGPT in September 2023, today we are happy to announce that LFortran can compile and run dftatom without any modifications, and dftatom&rsquo;s continuous integration (CI) now tests every commit with LFortran, along side GFortran.
+This is the fourth full third-party production-grade code that LFortran can compile. The progress bar towards beta has thus reached 4/10.
+It can compile the main application in Debug mode twice faster than GFortran."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "LFortran",
+    
+    "url": "https:\/\/lfortran.org\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/lfortran.org\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/lfortran.org\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/lfortran.org\/blog\/2023\/10\/lfortran-compiles-dftatom\/",
+          "name": "Lfortran compiles dftatom"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "[Ondřej Čertík](https:\/\/ondrejcertik.com\/), [Brian Beckman](https:\/\/www.linkedin.com\/in\/brianbeckman), [Gagandeep Singh](https:\/\/github.com\/czgdp1807), [Thirumalai Shaktivel](https:\/\/www.linkedin.com\/in\/thirumalai-shaktivel\/), [Ubaid Shaikh](https:\/\/Shaikh-Ubaid.github.io\/), [Pranav Goswami](https:\/\/www.linkedin.com\/in\/pranavgoswami1\/), [Luthfan Lubis](https:\/\/github.com\/ansharlubis), [Harshita Kalani](https:\/\/github.com\/HarshitaKalani), [Sarthak Gupta](https:\/\/github.com\/gptsarthak), [Anutosh Bhat](https:\/\/github.com\/anutosh491), [Smit Lunagariya](https:\/\/www.linkedin.com\/in\/smit-lunagariya-356b93179\/), [Dylon Edwards](https:\/\/www.linkedin.com\/in\/dylon-edwards-0936bb39\/), [Virendra Kabra](https:\/\/www.linkedin.com\/in\/virendrakabra\/), [Khushi Agrawal](https:\/\/khushi-411.github.io\/), [Rohit Goswami](https:\/\/rgoswami.me)"
+  },
+  "headline": "LFortran Compiles dftatom",
+  "description" : "LFortran Compiles dftatom After compiling fastGPT in September 2023, today we are happy to announce that LFortran can compile and run dftatom without any modifications, and dftatom\u0026rsquo;s continuous integration (CI) now tests every commit with LFortran, along side GFortran.\nThis is the fourth full third-party production-grade code that LFortran can compile. The progress bar towards beta has thus reached 4\/10.\nIt can compile the main application in Debug mode twice faster than GFortran.",
+  "inLanguage" : "en",
+  "wordCount":  1555 ,
+  "datePublished" : "2023-10-31T00:00:00",
+  "dateModified" : "2023-10-31T00:00:00",
+  "image" : "https:\/\/lfortran.org\/",
+  "keywords" : [ "Fortran, Announcement, dftatom" ],
+  "mainEntityOfPage" : "https:\/\/lfortran.org\/blog\/2023\/10\/lfortran-compiles-dftatom\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/lfortran.org\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/lfortran.org\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="LFortran Compiles dftatom" />
+<meta property="og:description" content="LFortran Compiles dftatom After compiling fastGPT in September 2023, today we are happy to announce that LFortran can compile and run dftatom without any modifications, and dftatom&rsquo;s continuous integration (CI) now tests every commit with LFortran, along side GFortran.
+This is the fourth full third-party production-grade code that LFortran can compile. The progress bar towards beta has thus reached 4/10.
+It can compile the main application in Debug mode twice faster than GFortran.">
+<meta property="og:url" content="https://lfortran.org/blog/2023/10/lfortran-compiles-dftatom/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="LFortran" />
+
+  <meta name="twitter:title" content="LFortran Compiles dftatom" />
+  <meta name="twitter:description" content="LFortran Compiles dftatom After compiling fastGPT in September 2023, today we are happy to announce that LFortran can compile and run dftatom without any modifications, and dftatom&rsquo;s continuous …">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="generator" content="Hugo 0.96.0" />
+  <link rel="alternate" href="https://lfortran.org/index.xml" type="application/rss+xml" title="LFortran"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://lfortran.org/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://lfortran.org/css/syntax.css" /><link rel="stylesheet" href="https://lfortran.org/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+
+
+<style>
+h2 {
+    font-size: 20px;
+}
+p, li {
+    text-align: justify;
+}
+img {
+    display: inline;
+}
+h1.h1heading {
+    text-align: center;
+}
+h2.h2heading {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    margin: 0 0 0;
+}
+#benefit i {
+    margin-right: 20px;
+}
+#benefit {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#benefits {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.post-heading .post-meta a {
+  color: #008AFF;
+}
+.post-heading .post-meta a:hover, a:focus {
+  color: #0085a1;
+  text-decoration: underline;
+}
+
+[data-toggle="collapse"].collapsed .if-not-collapsed {
+  display: none;
+}
+[data-toggle="collapse"]:not(.collapsed) .if-collapsed {
+  display: none;
+}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-138613977-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://lfortran.org/">LFortran</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Download" href="/download/">Download</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Documentation" href="https://docs.lfortran.org/">Documentation</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Blog" href="/blog/">Blog</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>LFortran Compiles dftatom</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on October 31, 2023
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;8&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1555&nbsp;words
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;<a href="https://ondrejcertik.com/">Ondřej Čertík</a>, <a href="https://www.linkedin.com/in/brianbeckman">Brian Beckman</a>, <a href="https://github.com/czgdp1807">Gagandeep Singh</a>, <a href="https://www.linkedin.com/in/thirumalai-shaktivel/">Thirumalai Shaktivel</a>, <a href="https://Shaikh-Ubaid.github.io/">Ubaid Shaikh</a>, <a href="https://www.linkedin.com/in/pranavgoswami1/">Pranav Goswami</a>, <a href="https://github.com/ansharlubis">Luthfan Lubis</a>, <a href="https://github.com/HarshitaKalani">Harshita Kalani</a>, <a href="https://github.com/gptsarthak">Sarthak Gupta</a>, <a href="https://github.com/anutosh491">Anutosh Bhat</a>, <a href="https://www.linkedin.com/in/smit-lunagariya-356b93179/">Smit Lunagariya</a>, <a href="https://www.linkedin.com/in/dylon-edwards-0936bb39/">Dylon Edwards</a>, <a href="https://www.linkedin.com/in/virendrakabra/">Virendra Kabra</a>, <a href="https://khushi-411.github.io/">Khushi Agrawal</a>, <a href="https://rgoswami.me">Rohit Goswami</a>
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h1 id="lfortran-compiles-dftatom">LFortran Compiles dftatom</h1>
+<p><a href="https://lfortran.org/blog/2023/09/lfortran-compiles-fastgpt/">After compiling fastGPT</a> in September 2023, today we are happy to announce that LFortran can compile and run <a href="https://github.com/certik/dftatom">dftatom</a> without any modifications, and <code>dftatom</code>&rsquo;s continuous integration (CI) now <a href="https://github.com/certik/dftatom/blob/3815c86b0144fd69981dc7dfd7e28adf671c64ac/.github/workflows/ci.yml#L58-L109">tests every commit</a> with LFortran, along side GFortran.</p>
+<p>This is the fourth full third-party production-grade code that LFortran can compile. The <a href="https://lfortran.org">progress bar towards beta</a> has thus reached 4/10.</p>
+<p>It can compile the main application in Debug mode twice faster than GFortran. In Release mode the runtime performance is within a factor of 2x slower than GFortran&rsquo;s Release mode (all optimizations on).</p>
+<p>LFortran is still alpha software, meaning that users must continue expecting that LFortran will fail compiling or running their codes. This means it is still easy to find compiler bugs and every time you find one, you should celebrate and then please report it. As we reach beta and later production, it will become a lot harder to find them.</p>
+<h2 id="dftatom-overview">dftatom Overview</h2>
+<p><a href="https://github.com/certik/dftatom">dftatom</a> is a library that implements accurate and efficient shooting-method solvers for the electronic-structure atomic radial Schrödinger and Dirac equations in the context of <a href="https://en.wikipedia.org/wiki/Density_functional_theory">Density Functional Theory</a> (DFT). You can read more information and link to an article explaining how it works in the README, see the project link above. Here are the main Fortran modules and functions:</p>
+<p><img src="https://lfortran.org/blog/images/dependency_graph.png" alt=""></p>
+<p>The code is written in modern Fortran, utilizing many common idioms such as allocatable arrays, derived types, string formatting and many array operations. While the <code>fastGPT</code> code exercised some of these features, <code>dftatom</code> uses many more combinations typically used in practice. Being able to compile it means LFortran is becoming very usable (although still alpha) for typical computational physics calculations. There are two build systems, manual makefiles with 3 tests and cmake with 21 tests. Both work with LFortran and all tests pass.</p>
+<p>As an example, here is the output generated by LFortran for <code>F_atom_U</code>, the non-relativistic Uranium atomic calculation using <a href="https://en.wikipedia.org/wiki/Local-density_approximation">local-density approximation</a> (LDA) in DFT:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>$ ./F_atom_U
+</span></span><span style="display:flex;"><span>Z<span style="color:#f92672">=</span> <span style="color:#ae81ff">92</span> N<span style="color:#f92672">=</span> <span style="color:#ae81ff">5500</span>
+</span></span><span style="display:flex;"><span>E_tot<span style="color:#f92672">=</span>     -25658.417889 a.u.
+</span></span><span style="display:flex;"><span>state    E <span style="color:#f92672">[</span>a.u.<span style="color:#f92672">]</span>      occupancy
+</span></span><span style="display:flex;"><span>1s       -3689.355140    2.000
+</span></span><span style="display:flex;"><span>2s        -639.778728    2.000
+</span></span><span style="display:flex;"><span>2p        -619.108550    6.000
+</span></span><span style="display:flex;"><span>3s        -161.118073    2.000
+</span></span><span style="display:flex;"><span>3p        -150.978980    6.000
+</span></span><span style="display:flex;"><span>3d        -131.977358   10.000
+</span></span><span style="display:flex;"><span>4s         -40.528084    2.000
+</span></span><span style="display:flex;"><span>4p         -35.853321    6.000
+</span></span><span style="display:flex;"><span>4d         -27.123212   10.000
+</span></span><span style="display:flex;"><span>4f         -15.027460   14.000
+</span></span><span style="display:flex;"><span>5s          -8.824089    2.000
+</span></span><span style="display:flex;"><span>5p          -7.018092    6.000
+</span></span><span style="display:flex;"><span>5d          -3.866175   10.000
+</span></span><span style="display:flex;"><span>5f          -0.366543    3.000
+</span></span><span style="display:flex;"><span>6s          -1.325976    2.000
+</span></span><span style="display:flex;"><span>6p          -0.822538    6.000
+</span></span><span style="display:flex;"><span>6d          -0.143190    1.000
+</span></span><span style="display:flex;"><span>7s          -0.130948    2.000
+</span></span><span style="display:flex;"><span>Print the first <span style="color:#ae81ff">10</span> values of the 1st and 2nd orbitals:
+</span></span><span style="display:flex;"><span>1.75328926418836136e+03 1.75328121752118705e+03 1.75327315125316363e+03 1.75326506454811920e+03 1.75325694958405666e+03 1.75324882035547853e+03 1.75324067107709357e+03 1.75323250147954241e+03 1.75322431102506198e+03 1.75321609934958383e+03 
+</span></span><span style="display:flex;"><span>5.87507022963877034e+02 5.87504326614959496e+02 5.87501623693095667e+02 5.87498913919208576e+02 5.87496194672607658e+02 5.87493470642835518e+02 5.87490739891368435e+02 5.87488002327970548e+02 5.87485257772447085e+02 5.87482506102796833e+02
+</span></span></code></pre></div><p>The energies are in <a href="https://en.wikipedia.org/wiki/Hartree_atomic_units">Hartree atomic units</a>.</p>
+<h2 id="benchmarking">Benchmarking</h2>
+<p>Following are benchmarks run on different systems. We test Debug and Release modes. The Debug mode has slow runtime but fast compilation. The Release mode has fast runtime but slow compilation.</p>
+<p>For Debug mode we use no flags for LFortran nor GFortran. For Release mode we use the following optimization flags for GFortran: <code>-O3 -march=native -ffast-math -funroll-loops</code>, and the following for LFortran: <code>--skip-pass=inline_function_calls,fma --fast</code>.</p>
+<h3 id="compilation-benchmarks">Compilation benchmarks</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>FC=gfortran cmake -DCMAKE_BUILD_TYPE=Debug .
+</span></span><span style="display:flex;"><span>time make conv_lda
+</span></span></code></pre></div><p><code>gfortran</code> 13.2.0 on MacBook Pro M1 (2020):</p>
+<pre tabindex="0"><code>make conv_lda  3.33s user 0.64s system 104% cpu 3.811 total
+</code></pre><p><code>lfortran</code> 0.29.0 on MacBook Pro M1 (2020):</p>
+<pre tabindex="0"><code>make conv_lda  1.40s user 0.33s system 96% cpu 1.796 total
+</code></pre><p>On this particular benchmark, platform and compiler versions, LFortran is about 2.1x faster to compile. A significant amount of LFortran&rsquo;s total compilation time is spent in LLVM (which in Debug mode just emits a binary with no optimizations), so our plan is to experiment with a custom faster backend for Debug builds to speedup compilation even further.</p>
+<p>LFortran compiles each Fortran module file to a <code>.mod</code> file which is just a serialized ASR (our intermediate representation). It does full parsing and semantics, but no other processing. GFortran also generates <code>.mod</code> files, but only stores the interfaces to modules (not the whole intermediate representation) and in addition it compiles to object files too (LFortran can do that using the <code>--generate-object-code</code> option as well, but currently it is mostly tested with compiling the Fortran packages in SciPy, which do not use modules).</p>
+<p>If we compile all binaries, not just one, then LFortran&rsquo;s compilation is slower (as one can see on the benchmarks in the next section), because it currently generates all code from scratch for each binary, not reusing precompiled object files like GFortran does. We will address this issue in the future.</p>
+<h3 id="compilation-and-run-time-benchmarks">Compilation and Run Time Benchmarks</h3>
+<h4 id="apple-macbook-pro-m2-pro-16-gb-memory">Apple MacBook Pro M2 Pro (16 GB Memory)</h4>
+<p>Full run of the <code>conv_lda</code> (Schrödinger) and <code>conv_rlda</code> (Dirac) DFT tests for all atoms from Hydrogen (Z=1) to Uranium (Z=92) and all accuracies from 1e-3 to 1e-8.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Compiler</strong></th>
+<th><strong>Compile Time (s)</strong></th>
+<th><strong>Run Time (<code>conv_lda</code>) (s)</strong></th>
+<th><strong>Run Time (<code>conv_rlda</code>) (s)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GFortran 11.0.1 Debug</td>
+<td>1.859</td>
+<td>57.633</td>
+<td>105.45</td>
+</tr>
+<tr>
+<td>LFortran 0.25.0 Debug</td>
+<td>2.625</td>
+<td>186.28</td>
+<td>356.37</td>
+</tr>
+<tr>
+<td>GFortran 11.0.1 Release</td>
+<td>4.467</td>
+<td>34.288</td>
+<td>61.86</td>
+</tr>
+<tr>
+<td>LFortran 0.25.0 Release</td>
+<td>5.622</td>
+<td>53.134</td>
+<td>100.04</td>
+</tr>
+</tbody>
+</table>
+<p>As you can see, LFortran is within a factor of 2x slower for the Release runs.</p>
+<h4 id="apple-macbook-pro-m1-16-gb-memory">Apple MacBook Pro M1 (16 GB Memory)</h4>
+<h5 id="for-the-uranium-atom">For the Uranium atom</h5>
+<table>
+<thead>
+<tr>
+<th><strong>Compiler</strong></th>
+<th><strong>Compile Time (s)</strong></th>
+<th><strong>Run Time (<code>conv_lda</code>) (s)</strong></th>
+<th><strong>Run Time (<code>conv_rlda</code>) (s)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GFortran 12.2.0</td>
+<td>1.542</td>
+<td>1.890</td>
+<td>3.271</td>
+</tr>
+<tr>
+<td>LFortran 0.25.0</td>
+<td>3.541</td>
+<td>5.766</td>
+<td>10.963</td>
+</tr>
+<tr>
+<td>GFortran 12.2.0 (Optimised)</td>
+<td>4.384</td>
+<td>1.042</td>
+<td>1.795</td>
+</tr>
+<tr>
+<td>LFortran 0.25.0 (Optimised)</td>
+<td>5.936</td>
+<td>1.662</td>
+<td>3.177</td>
+</tr>
+</tbody>
+</table>
+<h5 id="for-all-atoms">For all atoms</h5>
+<table>
+<thead>
+<tr>
+<th><strong>Compiler</strong></th>
+<th><strong>Compile Time (s)</strong></th>
+<th><strong>Run Time (<code>conv_lda</code>) (s)</strong></th>
+<th><strong>Run Time (<code>conv_rlda</code>) (s)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GFortran 12.2.0</td>
+<td>1.571</td>
+<td>65.382</td>
+<td>117.468</td>
+</tr>
+<tr>
+<td>LFortran 0.25.0</td>
+<td>3.559</td>
+<td>192.796</td>
+<td>375.302</td>
+</tr>
+<tr>
+<td>GFortran 12.2.0 (Optimised)</td>
+<td>4.391</td>
+<td>36.992</td>
+<td>66.708</td>
+</tr>
+<tr>
+<td>LFortran 0.25.0 (Optimised)</td>
+<td>5.958</td>
+<td>55.492</td>
+<td>106.969</td>
+</tr>
+</tbody>
+</table>
+<h4 id="amd-ryzen-5-2500u-ubuntu-2204-20-gb-memory">AMD Ryzen 5 2500U (Ubuntu 22.04, 20 GB Memory)</h4>
+<h5 id="for-the-uranium-atom-1">For the Uranium atom</h5>
+<table>
+<thead>
+<tr>
+<th><strong>Compiler</strong></th>
+<th><strong>Compile Time (s)</strong></th>
+<th><strong>Run Time (<code>conv_lda</code>) (s)</strong></th>
+<th><strong>Run Time (<code>conv_rlda</code>) (s)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GFortran 11.4.0</td>
+<td>2.141</td>
+<td>3.654</td>
+<td>6.574</td>
+</tr>
+<tr>
+<td>LFortran 0.25.0</td>
+<td>8.473</td>
+<td>13.422</td>
+<td>22.948</td>
+</tr>
+<tr>
+<td>GFortran 11.4.0 (Optimised)</td>
+<td>7.609</td>
+<td>1.413</td>
+<td>2.309</td>
+</tr>
+<tr>
+<td>LFortran 0.25.0 (Optimised)</td>
+<td>17.029</td>
+<td>2.769</td>
+<td>5.662</td>
+</tr>
+</tbody>
+</table>
+<h5 id="for-all-atoms-1">For all atoms</h5>
+<table>
+<thead>
+<tr>
+<th><strong>Compiler</strong></th>
+<th><strong>Compile Time (s)</strong></th>
+<th><strong>Run Time (<code>conv_lda</code>) (s)</strong></th>
+<th><strong>Run Time (<code>conv_rlda</code>) (s)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GFortran 11.4.0</td>
+<td>2.124</td>
+<td>93.026</td>
+<td>180.604</td>
+</tr>
+<tr>
+<td>LFortran 0.25.0</td>
+<td>6.376</td>
+<td>369.006</td>
+<td>712.956</td>
+</tr>
+<tr>
+<td>GFortran 11.4.0 (Optimised)</td>
+<td>6.837</td>
+<td>41.754</td>
+<td>75.532</td>
+</tr>
+<tr>
+<td>LFortran 0.25.0 (Optimised)</td>
+<td>16.040</td>
+<td>81.498</td>
+<td>171.116</td>
+</tr>
+</tbody>
+</table>
+<h3 id="benchmarking-discussion">Benchmarking Discussion</h3>
+<p>The benchmarks are preliminary, the numbers will change as LFortran matures, the main purpose is to give an idea what to expect about LFortran&rsquo;s current alpha-version compilation and run time performance.</p>
+<p>The compilation time of LFortran are within a factor of 1.5 of GFortran&rsquo;s because we compile several binaries (see the previous benchmark where we compile just one binary and then LFortran is faster than GFortran to compile). The run time for the unoptimized version are considerably slower than those of GFortran, but for the optimised version they are within a factor of 2 of GFortran&rsquo;s. This is a decent performance, given that LFortran is still in alpha. Once LFortran reaches beta, we will focus on optimizations, with the objective to match or beat GFortran’s run time in all cases. GFortran is the most advanced and mature production open source Fortran compiler.</p>
+<p>We encourage you to try LFortran via conda-forge using <code>conda install lfortran</code> which works on Linux, MacOS Intel/M1 and Windows. Note: the Windows platform is less tested, but Linux and macOS should work for everything we discussed above. As we reach beta, we will ensure that everything works on Windows as well.</p>
+<p>Run the benchmarks yourself, report bugs and let us know any feedback that you might have.</p>
+<h2 id="whats-next">What’s Next?</h2>
+<p>As of this writing, LFortran compiles four third-party codes:</p>
+<ul>
+<li><a href="https://github.com/scipy/scipy/tree/f797ac7721310c7bd98bae416be1bed9975b4203/scipy/optimize/minpack">Legacy Minpack</a> (part of SciPy) and several more SciPy packages</li>
+<li><a href="https://github.com/fortran-lang/minpack">Modern Minpack</a></li>
+<li><a href="https://github.com/certik/fastGPT">fastGPT</a></li>
+<li><a href="https://github.com/certik/dftatom">dftatom</a></li>
+</ul>
+<p>Our goal is to compile 10 third-party codes so as to bring LFortran from alpha to beta. This is our main focus. We have been working on compiling several more third-party codes. Our progress roadmap is essentially a &ldquo;feature importance&rdquo; method where LFortran supports all language features that show up in the ten third-party candidate codes. Since these codes are taken as representative of existing Fortran codes, compiling them (and supporting the language features used) is how it is used as a metric for progress towards beta. We will continue to announce each one as soon as we are able to fully compile and run them unchanged from their source code. Some of those codes are the Fortran Package Manager (fpm), Fortran stdlib and large parts of SciPy. The requirement and milestone to compile 10 third-party codes is necessary to reach beta, but might not be sufficient. Once we deliver the milestone we will evaluate with the community what else needs to be done to get to beta. Our definition of beta quality compiler is that when you run it on your code, it is expected to work and not fail, but there might still be bugs.</p>
+<p>We are always looking for more contributors; if you are interested, please get in touch. It is an exciting time of delivering LFortran, it is becoming easier and easier to compile new codes and it is a lot of fun to work on a compiler and learn how it works. We will teach you all the skills needed.</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>We&rsquo;d like to thank <a href="https://gsitechnology.com/">GSI Technology</a> for supporting this work. GSI
+recognizes the importance of compiler technology and benchmarking
+for all devices: CPU, GPU, and their own APU (Associative
+Processing Unit). LFortran is especially attractive to GSI because
+of its array orientation, and GSI&rsquo;s APU is an array-processing
+accelerator.</p>
+<p>We also want to thank:</p>
+<ul>
+<li><a href="https://lanl.gov/">LANL</a></li>
+<li><a href="https://numfocus.org/">NumFOCUS</a></li>
+<li><a href="https://sovereigntechfund.de/en/">Sovereign Tech Fund (STF)</a></li>
+<li><a href="https://quantstack.net/">QuantStack</a></li>
+<li><a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a></li>
+<li>Our GitHub, OpenCollective and NumFOCUS sponsors</li>
+<li>All our contributors (65 so far!)</li>
+</ul>
+<h2 id="discussions">Discussions</h2>
+<ul>
+<li>Fortran Discourse:</li>
+<li>Twitter:</li>
+</ul>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://lfortran.org//tags/fortran/">Fortran</a>&nbsp;
+            
+              <a href="https://lfortran.org//tags/announcement/">Announcement</a>&nbsp;
+            
+              <a href="https://lfortran.org//tags/dftatom/">dftatom</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://lfortran.org/blog/2023/09/lfortran-compiles-fastgpt/" data-toggle="tooltip" data-placement="top" title="LFortran Compiles fastGPT">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2023
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://lfortran.org/">LFortran</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+           
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://lfortran.org/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://lfortran.org/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+
