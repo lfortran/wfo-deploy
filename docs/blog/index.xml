@@ -6,7 +6,18 @@
     <description>Recent content in LFortran Blog on LFortran</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 31 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LFortran Compiles 60% of Scipy</title>
+      <link>https://lfortran.org/blog/2024/01/lfortran-compiles-60-of-scipy/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://lfortran.org/blog/2024/01/lfortran-compiles-60-of-scipy/</guid>
+      <description>LFortran Compiles 60% of SciPy With successful compilation of dftatom in October 2023, embarking to the new year with a remarkable stride, we are delighted to announce that LFortran can now successfully compile 9 out of the 15 Fortran packages within the SciPy library without requiring any modifications.
+This is the fifth third-party production-grade code that LFortran can compile. The progress bar towards beta has thus reached 5/10.
+LFortran can now compile and pass tests written for scipy.</description>
+    </item>
+    
     <item>
       <title>LFortran Compiles dftatom</title>
       <link>https://lfortran.org/blog/2023/10/lfortran-compiles-dftatom/</link>
