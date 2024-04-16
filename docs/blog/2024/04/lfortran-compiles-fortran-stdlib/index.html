@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138613977-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-138613977-1');
+</script>
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>LFortran compiles Fortran stdlib - </title>
+
+  <meta name="description" content="LFortran compiles 85% Fortran stdlib We are happy to announce that LFortran can compile all numerical modules in stdlib. The stdlib library has 32 modules, here are the details of the current status:
+ all 32 modules compile to ASR 27 modules (85%) compile to LLVM; there are 4 hash modules (hash_32bit, hash_64bit, hashmaps, hashmap_wrappers, stringlist_type) and one stringlist_type module that does not compile to LLVM yet 24 modules pass all their tests; 3 modules (sorting, bitsets, stats) do not pass all tests yet, but simple examples that use the modules work  This is sixth third-party production-grade code that LFortran can compile after SciPy."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "LFortran",
+    
+    "url": "https:\/\/lfortran.org\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/lfortran.org\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/lfortran.org\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/lfortran.org\/blog\/2024\/04\/lfortran-compiles-fortran-stdlib\/",
+          "name": "Lfortran compiles fortran stdlib"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "[Ondřej Čertík](https:\/\/ondrejcertik.com\/), [Gagandeep Singh](https:\/\/github.com\/czgdp1807), [Ubaid Shaikh](https:\/\/github.com\/Shaikh-Ubaid), [Thirumalai Shaktivel](https:\/\/www.linkedin.com\/in\/thirumalai-shaktivel\/), [Pranav Goswami](https:\/\/www.linkedin.com\/in\/pranavgoswami1\/), [Harshita Kalani](https:\/\/github.com\/HarshitaKalani), [Parth Mistry](https:\/\/github.com\/parth121101), [Gaurav Dhingra](https:\/\/github.com\/gxyd), [Smit Lunagariya](https:\/\/www.linkedin.com\/in\/smit-lunagariya-356b93179\/), [Luthfan Lubis](https:\/\/github.com\/ansharlubis), [Naman Gera](https:\/\/uk.linkedin.com\/in\/namannimmo), [Zihua Wu](https:\/\/github.com\/lucifer1004), [Khushi Agrawal](https:\/\/khushi-411.github.io\/), [Christoph Junghans](https:\/\/www.linkedin.com\/in\/christophjunghans), [Brian Beckman](https:\/\/www.linkedin.com\/in\/brianbeckman), [Dylon Edwards](https:\/\/www.linkedin.com\/in\/dylon-edwards-0936bb39\/)"
+  },
+  "headline": "LFortran compiles Fortran stdlib",
+  "description" : "LFortran compiles 85% Fortran stdlib We are happy to announce that LFortran can compile all numerical modules in stdlib. The stdlib library has 32 modules, here are the details of the current status:\n all 32 modules compile to ASR 27 modules (85%) compile to LLVM; there are 4 hash modules (hash_32bit, hash_64bit, hashmaps, hashmap_wrappers, stringlist_type) and one stringlist_type module that does not compile to LLVM yet 24 modules pass all their tests; 3 modules (sorting, bitsets, stats) do not pass all tests yet, but simple examples that use the modules work  This is sixth third-party production-grade code that LFortran can compile after SciPy.",
+  "inLanguage" : "en",
+  "wordCount":  818 ,
+  "datePublished" : "2024-04-16T00:00:00",
+  "dateModified" : "2024-04-16T00:00:00",
+  "image" : "https:\/\/lfortran.org\/",
+  "keywords" : [ "Fortran, Announcement, stdlib, fortran-lang" ],
+  "mainEntityOfPage" : "https:\/\/lfortran.org\/blog\/2024\/04\/lfortran-compiles-fortran-stdlib\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/lfortran.org\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/lfortran.org\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="LFortran compiles Fortran stdlib" />
+<meta property="og:description" content="LFortran compiles 85% Fortran stdlib We are happy to announce that LFortran can compile all numerical modules in stdlib. The stdlib library has 32 modules, here are the details of the current status:
+ all 32 modules compile to ASR 27 modules (85%) compile to LLVM; there are 4 hash modules (hash_32bit, hash_64bit, hashmaps, hashmap_wrappers, stringlist_type) and one stringlist_type module that does not compile to LLVM yet 24 modules pass all their tests; 3 modules (sorting, bitsets, stats) do not pass all tests yet, but simple examples that use the modules work  This is sixth third-party production-grade code that LFortran can compile after SciPy.">
+<meta property="og:url" content="https://lfortran.org/blog/2024/04/lfortran-compiles-fortran-stdlib/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="LFortran" />
+
+  <meta name="twitter:title" content="LFortran compiles Fortran stdlib" />
+  <meta name="twitter:description" content="LFortran compiles 85% Fortran stdlib We are happy to announce that LFortran can compile all numerical modules in stdlib. The stdlib library has 32 modules, here are the details of the current status: …">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="generator" content="Hugo 0.96.0" />
+  <link rel="alternate" href="https://lfortran.org/index.xml" type="application/rss+xml" title="LFortran"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://lfortran.org/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://lfortran.org/css/syntax.css" /><link rel="stylesheet" href="https://lfortran.org/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+
+
+<style>
+h2 {
+    font-size: 20px;
+}
+p, li {
+    text-align: justify;
+}
+img {
+    display: inline;
+}
+h1.h1heading {
+    text-align: center;
+}
+h2.h2heading {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    margin: 0 0 0;
+}
+#benefit i {
+    margin-right: 20px;
+}
+#benefit {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#benefits {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.post-heading .post-meta a {
+  color: #008AFF;
+}
+.post-heading .post-meta a:hover, a:focus {
+  color: #0085a1;
+  text-decoration: underline;
+}
+
+[data-toggle="collapse"].collapsed .if-not-collapsed {
+  display: none;
+}
+[data-toggle="collapse"]:not(.collapsed) .if-collapsed {
+  display: none;
+}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-138613977-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://lfortran.org/">LFortran</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Download" href="/download/">Download</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Documentation" href="https://docs.lfortran.org/">Documentation</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Blog" href="/blog/">Blog</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>LFortran compiles Fortran stdlib</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on April 16, 2024
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;818&nbsp;words
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;<a href="https://ondrejcertik.com/">Ondřej Čertík</a>, <a href="https://github.com/czgdp1807">Gagandeep Singh</a>, <a href="https://github.com/Shaikh-Ubaid">Ubaid Shaikh</a>, <a href="https://www.linkedin.com/in/thirumalai-shaktivel/">Thirumalai Shaktivel</a>, <a href="https://www.linkedin.com/in/pranavgoswami1/">Pranav Goswami</a>, <a href="https://github.com/HarshitaKalani">Harshita Kalani</a>, <a href="https://github.com/parth121101">Parth Mistry</a>, <a href="https://github.com/gxyd">Gaurav Dhingra</a>, <a href="https://www.linkedin.com/in/smit-lunagariya-356b93179/">Smit Lunagariya</a>, <a href="https://github.com/ansharlubis">Luthfan Lubis</a>, <a href="https://uk.linkedin.com/in/namannimmo">Naman Gera</a>, <a href="https://github.com/lucifer1004">Zihua Wu</a>, <a href="https://khushi-411.github.io/">Khushi Agrawal</a>, <a href="https://www.linkedin.com/in/christophjunghans">Christoph Junghans</a>, <a href="https://www.linkedin.com/in/brianbeckman">Brian Beckman</a>, <a href="https://www.linkedin.com/in/dylon-edwards-0936bb39/">Dylon Edwards</a>
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h1 id="lfortran-compiles-85-fortran-stdlib">LFortran compiles 85% Fortran stdlib</h1>
+<p>We are happy to announce that LFortran can compile all numerical modules in <code>stdlib</code>. The <code>stdlib</code> library has 32 modules, here are the details of the current status:</p>
+<ul>
+<li>all 32 modules compile to ASR</li>
+<li>27 modules (85%) compile to LLVM; there are 4 hash modules (<code>hash_32bit</code>, <code>hash_64bit</code>, <code>hashmaps</code>, <code>hashmap_wrappers</code>, <code>stringlist_type</code>) and one <code>stringlist_type</code> module that does not compile to LLVM yet</li>
+<li>24 modules pass all their tests; 3 modules (<code>sorting</code>, <code>bitsets</code>, <code>stats</code>) do not pass all tests yet, but simple examples that use the modules work</li>
+</ul>
+<p>This is sixth third-party production-grade code that LFortran can compile after <a href="https://lfortran.org/blog/2024/01/lfortran-compiles-60-of-scipy/">SciPy</a>. The <a href="https://lfortran.org">progress bar towards beta</a> has thus reached 6/10.</p>
+<p>All of numerical computing code compiles to LLVM and we also test this at CI for every LFortran commit, to ensure no regressions happen. The remaining module incorporates string handling and object oriented programming. Developers are currently working in these areas to make improvements. We also had to workaround several limitations by patching the <code>stdlib</code> code, and we opened a dedicated issue for each workaround.</p>
+<p>LFortran is still alpha software, meaning that users must continue expecting that LFortran will fail compiling or running their codes. Please report all bugs that you find.</p>
+<h2 id="stdlib-overview">stdlib Overview</h2>
+<p><a href="https://github.com/fortran-lang/stdlib">stdlib</a> provides a community driven and agreed upon de facto &ldquo;standard&rdquo; library for Fortran. It is both a specification and a reference implementation with goal to achieve utilities, algorithms, mathematics, etc.</p>
+<p>The code implements a variety of numerical, array-based features to evaluate the efficacy and robustness of a compiler with respect to array operations.  While <code>SciPy</code> utilized many legacy features, <code>dftatom</code> and <code>fastGPT</code> had plenty modern fortran features, compilation of <code>stdlib</code> and other codebase emphasise the importance of progressing along all fronts and marks a significant advancement in its alpha-stage development, enhancing its usability for a diverse range of users.</p>
+<h2 id="development-phase-overview">Development Phase Overview</h2>
+<p>Achieving this milestone proved comparably simpler than previous endeavors with the LFortran codebase. Our strategy entails a systematic compilation of third-party codes, foreseeing a smoother path towards beta with each successful compilation.</p>
+<p>We initiated the process post-compiling SciPy, meticulously progressing module by module in a topologically sorted manner while concurrently working on test drive. Initially tackling straightforward tasks, we subsequently addressed more complex modules</p>
+<p>Our approach prioritized achieving full functionality within each module, resolving compilation failures, divergences, setting up CI, and executing essential changes, including refactoring functionalities.</p>
+<p>We&rsquo;ve encountered a notable challenge within a few lines of code, particularly regarding the <a href="https://github.com/lfortran/lfortran/issues/536"><code>submodules</code></a>, which is already included in our roadmap for resolution. Additionally, minor workarounds have been implemented, as documented in the ongoing efforts outlined in the <a href="https://github.com/lfortran/lfortran/issues/536"><code>LFortran-stdlib-issues</code></a>. We are actively addressing each of these issues to enhance the overall functionality and stability of the codebase.</p>
+<h2 id="test-lfortran-compilation">Test LFortran Compilation</h2>
+<p>LFortran can be used to compile and execute stdlib code using the following commands:</p>
+<pre tabindex="0"><code>mamba create -n stdlib-tools fypp cmake make lfortran=0.35.0
+mamba activate stdlib-tools
+</code></pre><pre tabindex="0"><code>git clone https://github.com/czgdp1807/stdlib.git
+cd stdlib
+git checkout -t origin/lf19
+git checkout e13b0117fb1cff549f7fc811daaddf3c40134db4
+./build_test_lf.sh
+</code></pre><p><code>gfortran</code> 13.2.0 on MacBook Air M2 (2023):</p>
+<pre tabindex="0"><code>% time make -j8
+real	0m27.826s
+user	1m52.294s
+sys	0m8.928s
+</code></pre><p><code>lfortran</code> 0.35.0 on MacBook Air M2 (2023):</p>
+<pre tabindex="0"><code>% time make -j8
+real	0m5.688s
+user	0m27.014s
+sys	0m7.795s
+</code></pre><h2 id="whats-next">What’s Next?</h2>
+<p>As of this writing, LFortran compiles six third-party codes:</p>
+<ul>
+<li><a href="https://github.com/scipy/scipy/tree/f797ac7721310c7bd98bae416be1bed9975b4203/scipy/optimize/minpack">Legacy Minpack</a> (part of SciPy) and several more SciPy packages</li>
+<li><a href="https://github.com/fortran-lang/minpack">Modern Minpack</a></li>
+<li><a href="https://github.com/certik/fastGPT">fastGPT</a></li>
+<li><a href="https://github.com/certik/dftatom">dftatom</a></li>
+<li><a href="https://github.com/scipy/scipy">SciPy</a> (60%)</li>
+<li><a href="https://github.com/fortran-lang/stdlib">stdlib</a> (85%)</li>
+</ul>
+<p><a href="https://github.com/lfortran/lfortran/issues/3806">Here</a> is our issue to track priorities to reach beta quality.</p>
+<p>Our primary goal is to bring LFortran from alpha to beta and we think compiling 10 third-party codes is a way to acheieve it. Our approach involves prioritizing features based on their importance, ensuring that LFortran supports all language features present in the selected codes. Progress towards beta will be measured by successfully compiling and running these codes without alterations. We will keep on announcing each one as LFortran is able to fully compile and run the. The codes we are targeting on next are Fortran Package Manager (fpm), Lapack, SNAP, prima and remaining parts of Fortran stdlib and SciPy. Upon achieving the milestone of compiling 10 codes, we will collaborate with the community to identify any additional requirements for reaching beta status. A beta-quality compiler, in our context, is defined as one that executes user code without errors, though it may still contain bugs.</p>
+<p>We continuously welcome new contributors to join our endeavor. If you&rsquo;re interested, please reach out to us. This is an exciting phase in the development of LFortran, as the process of compiling new codes is progressively becoming more accessible and enjoyable. Working on a compiler offers a stimulating learning experience, and we&rsquo;re committed to providing all the necessary guidance and training. Join us in shaping the future of LFortran!</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>We want to thank:</p>
+<ul>
+<li><a href="https://sovereigntechfund.de/en/">Sovereign Tech Fund (STF)</a></li>
+<li><a href="https://numfocus.org/">NumFOCUS</a></li>
+<li><a href="https://quantstack.net/">QuantStack</a></li>
+<li><a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a></li>
+<li><a href="https://gsitechnology.com/">GSI Technology</a></li>
+<li><a href="https://lanl.gov/">LANL</a></li>
+<li>Our GitHub, OpenCollective and NumFOCUS sponsors</li>
+<li>All our contributors (73 so far!)</li>
+</ul>
+<h2 id="discussions">Discussions</h2>
+<ul>
+<li>Fortran Discourse:</li>
+<li>Twitter:</li>
+<li>Mastodon:</li>
+</ul>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://lfortran.org//tags/fortran/">Fortran</a>&nbsp;
+            
+              <a href="https://lfortran.org//tags/announcement/">Announcement</a>&nbsp;
+            
+              <a href="https://lfortran.org//tags/stdlib/">stdlib</a>&nbsp;
+            
+              <a href="https://lfortran.org//tags/fortran-lang/">fortran-lang</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://lfortran.org/blog/2024/01/lfortran-compiles-60-of-scipy/" data-toggle="tooltip" data-placement="top" title="LFortran Compiles 60% of Scipy">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2024
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://lfortran.org/">LFortran</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+           
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://lfortran.org/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://lfortran.org/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+

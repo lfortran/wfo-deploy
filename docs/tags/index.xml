@@ -6,11 +6,11 @@
     <description>Recent content in Tags on LFortran</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Announcement</title>
       <link>https://lfortran.org/tags/announcement/</link>
-      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
       
       <guid>https://lfortran.org/tags/announcement/</guid>
       <description></description>
@@ -19,9 +19,27 @@
     <item>
       <title>Fortran</title>
       <link>https://lfortran.org/tags/fortran/</link>
-      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
       
       <guid>https://lfortran.org/tags/fortran/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fortran-lang</title>
+      <link>https://lfortran.org/tags/fortran-lang/</link>
+      <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://lfortran.org/tags/fortran-lang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stdlib</title>
+      <link>https://lfortran.org/tags/stdlib/</link>
+      <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://lfortran.org/tags/stdlib/</guid>
       <description></description>
     </item>
     

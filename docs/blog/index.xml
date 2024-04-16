@@ -6,7 +6,17 @@
     <description>Recent content in LFortran Blog on LFortran</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LFortran compiles Fortran stdlib</title>
+      <link>https://lfortran.org/blog/2024/04/lfortran-compiles-fortran-stdlib/</link>
+      <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://lfortran.org/blog/2024/04/lfortran-compiles-fortran-stdlib/</guid>
+      <description>LFortran compiles 85% Fortran stdlib We are happy to announce that LFortran can compile all numerical modules in stdlib. The stdlib library has 32 modules, here are the details of the current status:
+ all 32 modules compile to ASR 27 modules (85%) compile to LLVM; there are 4 hash modules (hash_32bit, hash_64bit, hashmaps, hashmap_wrappers, stringlist_type) and one stringlist_type module that does not compile to LLVM yet 24 modules pass all their tests; 3 modules (sorting, bitsets, stats) do not pass all tests yet, but simple examples that use the modules work  This is sixth third-party production-grade code that LFortran can compile after SciPy.</description>
+    </item>
+    
     <item>
       <title>LFortran Compiles 60% of Scipy</title>
       <link>https://lfortran.org/blog/2024/01/lfortran-compiles-60-of-scipy/</link>
