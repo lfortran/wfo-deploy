@@ -72,7 +72,7 @@
   "headline": "LFortran compiles Fortran stdlib",
   "description" : "LFortran compiles 85% Fortran stdlib We are happy to announce that LFortran can compile all numerical modules in stdlib. The stdlib library has 32 modules, here are the details of the current status:\n all 32 modules compile to ASR 27 modules (85%) compile to LLVM; there are 4 hash modules (hash_32bit, hash_64bit, hashmaps, hashmap_wrappers, stringlist_type) and one stringlist_type module that does not compile to LLVM yet 24 modules pass all their tests; 3 modules (sorting, bitsets, stats) do not pass all tests yet, but simple examples that use the modules work  This is sixth third-party production-grade code that LFortran can compile after SciPy.",
   "inLanguage" : "en",
-  "wordCount":  821 ,
+  "wordCount":  822 ,
   "datePublished" : "2024-04-16T00:00:00",
   "dateModified" : "2024-04-16T00:00:00",
   "image" : "https:\/\/lfortran.org\/",
@@ -303,7 +303,7 @@ if (!doNotTrack) {
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;821&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;822&nbsp;words
   
   
     &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;<a href="https://ondrejcertik.com/">Ondřej Čertík</a>, <a href="https://github.com/czgdp1807">Gagandeep Singh</a>, <a href="https://github.com/Shaikh-Ubaid">Ubaid Shaikh</a>, <a href="https://www.linkedin.com/in/thirumalai-shaktivel/">Thirumalai Shaktivel</a>, <a href="https://www.linkedin.com/in/pranavgoswami1/">Pranav Goswami</a>, <a href="https://github.com/HarshitaKalani">Harshita Kalani</a>, <a href="https://github.com/parth121101">Parth Mistry</a>, <a href="https://github.com/gxyd">Gaurav Dhingra</a>, <a href="https://www.linkedin.com/in/smit-lunagariya-356b93179/">Smit Lunagariya</a>, <a href="https://github.com/ansharlubis">Luthfan Lubis</a>, <a href="https://uk.linkedin.com/in/namannimmo">Naman Gera</a>, <a href="https://github.com/lucifer1004">Zihua Wu</a>, <a href="https://khushi-411.github.io/">Khushi Agrawal</a>, <a href="https://www.linkedin.com/in/christophjunghans">Christoph Junghans</a>, <a href="https://www.linkedin.com/in/brianbeckman">Brian Beckman</a>, <a href="https://www.linkedin.com/in/dylon-edwards-0936bb39/">Dylon Edwards</a>
@@ -342,7 +342,7 @@ if (!doNotTrack) {
 <p>The code implements a variety of numerical, array-based features to evaluate the efficacy and robustness of a compiler with respect to array operations.  While <code>SciPy</code> utilized many legacy features, <code>dftatom</code> and <code>fastGPT</code> had plenty modern fortran features, compilation of <code>stdlib</code> and other codebase emphasise the importance of progressing along all fronts and marks a significant advancement in its alpha-stage development, enhancing its usability for a diverse range of users.</p>
 <h2 id="development-phase-overview">Development Phase Overview</h2>
 <p>Achieving this milestone proved comparably simpler than previous endeavors with the LFortran codebase. Our strategy entails a systematic compilation of third-party codes, foreseeing a smoother path towards beta with each successful compilation.</p>
-<p>We initiated the process post-compiling SciPy, meticulously progressing module by module in a topologically sorted manner while concurrently working on test drive. Initially tackling straightforward tasks, we subsequently addressed more complex modules</p>
+<p>We initiated the process post-compiling SciPy, meticulously progressing module by module in a topologically sorted manner while concurrently working on test drive. Initially tackling straightforward tasks, we subsequently addressed more complex modules.</p>
 <p>Our approach prioritized achieving full functionality within each module, resolving compilation failures, divergences, setting up CI, and executing essential changes, including refactoring functionalities.</p>
 <p>We&rsquo;ve encountered a notable challenge within a few lines of code, particularly regarding the <a href="https://github.com/lfortran/lfortran/issues/536"><code>submodules</code></a>, which is already included in our roadmap for resolution. Additionally, minor workarounds have been implemented, as documented in the ongoing efforts outlined in the <a href="https://github.com/lfortran/lfortran/issues/536"><code>LFortran-stdlib-issues</code></a>. We are actively addressing each of these issues to enhance the overall functionality and stability of the codebase.</p>
 <h2 id="test-lfortran-compilation">Test LFortran Compilation</h2>
@@ -375,7 +375,7 @@ sys	0m7.795s
 <li><a href="https://github.com/fortran-lang/stdlib">stdlib</a> (85%)</li>
 </ul>
 <p><a href="https://github.com/lfortran/lfortran/issues/3806">Here</a> is our issue to track priorities to reach beta quality.</p>
-<p>Our primary goal is to bring LFortran from alpha to beta and we think compiling 10 third-party codes is a way to acheieve it. Our approach involves prioritizing features based on their importance, ensuring that LFortran supports all language features present in the selected codes. Progress towards beta will be measured by successfully compiling and running these codes without alterations. We will keep on announcing each one as LFortran is able to fully compile and run the. The codes we are targeting on next are Fortran Package Manager (fpm), Lapack, SNAP, prima and remaining parts of Fortran stdlib and SciPy. Upon achieving the milestone of compiling 10 codes, we will collaborate with the community to identify any additional requirements for reaching beta status. A beta-quality compiler, in our context, is defined as one that executes user code without errors, though it may still contain bugs.</p>
+<p>Our primary goal is to bring LFortran from alpha to beta and we think compiling 10 third-party codes is a way to achieve it. Our approach involves prioritizing features based on their importance, ensuring that LFortran supports all language features present in the selected codes. Progress towards beta will be measured by successfully compiling and running these codes without alterations. We will keep on announcing each one as LFortran is able to fully compile and run. The codes we are targeting on next are Fortran Package Manager (fpm), Lapack, SNAP, prima and remaining parts of Fortran stdlib and SciPy. Upon achieving the milestone of compiling 10 codes, we will collaborate with the community to identify any additional requirements for reaching beta status. A beta-quality compiler, in our context, is defined as one that executes user code without errors, though it may still contain bugs.</p>
 <p>We continuously welcome new contributors to join our endeavor. If you&rsquo;re interested, please reach out to us. This is an exciting phase in the development of LFortran, as the process of compiling new codes is progressively becoming more accessible and enjoyable. Working on a compiler offers a stimulating learning experience, and we&rsquo;re committed to providing all the necessary guidance and training. Join us in shaping the future of LFortran!</p>
 <h2 id="acknowledgements">Acknowledgements</h2>
 <p>We want to thank:</p>
@@ -394,6 +394,7 @@ sys	0m7.795s
 <li>Fortran Discourse: <a href="https://fortran-lang.discourse.group/t/lfortran-compiles-stdlib/7855">https://fortran-lang.discourse.group/t/lfortran-compiles-stdlib/7855</a></li>
 <li>Twitter: <a href="https://twitter.com/lfortranorg/status/1780260738059116859">https://twitter.com/lfortranorg/status/1780260738059116859</a></li>
 <li>Mastodon: <a href="https://mastodon.social/@certik/112282011911188565">https://mastodon.social/@certik/112282011911188565</a></li>
+<li>LinkedIn: <a href="https://www.linkedin.com/feed/update/urn:li:activity:7186024762924568578/">https://www.linkedin.com/feed/update/urn:li:activity:7186024762924568578/</a></li>
 </ul>
 
 
