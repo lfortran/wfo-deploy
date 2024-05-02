@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>webassembly on LFortran</title>
+    <link>https://lfortran.org/tags/webassembly/</link>
+    <description>Recent content in webassembly on LFortran</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/tags/webassembly/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fortran On Web Using LFortran</title>
+      <link>https://lfortran.org/blog/2024/05/fortran-on-web-using-lfortran/</link>
+      <pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://lfortran.org/blog/2024/05/fortran-on-web-using-lfortran/</guid>
+      <description>Fortran On Web Using LFortran Recently, there was a blog post titled Fortran on WebAssembly released by Dr George W Stagg. This article inspired us to compile the same example using our LFortran compiler. We are happy to share that we have the fortran mnist classifier example used in the blog post, compiled to WebAssembly using LFortran (with no hacks to the compiler) and working perfectly in the browser.
+MNIST  We cloned the original authors code and just swapped-in two of our generated files mnist.</description>
+    </item>
+    
+  </channel>
+</rss>
