@@ -80,5 +80,11 @@
   </url><url>
     <loc>https://lfortran.org/blog/2019/04/why-we-created-lfortran/</loc>
     <lastmod>2019-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lfortran.org/tags/arrays/</loc>
+  </url><url>
+    <loc>https://lfortran.org/blog/1/01/lfortran-the-fastest-open-source-compiler-in-compile-time-evaluation-of-an-array-benchmark/</loc>
+  </url><url>
+    <loc>https://lfortran.org/tags/performance/</loc>
   </url>
 </urlset>

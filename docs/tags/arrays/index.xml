@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arrays on LFortran</title>
+    <link>https://lfortran.org/tags/arrays/</link>
+    <description>Recent content in Arrays on LFortran</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://lfortran.org/tags/arrays/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LFortran: the Fastest Open-Source Compiler in Compile-Time Evaluation of an Array Benchmark</title>
+      <link>https://lfortran.org/blog/1/01/lfortran-the-fastest-open-source-compiler-in-compile-time-evaluation-of-an-array-benchmark/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lfortran.org/blog/1/01/lfortran-the-fastest-open-source-compiler-in-compile-time-evaluation-of-an-array-benchmark/</guid>
+      <description>LFortran: the Fastest Open-Source Compiler in Compile-Time Evaluation of an Array Benchmark After successful compilation of stdlib and Fortran On Web Using LFortran, we focused on improving the support for compile time computation and we are excited to announce that LFortran can now compile the example from the Computing at compile time Fortran Discourse topic.
+This example can be used to benchmark the speed of compilation and compile-time array evaluation by increasing the size of the arrays.</description>
+    </item>
+    
+  </channel>
+</rss>
