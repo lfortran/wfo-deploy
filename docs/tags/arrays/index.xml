@@ -13,8 +13,8 @@
       <pubDate>Tue, 04 Jun 2024 00:00:00 +0000</pubDate>
       
       <guid>https://lfortran.org/blog/2024/06/lfortran-the-fastest-open-source-compiler-in-compile-time-evaluation-of-an-array-benchmark/</guid>
-      <description>LFortran: the Fastest Open-Source Compiler in Compile-Time Evaluation of an Array Benchmark After successful compilation of stdlib and Fortran On Web Using LFortran, we focused on improving the support for compile time computation and we are excited to announce that LFortran can now compile the example from the Computing at compile time Fortran Discourse topic.
-This example can be used to benchmark the speed of compilation and compile-time array evaluation by increasing the size of the arrays.</description>
+      <description>After successful compilation of stdlib and Fortran On Web Using LFortran, we focused on improving the support for compile time computation and we are excited to announce that LFortran can now compile the example from the Computing at compile time Fortran Discourse topic.
+This example can be used to benchmark the speed of compilation and compile-time array evaluation by increasing the size of the arrays. On this particular example LFortran outperforms other open-source Fortran compilers by an order of magnitude for large array sizes.</description>
     </item>
     
   </channel>
