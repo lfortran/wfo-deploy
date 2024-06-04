@@ -3,25 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://lfortran.org/</loc>
-    <lastmod>2024-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2024-06-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url><url>
     <loc>https://lfortran.org/tags/announcement/</loc>
-    <lastmod>2024-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2024-06-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lfortran.org/tags/arrays/</loc>
+    <lastmod>2024-06-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lfortran.org/tags/fortran/</loc>
-    <lastmod>2024-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2024-06-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lfortran.org/blog/</loc>
+    <lastmod>2024-06-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lfortran.org/blog/2024/06/lfortran-the-fastest-open-source-compiler-in-compile-time-evaluation-of-an-array-benchmark/</loc>
+    <lastmod>2024-06-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lfortran.org/tags/performance/</loc>
+    <lastmod>2024-06-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lfortran.org/tags/</loc>
+    <lastmod>2024-06-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lfortran.org/blog/2024/05/fortran-on-web-using-lfortran/</loc>
     <lastmod>2024-05-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lfortran.org/tags/fortran-lang/</loc>
-    <lastmod>2024-05-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://lfortran.org/blog/</loc>
-    <lastmod>2024-05-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://lfortran.org/tags/</loc>
     <lastmod>2024-05-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lfortran.org/tags/webassembly/</loc>
@@ -80,11 +89,5 @@
   </url><url>
     <loc>https://lfortran.org/blog/2019/04/why-we-created-lfortran/</loc>
     <lastmod>2019-04-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://lfortran.org/tags/arrays/</loc>
-  </url><url>
-    <loc>https://lfortran.org/blog/1/01/lfortran-the-fastest-open-source-compiler-in-compile-time-evaluation-of-an-array-benchmark/</loc>
-  </url><url>
-    <loc>https://lfortran.org/tags/performance/</loc>
   </url>
 </urlset>
