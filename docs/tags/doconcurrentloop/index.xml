@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DoConcurrentLoop on LFortran</title>
+    <link>https://lfortran.org/tags/doconcurrentloop/</link>
+    <description>Recent content in DoConcurrentLoop on LFortran</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/tags/doconcurrentloop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LFortran supports OpenMP pragmas and Do Concurrent</title>
+      <link>https://lfortran.org/blog/2024/07/lfortran-supports-openmp-pragmas-and-do-concurrent/</link>
+      <pubDate>Tue, 30 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://lfortran.org/blog/2024/07/lfortran-supports-openmp-pragmas-and-do-concurrent/</guid>
+      <description>In early June, we announced a significant achievement with LFortran: the Fastest Open-Source Compiler in Compile-Time Evaluation of an Array Benchmark. Continuing our commitment to performance enhancement, we are pleased to announce that LFortran now includes support for OpenMP pragmas and parallelizing do concurrent. Particularly for parallel do OpenMP construct, our implementation is fully operational and achieves performance comparable to GFortran.
+Note that LFortran is still a alpha software, meaning that users must continue expecting that LFortran will fail compiling or running their codes.</description>
+    </item>
+    
+  </channel>
+</rss>
