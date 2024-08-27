@@ -6,7 +6,17 @@
     <description>Recent content on LFortran</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LFortran now compiles lanl/SNAP</title>
+      <link>https://lfortran.org/blog/2024/08/lfortran-now-compiles-lanl/snap/</link>
+      <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://lfortran.org/blog/2024/08/lfortran-now-compiles-lanl/snap/</guid>
+      <description>We are thrilled to announce that LFortran can now successfully compile and run lanl/SNAP, marking a significant milestone in our journey to beta. SNAP is the seventh production-grade, third-party code that LFortran can compile, bringing us closer to our goal of compiling 10 such codes—a critical step toward a beta-quality compiler.
+ About SNAP SNAP (SN Discrete Ordinates Application Proxy) is a proxy application designed to emulate the performance of modern discrete ordinates neutral particle transport codes.</description>
+    </item>
+    
     <item>
       <title>LFortran supports OpenMP pragmas and Do Concurrent</title>
       <link>https://lfortran.org/blog/2024/07/lfortran-supports-openmp-pragmas-and-do-concurrent/</link>

@@ -6,13 +6,49 @@
     <description>Recent content in Tags on LFortran</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Announcement</title>
       <link>https://lfortran.org/tags/announcement/</link>
-      <pubDate>Tue, 30 Jul 2024 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
       
       <guid>https://lfortran.org/tags/announcement/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fortran</title>
+      <link>https://lfortran.org/tags/fortran/</link>
+      <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://lfortran.org/tags/fortran/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fortran-lang</title>
+      <link>https://lfortran.org/tags/fortran-lang/</link>
+      <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://lfortran.org/tags/fortran-lang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LANL</title>
+      <link>https://lfortran.org/tags/lanl/</link>
+      <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://lfortran.org/tags/lanl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SNAP</title>
+      <link>https://lfortran.org/tags/snap/</link>
+      <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://lfortran.org/tags/snap/</guid>
       <description></description>
     </item>
     
@@ -22,15 +58,6 @@
       <pubDate>Tue, 30 Jul 2024 00:00:00 +0000</pubDate>
       
       <guid>https://lfortran.org/tags/doconcurrentloop/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Fortran</title>
-      <link>https://lfortran.org/tags/fortran/</link>
-      <pubDate>Tue, 30 Jul 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://lfortran.org/tags/fortran/</guid>
       <description></description>
     </item>
     
@@ -58,15 +85,6 @@
       <pubDate>Tue, 04 Jun 2024 00:00:00 +0000</pubDate>
       
       <guid>https://lfortran.org/tags/arrays/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>fortran-lang</title>
-      <link>https://lfortran.org/tags/fortran-lang/</link>
-      <pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://lfortran.org/tags/fortran-lang/</guid>
       <description></description>
     </item>
     

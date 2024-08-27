@@ -3,19 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://lfortran.org/</loc>
-    <lastmod>2024-07-30T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url><url>
     <loc>https://lfortran.org/tags/announcement/</loc>
-    <lastmod>2024-07-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://lfortran.org/tags/doconcurrentloop/</loc>
-    <lastmod>2024-07-30T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lfortran.org/tags/fortran/</loc>
-    <lastmod>2024-07-30T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lfortran.org/tags/fortran-lang/</loc>
+    <lastmod>2024-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lfortran.org/tags/lanl/</loc>
+    <lastmod>2024-08-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lfortran.org/blog/</loc>
+    <lastmod>2024-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lfortran.org/blog/2024/08/lfortran-now-compiles-lanl/snap/</loc>
+    <lastmod>2024-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lfortran.org/tags/snap/</loc>
+    <lastmod>2024-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lfortran.org/tags/</loc>
+    <lastmod>2024-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lfortran.org/tags/doconcurrentloop/</loc>
     <lastmod>2024-07-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lfortran.org/blog/2024/07/lfortran-supports-openmp-pragmas-and-do-concurrent/</loc>
@@ -27,9 +42,6 @@
     <loc>https://lfortran.org/tags/performance/</loc>
     <lastmod>2024-07-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://lfortran.org/tags/</loc>
-    <lastmod>2024-07-30T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://lfortran.org/tags/arrays/</loc>
     <lastmod>2024-06-04T00:00:00+00:00</lastmod>
   </url><url>
@@ -37,9 +49,6 @@
     <lastmod>2024-06-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lfortran.org/blog/2024/05/fortran-on-web-using-lfortran/</loc>
-    <lastmod>2024-05-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://lfortran.org/tags/fortran-lang/</loc>
     <lastmod>2024-05-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lfortran.org/tags/webassembly/</loc>
