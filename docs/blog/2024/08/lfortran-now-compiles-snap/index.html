@@ -72,7 +72,7 @@
   "headline": "LFortran now compiles SNAP",
   "description" : "We are thrilled to announce that LFortran can now successfully compile and run lanl\/SNAP, marking a significant milestone in our journey to beta. SNAP is the seventh production-grade, third-party code that LFortran can compile, bringing us closer to our goal of compiling 10 such codes—a critical step toward a beta-quality compiler.\n About SNAP SNAP (SN Discrete Ordinates Application Proxy) is a proxy application designed to emulate the performance of modern discrete ordinates neutral particle transport codes.",
   "inLanguage" : "en",
-  "wordCount":  1447 ,
+  "wordCount":  1437 ,
   "datePublished" : "2024-08-27T00:00:00",
   "dateModified" : "2024-08-27T00:00:00",
   "image" : "https:\/\/lfortran.org\/",
@@ -303,7 +303,7 @@ if (!doNotTrack) {
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;7&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1447&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1437&nbsp;words
   
   
     &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;<a href="https://github.com/gxyd">Gaurav Dhingra</a>, <a href="https://github.com/assem2002">Assem Medhat</a>, <a href="https://github.com/kmr-srbh">Saurabh Kumar</a>, <a href="https://www.linkedin.com/in/pranavgoswami1/">Pranav Goswami</a>, <a href="https://ondrejcertik.com/">Ondřej Čertík</a>, <a href="https://github.com/czgdp1807">Gagandeep Singh</a>, <a href="https://github.com/Shaikh-Ubaid">Ubaid Shaikh</a>, <a href="https://www.linkedin.com/in/thirumalai-shaktivel/">Thirumalai Shaktivel</a>, <a href="https://www.linkedin.com/in/harshita-kalani-604866225/">Harshita Kalani</a>, <a href="https://github.com/parth121101">Parth Mistry</a>, <a href="https://github.com/Vipul-Cariappa">Vipul Cariappa</a>, <a href="https://github.com/shivimathur">Shivi Mathur</a>, <a href="https://github.com/KGB99">Kerim Birgi</a>, <a href="https://github.com/serge-sans-paille">Serge Sans Paille</a>, <a href="https://github.com/advikkabra">Advik Kabra</a>, <a href="https://github.com/junghans">Christoph Junghans</a>, <a href="https://github.com/tanay-man">Tanay Manerikar</a>, <a href="https://github.com/wolfv">Wolf Vollprecht</a>
@@ -333,46 +333,11 @@ if (!doNotTrack) {
 <p><strong>SNAP</strong> (<em>SN</em> Discrete Ordinates <em>Application Proxy</em>) is a proxy application designed to emulate the performance of modern discrete ordinates neutral particle transport codes. It replicates the computational workload, memory requirements, and communication patterns of the Los Alamos National Laboratory code PARTISN, without including actual physics. By using domain decomposition and parallelization across spatial, angular, and energy domains, SNAP is ideal for performance testing on cutting-edge high-performance computing systems.</p>
 <p>It is also a great application to test LFortran on, as it exercises the typical
 Fortran features used for computational physics, has a simple build system, and
-it is not huge (about 10K lines). By being able to compile it and run it
+it is about 10K lines. By being able to compile it and run it
 successfully (reproducing results from other compilers), LFortran is well on
 its way of becoming a solid compiler that you can depend on.</p>
-<h2 id="development-overview">Development Overview</h2>
-<p>Achieving this milestone was not without its challenges. We encountered some technical hurdles, but our team&rsquo;s collaborative effort and determination ensured that these were swiftly addressed. Below are some of the key areas where we focused our development:</p>
-<h3 id="overcoming-the-global-subroutine-linking-issue">Overcoming the global subroutine linking issue</h3>
-<p>We encountered an issue related to the linking of global subroutines. It was challenging to determine whether this was due to an error in SNAP&rsquo;s code or a bug in LFortran. After extensive investigation, we identified it as a bug in LFortran, which was subsequently reported and tracked here: <a href="https://github.com/lfortran/lfortran/issues/4435">issue #4435</a>. This issue underscores the need for improvements in LFortran&rsquo;s handling of global subroutines and their linkage, especially when they are not encapsulated within modules.</p>
-<h3 id="provide-nullify-support">Provide <code>nullify</code> support</h3>
-<p>We had to implement <code>nullify</code> mechanism in the LLVM backend. We used the LLVM API and the utilities we built before to make the array variable point to a null pointer. The related issue is tracked here: <a href="https://github.com/lfortran/lfortran/pull/4517">https://github.com/lfortran/lfortran/pull/4517</a></p>
-<h3 id="improving-pointer-management-with-nullify">Improving pointer management with <code>nullify</code></h3>
-<p>We also worked on addressing an issue related to the <code>nullify</code> statement, where LFortran had difficulties handling pointer-arrays allocation after nullifying it. This led to further enhancements in LFortran&rsquo;s allocation technique and also opened our eyes to a subtle bug that we may encounter later. The related issue is tracked here: <a href="https://github.com/lfortran/lfortran/issues/4635">https://github.com/lfortran/lfortran/issues/4635</a>.</p>
-<h3 id="assignment-to-array-of-structs">Assignment to array of structs</h3>
-<p>We had to provide an implmentation to handle such an expression <code>a%num = 44</code> where <code>a</code> is an array. We had to detect the existence of an array and then to build a loop on its indices to set their member <code>num</code> with value <code>44</code>. Due to the flexibility in the ASR builder and the strong utilities: such a task was easy to implement. The issue is tracked in here: <a href="https://github.com/lfortran/lfortran/issues/4579">https://github.com/lfortran/lfortran/issues/4579</a></p>
-<h3 id="where-statement-for-looping-on-every-dimension">Where statement for looping on every dimension</h3>
-<p>We missed the case of doing nested loops on all of the array dimensions so we can test the predicate of the <code>where</code> statment. Fixing that was easy with the help of utilites and the separate-function responsibilites, We just got a recursive call to build nested DO loops from ground up. The issue is tracked in here: <a href="https://github.com/lfortran/lfortran/issues/4510">https://github.com/lfortran/lfortran/issues/4510</a></p>
-<h3 id="support-printing-and-writing-of-tuple-in-implieddoloop">Support printing and writing of <code>tuple</code> in <code>ImpliedDoLoop</code></h3>
-<p>Fortran syntax doesn&rsquo;t support compound data type such as tuples, except in one
-special case: implied do loops in print or write statements. There are multiple
-ways to implement this feature in a compiler, and we chose to use tuples since
-LCompilers internally already support tuples for LPython. We got the ASR
-builder identifying <code>tuple</code> in the implied do loops, but we had to extend our
-implementation to support printing it. So, we now support printing and writing
-of <code>tuple</code> in <code>ImpliedDoLoop</code>, e.g.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fortran" data-lang="fortran"><span style="display:flex;"><span><span style="color:#66d9ef">print</span> <span style="color:#f92672">*</span>, (i, A(i), i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)
-</span></span></code></pre></div><p>now works. The changes are detailed in this pull request: <a href="https://github.com/lfortran/lfortran/pull/4683">https://github.com/lfortran/lfortran/pull/4683</a></p>
-<h3 id="string-format-enhancement">String format enhancement</h3>
-<p>We had to provide runtime implementation of computing the formatting of the resulting print statement. The implementation required array handling in the runtime, which made us able to print arrays with the desired format. The related issue is tracked here: <a href="https://github.com/lfortran/lfortran/issues/4507">https://github.com/lfortran/lfortran/issues/4507</a></p>
-<h3 id="overshadow-variables">Overshadow variables</h3>
-<p>We encountered the case where we had to overshadow the variables in the order of their declaration, so we added this feature in the process of building the ASR, and we also raised a warning for the user to be aware of the behavior the compiler is following. The related issue is tracked here: <a href="https://github.com/lfortran/lfortran/pull/4191">https://github.com/lfortran/lfortran/pull/4191</a></p>
-<h3 id="improve-interface-matching">Improve interface matching</h3>
-<p>We encountered a case where matching function with interface didn&rsquo;t work properly due a missing edge case in the implementation of the matcher. With the help of how the nodes are structred, we were able to implement that with no problem. The related issue is tracked here: <a href="https://github.com/lfortran/lfortran/issues/4131">https://github.com/lfortran/lfortran/issues/4131</a></p>
-<h2 id="how-to-compile-snap-with-lfortran">How to Compile SNAP with LFortran</h2>
-<p>There are two small workarounds that are currently needed:</p>
-<ul>
-<li>Namelist: <a href="https://github.com/lfortran/lfortran/issues/1999">https://github.com/lfortran/lfortran/issues/1999</a></li>
-<li>Wrap a global subroutine into a module: <a href="https://github.com/lfortran/lfortran/issues/4175">https://github.com/lfortran/lfortran/issues/4175</a></li>
-</ul>
-<p>We will implement namelists later, and the global subroutine issue we plan to fix after beta. The workaround however could be argued is an improvement to the original code, since a compiler cannot in general check argument types when calling global subroutines, while it checks everything if they are inside a module.</p>
-<p>There is also a bug in the build system on macOS, which we fixed and submitted a PR upstream: <a href="https://github.com/lanl/SNAP/pull/21">https://github.com/lanl/SNAP/pull/21</a>.</p>
-<p>For your convenience we provide a branch with all these fixes and workarounds at <a href="https://github.com/certik/SNAP/tree/lf11">https://github.com/certik/SNAP/tree/lf11</a>.</p>
+<h3 id="how-to-compile-snap-with-lfortran">How to Compile SNAP with LFortran</h3>
+<p>Follow the commands shown below to build and compile SNAP with LFortran.</p>
 <h3 id="set-up-the-environment">Set up the Environment</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>conda create -n lfortran lfortran<span style="color:#f92672">=</span>0.40.0 make
 </span></span><span style="display:flex;"><span>conda activate lfortran
@@ -388,7 +353,7 @@ of <code>tuple</code> in <code>ImpliedDoLoop</code>, e.g.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>make clean
 </span></span><span style="display:flex;"><span>make FORTRAN=lfortran FFLAGS=&#34;--fast --skip-pass=promote_allocatable_to_nonallocatable&#34; MPI=no OPENMP=no
 </span></span><span style="display:flex;"><span>./gsnap ../qasnap/sample/inp out
-</span></span></code></pre></div><h2 id="compilation-benchmarks">Compilation Benchmarks</h2>
+</span></span></code></pre></div><h3 id="compilation-benchmarks">Compilation Benchmarks</h3>
 <p>We conducted several benchmarks to compare LFortran with GFortran and Flang in compiling the SNAP codebase. Using <code>lfortran=0.40.0</code> on a Surface 5 laptop:</p>
 <table>
 <thead>
@@ -456,6 +421,41 @@ GFortran currently holds an advantage. Ongoing work to optimize LFortran’s
 integration with LLVM is expected to enhance these benchmarks further. After we
 reach beta, we also plan to invest into our alternative backends like WASM that
 allow much faster compilation speed.</p>
+<p>Also, we shall note that there are two small workarounds that are currently needed:</p>
+<ul>
+<li>Namelist: <a href="https://github.com/lfortran/lfortran/issues/1999">issue#1999</a></li>
+<li>Wrap a global subroutine into a module: <a href="https://github.com/lfortran/lfortran/issues/4175">issue#4175</a></li>
+</ul>
+<p>We will implement namelists later, and the global subroutine issue we plan to fix after beta. The workaround however could be argued is an improvement to the original code, since a compiler cannot in general check argument types when calling global subroutines, while it checks everything if they are inside a module.</p>
+<p>There is also a bug in the build system on macOS, which we fixed and submitted a PR upstream: <a href="https://github.com/lanl/SNAP/pull/21">SNAP#21</a>.</p>
+<h2 id="development-overview">Development Overview</h2>
+<p>Achieving this milestone was not without its challenges. We encountered some technical hurdles, but our team&rsquo;s collaborative effort and determination ensured that these were swiftly addressed. Below are some of the key areas where we focused our development:</p>
+<h3 id="provide-nullify-support">Provide <code>nullify</code> support</h3>
+<p>We implemented <code>nullify</code> mechanism in the LLVM backend. We used the LLVM API and the utilities we built before to make the array variable point to a null pointer. The issue was fixed via <a href="https://github.com/lfortran/lfortran/pull/4517">PR#4517</a>.</p>
+<h3 id="improving-pointer-management-with-nullify">Improving pointer management with <code>nullify</code></h3>
+<p>We also worked on addressing an issue related to the <code>nullify</code> statement, where LFortran had difficulties handling pointer-arrays allocation after nullifying it. This led to further enhancements in LFortran&rsquo;s allocation technique and also opened our eyes to a subtle bug that we may encounter later. The related issue is tracked at <a href="https://github.com/lfortran/lfortran/issues/4635">issue#4653</a>.</p>
+<h3 id="assignment-to-array-of-structs">Assignment to array of structs</h3>
+<p>We had to provide an implmentation to handle such an expression <code>a%num = 44</code> where <code>a</code> is an array. We had to detect the existence of an array and then to build a loop on its indices to set their member <code>num</code> with value <code>44</code>. Due to the flexibility in the ASR builder and the strong utilities: such a task was easy to implement. One may track it at <a href="https://github.com/lfortran/lfortran/issues/4579">issue#4579</a>.</p>
+<h3 id="where-statement-for-looping-on-every-dimension">Where statement for looping on every dimension</h3>
+<p>We missed the case of doing nested loops on all of the array dimensions so we can test the predicate of the <code>where</code> statment. Fixing that was easy with the help of utilites and the separate-function responsibilites, We just got a recursive call to build nested DO loops from ground up. Feel free to lookup <a href="https://github.com/lfortran/lfortran/issues/4510">issue#4510</a>.</p>
+<h3 id="support-printing-and-writing-of-tuple-in-implieddoloop">Support printing and writing of <code>tuple</code> in <code>ImpliedDoLoop</code></h3>
+<p>Fortran syntax doesn&rsquo;t support compound data type such as tuples, except in one
+special case: implied do loops in print or write statements. There are multiple
+ways to implement this feature in a compiler, and we chose to use tuples since
+LCompilers internally already support tuples for LPython. We got the ASR
+builder identifying <code>tuple</code> in the implied do loops, but we had to extend our
+implementation to support printing it. So, we now support printing and writing
+of <code>tuple</code> in <code>ImpliedDoLoop</code>, e.g.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fortran" data-lang="fortran"><span style="display:flex;"><span><span style="color:#66d9ef">print</span> <span style="color:#f92672">*</span>, (i, A(i), i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)
+</span></span></code></pre></div><p>now works. The changes are detailed in this <a href="https://github.com/lfortran/lfortran/pull/4683">PR#4683</a>.</p>
+<h3 id="string-format-enhancement">String format enhancement</h3>
+<p>We had to provide runtime implementation of computing the formatting of the resulting print statement. The implementation required array handling in the runtime, which made us able to print arrays with the desired format. It is tracked via <a href="https://github.com/lfortran/lfortran/issues/4507">issue#4507</a>.</p>
+<h3 id="overcoming-the-global-subroutine-linking-issue">Overcoming the global subroutine linking issue</h3>
+<p>We encountered an issue related to the linking of global subroutines. It was challenging to determine whether this was due to an error in SNAP&rsquo;s code or a bug in LFortran. After extensive investigation, we identified it as a bug in LFortran, which was subsequently reported and tracked at <a href="https://github.com/lfortran/lfortran/issues/4435">issue #4435</a>. This issue underscores the need for improvements in LFortran&rsquo;s handling of global subroutines and their linkage, especially when they are not encapsulated within modules.</p>
+<h3 id="overshadow-variables">Overshadow variables</h3>
+<p>We encountered the case where we had to overshadow the variables in the order of their declaration, so we added this feature in the process of building the ASR, and we also raised a warning for the user to be aware of the behavior the compiler is following. The related issue is tracked <a href="https://github.com/lfortran/lfortran/pull/4191">here</a>.</p>
+<h3 id="improve-interface-matching">Improve interface matching</h3>
+<p>We encountered a case where matching function with interface didn&rsquo;t work properly due a missing edge case in the implementation of the matcher. With the help of how the nodes are structred, we were able to implement that with no problem. Detailed discussion over it is done at <a href="https://github.com/lfortran/lfortran/issues/4131">issue#4131</a>.</p>
 <h2 id="whats-next">What&rsquo;s Next?</h2>
 <p>As of this writing, LFortran compiles seven third-party codes:</p>
 <ul>
