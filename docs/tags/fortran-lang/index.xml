@@ -1,41 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>fortran-lang on LFortran</title>
+    <title>Fortran-Lang on LFortran</title>
     <link>https://lfortran.org/tags/fortran-lang/</link>
-    <description>Recent content in fortran-lang on LFortran</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Fortran-Lang on LFortran</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/tags/fortran-lang/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lfortran.org/tags/fortran-lang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LFortran now compiles SNAP</title>
       <link>https://lfortran.org/blog/2024/08/lfortran-now-compiles-snap/</link>
       <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/blog/2024/08/lfortran-now-compiles-snap/</guid>
-      <description>We are thrilled to announce that LFortran can now successfully compile and run lanl/SNAP, marking a significant milestone in our journey to beta. SNAP is the seventh production-grade, third-party code that LFortran can compile, bringing us closer to our goal of compiling 10 such codes—a critical step toward a beta-quality compiler.
- About SNAP SNAP (SN Discrete Ordinates Application Proxy) is a proxy application designed to emulate the performance of modern discrete ordinates neutral particle transport codes.</description>
+      <description>&lt;p&gt;We are thrilled to announce that &lt;a href=&#34;https://github.com/lfortran/lfortran&#34;&gt;LFortran&lt;/a&gt; can now successfully compile and run &lt;a href=&#34;https://github.com/lanl/SNAP&#34;&gt;lanl/SNAP&lt;/a&gt;, marking a significant milestone in our journey to beta. SNAP is the seventh production-grade, third-party code that LFortran can compile, bringing us closer to our goal of compiling 10 such codes—a critical step toward a beta-quality compiler.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;about-snap&#34;&gt;About SNAP&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;SNAP&lt;/strong&gt; (&lt;em&gt;SN&lt;/em&gt; Discrete Ordinates &lt;em&gt;Application Proxy&lt;/em&gt;) is a proxy application designed to emulate the performance of modern discrete ordinates neutral particle transport codes. It replicates the computational workload, memory requirements, and communication patterns of the Los Alamos National Laboratory code PARTISN, without including actual physics. By using domain decomposition and parallelization across spatial, angular, and energy domains, SNAP is ideal for performance testing on cutting-edge high-performance computing systems.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Fortran On Web Using LFortran</title>
       <link>https://lfortran.org/blog/2024/05/fortran-on-web-using-lfortran/</link>
       <pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/blog/2024/05/fortran-on-web-using-lfortran/</guid>
-      <description>Fortran On Web Using LFortran Recently, there was a blog post titled Fortran on WebAssembly released by Dr George W Stagg. This article inspired us to compile the same example using our LFortran compiler. We are happy to share that we have the fortran mnist classifier example used in the blog post, compiled to WebAssembly using LFortran (with no hacks to the compiler) and working perfectly in the browser.
-MNIST  We cloned the original authors code and just swapped-in two of our generated files mnist.</description>
+      <description>&lt;h1 id=&#34;fortran-on-web-using-lfortran&#34;&gt;Fortran On Web Using LFortran&lt;/h1&gt;&#xA;&lt;p&gt;Recently, there was a blog post titled &lt;a href=&#34;https://gws.phd/posts/fortran_wasm/&#34;&gt;Fortran on WebAssembly&lt;/a&gt; released by &lt;a href=&#34;https://gws.phd/&#34;&gt;Dr George W Stagg&lt;/a&gt;. This article inspired us to compile the same example using our &lt;a href=&#34;https://lfortran.org/&#34;&gt;LFortran&lt;/a&gt; compiler. We are happy to share that we have the fortran &lt;a href=&#34;https://en.wikipedia.org/wiki/MNIST_database&#34;&gt;mnist&lt;/a&gt; classifier example used in the blog post, compiled to WebAssembly using LFortran (with no hacks to the compiler) and working perfectly in the browser.&lt;/p&gt;&#xA;&lt;h2 id=&#34;mnist&#34;&gt;MNIST&lt;/h2&gt;&#xA;&lt;iframe src=&#34;https://lfortran.github.io/mnist-classifier-blas-wasm/&#34; style=&#34;width: 100%; height: 282px; border: none;&#34;&gt;&#xA;&lt;/iframe&gt;&#xA;&lt;p&gt;We cloned the original authors code and just swapped-in two of our generated files &lt;code&gt;mnist.js&lt;/code&gt; and &lt;code&gt;mnist.wasm&lt;/code&gt; with the original files. We also fixed few minor bugs in the code that we came across (details in the commit history).&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>LFortran compiles Fortran stdlib</title>
       <link>https://lfortran.org/blog/2024/04/lfortran-compiles-fortran-stdlib/</link>
       <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/blog/2024/04/lfortran-compiles-fortran-stdlib/</guid>
-      <description>LFortran compiles 85% Fortran stdlib We are happy to announce that LFortran can compile all numerical modules in stdlib. The stdlib library has 32 modules, here are the details of the current status:
- all 32 modules compile to ASR 27 modules (85%) compile to LLVM; there are 4 hash modules (hash_32bit, hash_64bit, hashmaps, hashmap_wrappers, stringlist_type) and one stringlist_type module that does not compile to LLVM yet 24 modules pass all their tests; 3 modules (sorting, bitsets, stats) do not pass all tests yet, but simple examples that use the modules work  This is sixth third-party production-grade code that LFortran can compile after SciPy.</description>
+      <description>&lt;h1 id=&#34;lfortran-compiles-85-fortran-stdlib&#34;&gt;LFortran compiles 85% Fortran stdlib&lt;/h1&gt;&#xA;&lt;p&gt;We are happy to announce that LFortran can compile all numerical modules in &lt;code&gt;stdlib&lt;/code&gt;. The &lt;code&gt;stdlib&lt;/code&gt; library has 32 modules, here are the details of the current status:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;all 32 modules compile to ASR&lt;/li&gt;&#xA;&lt;li&gt;27 modules (85%) compile to LLVM; there are 4 hash modules (&lt;code&gt;hash_32bit&lt;/code&gt;, &lt;code&gt;hash_64bit&lt;/code&gt;, &lt;code&gt;hashmaps&lt;/code&gt;, &lt;code&gt;hashmap_wrappers&lt;/code&gt;, &lt;code&gt;stringlist_type&lt;/code&gt;) and one &lt;code&gt;stringlist_type&lt;/code&gt; module that does not compile to LLVM yet&lt;/li&gt;&#xA;&lt;li&gt;24 modules pass all their tests; 3 modules (&lt;code&gt;sorting&lt;/code&gt;, &lt;code&gt;bitsets&lt;/code&gt;, &lt;code&gt;stats&lt;/code&gt;) do not pass all tests yet, but simple examples that use the modules work&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This is sixth third-party production-grade code that LFortran can compile after &lt;a href=&#34;https://lfortran.org/blog/2024/01/lfortran-compiles-60-of-scipy/&#34;&gt;SciPy&lt;/a&gt;. The &lt;a href=&#34;https://lfortran.org&#34;&gt;progress bar towards beta&lt;/a&gt; has thus reached 6/10.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

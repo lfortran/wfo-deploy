@@ -4,18 +4,16 @@
     <title>Motivation on LFortran</title>
     <link>https://lfortran.org/tags/motivation/</link>
     <description>Recent content in Motivation on LFortran</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/tags/motivation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 May 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lfortran.org/tags/motivation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why to Use Fortran For New Projects</title>
       <link>https://lfortran.org/blog/2019/05/why-to-use-fortran-for-new-projects/</link>
       <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/blog/2019/05/why-to-use-fortran-for-new-projects/</guid>
-      <description>We received a lot of positive feedback on our LFortran announcement. Most generally like the idea and tool, and expressed interest to hear a bit more on why we think Fortran is a superior language in its domain and why it makes sense to use Fortran for new projects.
-Why Fortran? Fortran was designed from the ground up to naturally and simply translate mathematics to code that compiles and runs at maximum speed.</description>
+      <description>&lt;p&gt;We received a lot of positive feedback on our LFortran &lt;a href=&#34;https://lfortran.org/blog/2019/04/why-we-created-lfortran/&#34;&gt;announcement&lt;/a&gt;. Most&#xA;generally like the idea and tool, and expressed interest to hear a bit more on&#xA;why we think Fortran is a superior language in its domain and why it makes&#xA;sense to use Fortran for new projects.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-fortran&#34;&gt;Why Fortran?&lt;/h2&gt;&#xA;&lt;p&gt;Fortran was designed from the ground up to naturally and simply translate&#xA;mathematics to code that compiles and runs at maximum speed. And being&#xA;specifically targeted for such fundamentally computational tasks, it contains a&#xA;broad range of key functionality within the language itself, standard across&#xA;all platforms, with no need for external libraries that may or may not be well&#xA;optimized or maintained, at present or down the road.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

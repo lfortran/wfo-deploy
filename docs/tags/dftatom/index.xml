@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>dftatom on LFortran</title>
+    <title>Dftatom on LFortran</title>
     <link>https://lfortran.org/tags/dftatom/</link>
-    <description>Recent content in dftatom on LFortran</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Dftatom on LFortran</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 31 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/tags/dftatom/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lfortran.org/tags/dftatom/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LFortran Compiles dftatom</title>
       <link>https://lfortran.org/blog/2023/10/lfortran-compiles-dftatom/</link>
       <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/blog/2023/10/lfortran-compiles-dftatom/</guid>
-      <description>After compiling fastGPT in September 2023, today we are happy to announce that LFortran can compile and run dftatom without any modifications, and dftatom&amp;rsquo;s continuous integration (CI) now tests every commit with LFortran, along side GFortran.
-This is the fourth full third-party production-grade code that LFortran can compile. The progress bar towards beta has thus reached 4/10.
-It can compile the main application in Debug mode twice faster than GFortran. In Release mode the runtime performance is within a factor of 2x slower than GFortran&amp;rsquo;s Release mode (all optimizations on).</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://lfortran.org/blog/2023/09/lfortran-compiles-fastgpt/&#34;&gt;After compiling fastGPT&lt;/a&gt; in September 2023, today we are happy to announce that LFortran can compile and run &lt;a href=&#34;https://github.com/certik/dftatom&#34;&gt;dftatom&lt;/a&gt; without any modifications, and &lt;code&gt;dftatom&lt;/code&gt;&amp;rsquo;s continuous integration (CI) now &lt;a href=&#34;https://github.com/certik/dftatom/blob/3815c86b0144fd69981dc7dfd7e28adf671c64ac/.github/workflows/ci.yml#L58-L109&#34;&gt;tests every commit&lt;/a&gt; with LFortran, along side GFortran.&lt;/p&gt;&#xA;&lt;p&gt;This is the fourth full third-party production-grade code that LFortran can compile. The &lt;a href=&#34;https://lfortran.org&#34;&gt;progress bar towards beta&lt;/a&gt; has thus reached 4/10.&lt;/p&gt;&#xA;&lt;p&gt;It can compile the main application in Debug mode twice faster than GFortran. In Release mode the runtime performance is within a factor of 2x slower than GFortran&amp;rsquo;s Release mode (all optimizations on).&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

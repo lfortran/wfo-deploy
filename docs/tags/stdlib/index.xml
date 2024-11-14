@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>stdlib on LFortran</title>
+    <title>Stdlib on LFortran</title>
     <link>https://lfortran.org/tags/stdlib/</link>
-    <description>Recent content in stdlib on LFortran</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Stdlib on LFortran</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/tags/stdlib/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lfortran.org/tags/stdlib/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LFortran compiles Fortran stdlib</title>
       <link>https://lfortran.org/blog/2024/04/lfortran-compiles-fortran-stdlib/</link>
       <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/blog/2024/04/lfortran-compiles-fortran-stdlib/</guid>
-      <description>LFortran compiles 85% Fortran stdlib We are happy to announce that LFortran can compile all numerical modules in stdlib. The stdlib library has 32 modules, here are the details of the current status:
- all 32 modules compile to ASR 27 modules (85%) compile to LLVM; there are 4 hash modules (hash_32bit, hash_64bit, hashmaps, hashmap_wrappers, stringlist_type) and one stringlist_type module that does not compile to LLVM yet 24 modules pass all their tests; 3 modules (sorting, bitsets, stats) do not pass all tests yet, but simple examples that use the modules work  This is sixth third-party production-grade code that LFortran can compile after SciPy.</description>
+      <description>&lt;h1 id=&#34;lfortran-compiles-85-fortran-stdlib&#34;&gt;LFortran compiles 85% Fortran stdlib&lt;/h1&gt;&#xA;&lt;p&gt;We are happy to announce that LFortran can compile all numerical modules in &lt;code&gt;stdlib&lt;/code&gt;. The &lt;code&gt;stdlib&lt;/code&gt; library has 32 modules, here are the details of the current status:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;all 32 modules compile to ASR&lt;/li&gt;&#xA;&lt;li&gt;27 modules (85%) compile to LLVM; there are 4 hash modules (&lt;code&gt;hash_32bit&lt;/code&gt;, &lt;code&gt;hash_64bit&lt;/code&gt;, &lt;code&gt;hashmaps&lt;/code&gt;, &lt;code&gt;hashmap_wrappers&lt;/code&gt;, &lt;code&gt;stringlist_type&lt;/code&gt;) and one &lt;code&gt;stringlist_type&lt;/code&gt; module that does not compile to LLVM yet&lt;/li&gt;&#xA;&lt;li&gt;24 modules pass all their tests; 3 modules (&lt;code&gt;sorting&lt;/code&gt;, &lt;code&gt;bitsets&lt;/code&gt;, &lt;code&gt;stats&lt;/code&gt;) do not pass all tests yet, but simple examples that use the modules work&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This is sixth third-party production-grade code that LFortran can compile after &lt;a href=&#34;https://lfortran.org/blog/2024/01/lfortran-compiles-60-of-scipy/&#34;&gt;SciPy&lt;/a&gt;. The &lt;a href=&#34;https://lfortran.org&#34;&gt;progress bar towards beta&lt;/a&gt; has thus reached 6/10.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

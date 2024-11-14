@@ -4,170 +4,135 @@
     <title>Tags on LFortran</title>
     <link>https://lfortran.org/tags/</link>
     <description>Recent content in Tags on LFortran</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lfortran.org/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Announcement</title>
       <link>https://lfortran.org/tags/announcement/</link>
       <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/tags/announcement/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Fortran</title>
       <link>https://lfortran.org/tags/fortran/</link>
       <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/tags/fortran/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>fortran-lang</title>
+      <title>Fortran-Lang</title>
       <link>https://lfortran.org/tags/fortran-lang/</link>
       <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/tags/fortran-lang/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>LANL</title>
       <link>https://lfortran.org/tags/lanl/</link>
       <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/tags/lanl/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>SNAP</title>
       <link>https://lfortran.org/tags/snap/</link>
       <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/tags/snap/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>DoConcurrentLoop</title>
       <link>https://lfortran.org/tags/doconcurrentloop/</link>
       <pubDate>Tue, 30 Jul 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/tags/doconcurrentloop/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>OpenMP</title>
       <link>https://lfortran.org/tags/openmp/</link>
       <pubDate>Tue, 30 Jul 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/tags/openmp/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Performance</title>
       <link>https://lfortran.org/tags/performance/</link>
       <pubDate>Tue, 30 Jul 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/tags/performance/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Arrays</title>
       <link>https://lfortran.org/tags/arrays/</link>
       <pubDate>Tue, 04 Jun 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/tags/arrays/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>webassembly</title>
+      <title>Webassembly</title>
       <link>https://lfortran.org/tags/webassembly/</link>
       <pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/tags/webassembly/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>stdlib</title>
+      <title>Stdlib</title>
       <link>https://lfortran.org/tags/stdlib/</link>
       <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/tags/stdlib/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>SciPy</title>
       <link>https://lfortran.org/tags/scipy/</link>
       <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/tags/scipy/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>dftatom</title>
+      <title>Dftatom</title>
       <link>https://lfortran.org/tags/dftatom/</link>
       <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/tags/dftatom/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>fastGPT</title>
+      <title>FastGPT</title>
       <link>https://lfortran.org/tags/fastgpt/</link>
       <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/tags/fastgpt/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>GSoD</title>
       <link>https://lfortran.org/tags/gsod/</link>
       <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/tags/gsod/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>LFortran</title>
       <link>https://lfortran.org/tags/lfortran/</link>
       <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/tags/lfortran/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>MVP</title>
       <link>https://lfortran.org/tags/mvp/</link>
       <pubDate>Thu, 23 Sep 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/tags/mvp/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Motivation</title>
       <link>https://lfortran.org/tags/motivation/</link>
       <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/tags/motivation/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

@@ -4,18 +4,16 @@
     <title>SNAP on LFortran</title>
     <link>https://lfortran.org/tags/snap/</link>
     <description>Recent content in SNAP on LFortran</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/tags/snap/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lfortran.org/tags/snap/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LFortran now compiles SNAP</title>
       <link>https://lfortran.org/blog/2024/08/lfortran-now-compiles-snap/</link>
       <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/blog/2024/08/lfortran-now-compiles-snap/</guid>
-      <description>We are thrilled to announce that LFortran can now successfully compile and run lanl/SNAP, marking a significant milestone in our journey to beta. SNAP is the seventh production-grade, third-party code that LFortran can compile, bringing us closer to our goal of compiling 10 such codes—a critical step toward a beta-quality compiler.
- About SNAP SNAP (SN Discrete Ordinates Application Proxy) is a proxy application designed to emulate the performance of modern discrete ordinates neutral particle transport codes.</description>
+      <description>&lt;p&gt;We are thrilled to announce that &lt;a href=&#34;https://github.com/lfortran/lfortran&#34;&gt;LFortran&lt;/a&gt; can now successfully compile and run &lt;a href=&#34;https://github.com/lanl/SNAP&#34;&gt;lanl/SNAP&lt;/a&gt;, marking a significant milestone in our journey to beta. SNAP is the seventh production-grade, third-party code that LFortran can compile, bringing us closer to our goal of compiling 10 such codes—a critical step toward a beta-quality compiler.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;about-snap&#34;&gt;About SNAP&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;SNAP&lt;/strong&gt; (&lt;em&gt;SN&lt;/em&gt; Discrete Ordinates &lt;em&gt;Application Proxy&lt;/em&gt;) is a proxy application designed to emulate the performance of modern discrete ordinates neutral particle transport codes. It replicates the computational workload, memory requirements, and communication patterns of the Los Alamos National Laboratory code PARTISN, without including actual physics. By using domain decomposition and parallelization across spatial, angular, and energy domains, SNAP is ideal for performance testing on cutting-edge high-performance computing systems.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

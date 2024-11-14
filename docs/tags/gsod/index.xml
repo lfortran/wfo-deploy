@@ -4,18 +4,16 @@
     <title>GSoD on LFortran</title>
     <link>https://lfortran.org/tags/gsod/</link>
     <description>Recent content in GSoD on LFortran</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/tags/gsod/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 May 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lfortran.org/tags/gsod/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LFortran Google Season of Docs (GSoD)</title>
       <link>https://lfortran.org/blog/2022/05/lfortran-google-season-of-docs-gsod/</link>
       <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/blog/2022/05/lfortran-google-season-of-docs-gsod/</guid>
-      <description>LFortran has evolved rapidly since its inception and is now close to beta status. Several key project progress goals are on track with the help of external support; and the recent GSoD support will galvanize the documentation and ease the onboarding of new contributors to the language and LFortran&amp;rsquo;s unique tooling.
-At the heart of the L-family of compilers (LFortran, LPython) lies the idea that there are invariants across languages which can be documented and worked with.</description>
+      <description>&lt;p&gt;LFortran has evolved rapidly since its inception and is now close to beta&#xA;status. Several key project progress goals are on track with the help of&#xA;external support; and the recent &lt;a href=&#34;https://opensource.googleblog.com/2022/04/season-of-docs-announces-participating-organizations-for-2022.html&#34;&gt;GSoD support&lt;/a&gt; will galvanize the documentation&#xA;and ease the onboarding of new contributors to the language and LFortran&amp;rsquo;s&#xA;unique tooling.&lt;/p&gt;&#xA;&lt;p&gt;At the heart of the L-family of compilers (LFortran, LPython)&#xA;lies the idea that there are invariants across languages which can be&#xA;documented and worked with. To this end, LFortran has decided to kick-start a&#xA;sustained period of documentation generation for both the Fortran language (in&#xA;terms of compiler implementation records) and the ASR itself. The relatively&#xA;higher technical debt required for the task at the moment made it inefficient&#xA;to look too far away from the existing community, and Rohit Goswami and&#xA;Tapasweni Pathak will be the two technical writers for this 2022 season of&#xA;documentation. You can look at our GSoD &lt;a href=&#34;https://gitlab.com/lfortran/lfortran/-/wikis/GSoD%20Proposal%202022%20-%20LFortran%20Compiler%20Developer%20Documentation&#34;&gt;proposal&lt;/a&gt; for more details.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

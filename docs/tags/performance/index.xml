@@ -4,28 +4,23 @@
     <title>Performance on LFortran</title>
     <link>https://lfortran.org/tags/performance/</link>
     <description>Recent content in Performance on LFortran</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/tags/performance/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lfortran.org/tags/performance/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LFortran supports OpenMP pragmas and Do Concurrent</title>
       <link>https://lfortran.org/blog/2024/07/lfortran-supports-openmp-pragmas-and-do-concurrent/</link>
       <pubDate>Tue, 30 Jul 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/blog/2024/07/lfortran-supports-openmp-pragmas-and-do-concurrent/</guid>
-      <description>In early June, we announced a significant achievement with LFortran: the Fastest Open-Source Compiler in Compile-Time Evaluation of an Array Benchmark. Continuing our commitment to performance enhancement, we are pleased to announce that LFortran now includes support for OpenMP pragmas and parallelizing do concurrent. Particularly for parallel do OpenMP construct, our implementation is fully operational and achieves performance comparable to GFortran.
-Note that LFortran is still a alpha software, meaning that users must continue expecting that LFortran will fail compiling or running their codes.</description>
+      <description>&lt;p&gt;In early June, we announced a significant achievement with &lt;a href=&#34;https://lfortran.org/blog/2024/06/lfortran-the-fastest-open-source-compiler-in-compile-time-evaluation-of-an-array-benchmark/&#34;&gt;LFortran: the Fastest Open-Source Compiler in Compile-Time Evaluation of an Array Benchmark&lt;/a&gt;. Continuing our commitment to performance enhancement, we are pleased to announce that LFortran now includes support for OpenMP pragmas and parallelizing &lt;code&gt;do concurrent&lt;/code&gt;. Particularly for &lt;code&gt;parallel do&lt;/code&gt; OpenMP construct, our implementation is fully operational and achieves performance comparable to GFortran.&lt;/p&gt;&#xA;&lt;p&gt;Note that LFortran is still a alpha software, meaning that users must continue expecting that LFortran will fail compiling or running their codes. Please report all bugs that you find.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>LFortran: the Fastest Open-Source Compiler in Compile-Time Evaluation of an Array Benchmark</title>
       <link>https://lfortran.org/blog/2024/06/lfortran-the-fastest-open-source-compiler-in-compile-time-evaluation-of-an-array-benchmark/</link>
       <pubDate>Tue, 04 Jun 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/blog/2024/06/lfortran-the-fastest-open-source-compiler-in-compile-time-evaluation-of-an-array-benchmark/</guid>
-      <description>After successful compilation of stdlib and Fortran On Web Using LFortran, we focused on improving the support for compile time computation and we are excited to announce that LFortran can now compile the example from the Computing at compile time Fortran Discourse topic.
-This example can be used to benchmark the speed of compilation and compile-time array evaluation by increasing the size of the arrays. On this particular example LFortran outperforms other open-source Fortran compilers by an order of magnitude for large array sizes.</description>
+      <description>&lt;p&gt;After successful &lt;a href=&#34;https://lfortran.org/blog/2024/04/lfortran-compiles-fortran-stdlib/&#34;&gt;compilation of &lt;code&gt;stdlib&lt;/code&gt;&lt;/a&gt; and &lt;a href=&#34;https://lfortran.org/blog/2024/05/fortran-on-web-using-lfortran/&#34;&gt;Fortran On Web Using LFortran&lt;/a&gt;, we focused on improving the support for compile time computation and we are excited to announce that LFortran can now compile the example from the &lt;a href=&#34;https://fortran-lang.discourse.group/t/computing-at-compile-time/3044&#34;&gt;Computing at compile time&lt;/a&gt; Fortran Discourse topic.&lt;/p&gt;&#xA;&lt;p&gt;This example can be used to benchmark the speed of compilation and compile-time array evaluation by increasing the size of the arrays. On this particular example LFortran outperforms other open-source Fortran compilers by an order of magnitude for large array sizes. For small array sizes each compiler has a different constant overhead, which becomes negligible for large arrays and this benchmark measures how quickly the compiler can internally apply the symbolic function on a large array numerically.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

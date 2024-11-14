@@ -4,19 +4,16 @@
     <title>SciPy on LFortran</title>
     <link>https://lfortran.org/tags/scipy/</link>
     <description>Recent content in SciPy on LFortran</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://lfortran.org/tags/scipy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lfortran.org/tags/scipy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LFortran Compiles 60% of Scipy</title>
       <link>https://lfortran.org/blog/2024/01/lfortran-compiles-60-of-scipy/</link>
       <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://lfortran.org/blog/2024/01/lfortran-compiles-60-of-scipy/</guid>
-      <description>LFortran Compiles 60% of SciPy With successful compilation of dftatom in October 2023, embarking to the new year with a remarkable stride, we are delighted to announce that LFortran can now successfully compile 9 out of the 15 Fortran packages within the SciPy library without requiring any modifications.
-This is the fifth third-party production-grade code that LFortran can compile. The progress bar towards beta has thus reached 5/10.
-LFortran can now compile and pass tests written for scipy.</description>
+      <description>&lt;h1 id=&#34;lfortran-compiles-60-of-scipy&#34;&gt;LFortran Compiles 60% of SciPy&lt;/h1&gt;&#xA;&lt;p&gt;With successful compilation of &lt;a href=&#34;https://lfortran.org/blog/2023/10/lfortran-compiles-dftatom/&#34;&gt;dftatom&lt;/a&gt; in October 2023, embarking to the new year with a remarkable stride, we are delighted to announce that LFortran can now successfully compile 9 out of the 15 Fortran packages within the SciPy library without requiring any modifications.&lt;/p&gt;&#xA;&lt;p&gt;This is the fifth third-party production-grade code that LFortran can compile. The &lt;a href=&#34;https://lfortran.org&#34;&gt;progress bar towards beta&lt;/a&gt; has thus reached 5/10.&lt;/p&gt;&#xA;&lt;p&gt;LFortran can now compile and pass tests written for &lt;code&gt;scipy.special.specfun&lt;/code&gt;, &lt;code&gt;scipy.special.cdflib&lt;/code&gt;, &lt;code&gt;scipy.special.amos&lt;/code&gt;, &lt;code&gt;scipy.special.mach&lt;/code&gt;, &lt;code&gt;scipy.optimize.minpack&lt;/code&gt;, &lt;code&gt;scipy.optimize.minpack2&lt;/code&gt;, &lt;code&gt;scipy.interpolate.fitpack&lt;/code&gt;, &lt;code&gt;scipy.integrate.quadpack&lt;/code&gt;,  and &lt;code&gt;scipy.integrate.mach&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

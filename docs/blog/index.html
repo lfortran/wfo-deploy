@@ -48,7 +48,7 @@
 
   <meta name="twitter:title" content="LFortran Blog" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="generator" content="Hugo 0.96.0" />
+  <meta name="generator" content="Hugo 0.138.0">
   <link rel="alternate" href="https://lfortran.org/index.xml" type="application/rss+xml" title="LFortran"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://lfortran.org/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -106,18 +106,6 @@ h2.h2heading {
 }
 </style>
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-138613977-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
   </head>
   <body>
     <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
@@ -287,8 +275,10 @@ if (!doNotTrack) {
 
               <div class="post-entry">
                 
-                  We are thrilled to announce that LFortran can now successfully compile and run lanl/SNAP, marking a significant milestone in our journey to beta. SNAP is the seventh production-grade, third-party code that LFortran can compile, bringing us closer to our goal of compiling 10 such codes—a critical step toward a beta-quality compiler.
- About SNAP SNAP (SN Discrete Ordinates Application Proxy) is a proxy application designed to emulate the performance of modern discrete ordinates neutral particle transport codes.
+                  <p>We are thrilled to announce that <a href="https://github.com/lfortran/lfortran">LFortran</a> can now successfully compile and run <a href="https://github.com/lanl/SNAP">lanl/SNAP</a>, marking a significant milestone in our journey to beta. SNAP is the seventh production-grade, third-party code that LFortran can compile, bringing us closer to our goal of compiling 10 such codes—a critical step toward a beta-quality compiler.</p>
+<hr>
+<h1 id="about-snap">About SNAP</h1>
+<p><strong>SNAP</strong> (<em>SN</em> Discrete Ordinates <em>Application Proxy</em>) is a proxy application designed to emulate the performance of modern discrete ordinates neutral particle transport codes. It replicates the computational workload, memory requirements, and communication patterns of the Los Alamos National Laboratory code PARTISN, without including actual physics. By using domain decomposition and parallelization across spatial, angular, and energy domains, SNAP is ideal for performance testing on cutting-edge high-performance computing systems.</p>
                   <a href="https://lfortran.org/blog/2024/08/lfortran-now-compiles-snap/" class="post-read-more">[Read More]</a>
                 
               </div>
@@ -337,8 +327,8 @@ if (!doNotTrack) {
 
               <div class="post-entry">
                 
-                  In early June, we announced a significant achievement with LFortran: the Fastest Open-Source Compiler in Compile-Time Evaluation of an Array Benchmark. Continuing our commitment to performance enhancement, we are pleased to announce that LFortran now includes support for OpenMP pragmas and parallelizing do concurrent. Particularly for parallel do OpenMP construct, our implementation is fully operational and achieves performance comparable to GFortran.
-Note that LFortran is still a alpha software, meaning that users must continue expecting that LFortran will fail compiling or running their codes.
+                  <p>In early June, we announced a significant achievement with <a href="https://lfortran.org/blog/2024/06/lfortran-the-fastest-open-source-compiler-in-compile-time-evaluation-of-an-array-benchmark/">LFortran: the Fastest Open-Source Compiler in Compile-Time Evaluation of an Array Benchmark</a>. Continuing our commitment to performance enhancement, we are pleased to announce that LFortran now includes support for OpenMP pragmas and parallelizing <code>do concurrent</code>. Particularly for <code>parallel do</code> OpenMP construct, our implementation is fully operational and achieves performance comparable to GFortran.</p>
+<p>Note that LFortran is still a alpha software, meaning that users must continue expecting that LFortran will fail compiling or running their codes. Please report all bugs that you find.</p>
                   <a href="https://lfortran.org/blog/2024/07/lfortran-supports-openmp-pragmas-and-do-concurrent/" class="post-read-more">[Read More]</a>
                 
               </div>
@@ -387,8 +377,8 @@ Note that LFortran is still a alpha software, meaning that users must continue e
 
               <div class="post-entry">
                 
-                  After successful compilation of stdlib and Fortran On Web Using LFortran, we focused on improving the support for compile time computation and we are excited to announce that LFortran can now compile the example from the Computing at compile time Fortran Discourse topic.
-This example can be used to benchmark the speed of compilation and compile-time array evaluation by increasing the size of the arrays. On this particular example LFortran outperforms other open-source Fortran compilers by an order of magnitude for large array sizes.
+                  <p>After successful <a href="https://lfortran.org/blog/2024/04/lfortran-compiles-fortran-stdlib/">compilation of <code>stdlib</code></a> and <a href="https://lfortran.org/blog/2024/05/fortran-on-web-using-lfortran/">Fortran On Web Using LFortran</a>, we focused on improving the support for compile time computation and we are excited to announce that LFortran can now compile the example from the <a href="https://fortran-lang.discourse.group/t/computing-at-compile-time/3044">Computing at compile time</a> Fortran Discourse topic.</p>
+<p>This example can be used to benchmark the speed of compilation and compile-time array evaluation by increasing the size of the arrays. On this particular example LFortran outperforms other open-source Fortran compilers by an order of magnitude for large array sizes. For small array sizes each compiler has a different constant overhead, which becomes negligible for large arrays and this benchmark measures how quickly the compiler can internally apply the symbolic function on a large array numerically.</p>
                   <a href="https://lfortran.org/blog/2024/06/lfortran-the-fastest-open-source-compiler-in-compile-time-evaluation-of-an-array-benchmark/" class="post-read-more">[Read More]</a>
                 
               </div>
@@ -435,8 +425,12 @@ This example can be used to benchmark the speed of compilation and compile-time 
 
               <div class="post-entry">
                 
-                  Fortran On Web Using LFortran Recently, there was a blog post titled Fortran on WebAssembly released by Dr George W Stagg. This article inspired us to compile the same example using our LFortran compiler. We are happy to share that we have the fortran mnist classifier example used in the blog post, compiled to WebAssembly using LFortran (with no hacks to the compiler) and working perfectly in the browser.
-MNIST  We cloned the original authors code and just swapped-in two of our generated files mnist.
+                  <h1 id="fortran-on-web-using-lfortran">Fortran On Web Using LFortran</h1>
+<p>Recently, there was a blog post titled <a href="https://gws.phd/posts/fortran_wasm/">Fortran on WebAssembly</a> released by <a href="https://gws.phd/">Dr George W Stagg</a>. This article inspired us to compile the same example using our <a href="https://lfortran.org/">LFortran</a> compiler. We are happy to share that we have the fortran <a href="https://en.wikipedia.org/wiki/MNIST_database">mnist</a> classifier example used in the blog post, compiled to WebAssembly using LFortran (with no hacks to the compiler) and working perfectly in the browser.</p>
+<h2 id="mnist">MNIST</h2>
+<iframe src="https://lfortran.github.io/mnist-classifier-blas-wasm/" style="width: 100%; height: 282px; border: none;">
+</iframe>
+<p>We cloned the original authors code and just swapped-in two of our generated files <code>mnist.js</code> and <code>mnist.wasm</code> with the original files. We also fixed few minor bugs in the code that we came across (details in the commit history).</p>
                   <a href="https://lfortran.org/blog/2024/05/fortran-on-web-using-lfortran/" class="post-read-more">[Read More]</a>
                 
               </div>
@@ -483,8 +477,14 @@ MNIST  We cloned the original authors code and just swapped-in two of our genera
 
               <div class="post-entry">
                 
-                  LFortran compiles 85% Fortran stdlib We are happy to announce that LFortran can compile all numerical modules in stdlib. The stdlib library has 32 modules, here are the details of the current status:
- all 32 modules compile to ASR 27 modules (85%) compile to LLVM; there are 4 hash modules (hash_32bit, hash_64bit, hashmaps, hashmap_wrappers, stringlist_type) and one stringlist_type module that does not compile to LLVM yet 24 modules pass all their tests; 3 modules (sorting, bitsets, stats) do not pass all tests yet, but simple examples that use the modules work  This is sixth third-party production-grade code that LFortran can compile after SciPy.
+                  <h1 id="lfortran-compiles-85-fortran-stdlib">LFortran compiles 85% Fortran stdlib</h1>
+<p>We are happy to announce that LFortran can compile all numerical modules in <code>stdlib</code>. The <code>stdlib</code> library has 32 modules, here are the details of the current status:</p>
+<ul>
+<li>all 32 modules compile to ASR</li>
+<li>27 modules (85%) compile to LLVM; there are 4 hash modules (<code>hash_32bit</code>, <code>hash_64bit</code>, <code>hashmaps</code>, <code>hashmap_wrappers</code>, <code>stringlist_type</code>) and one <code>stringlist_type</code> module that does not compile to LLVM yet</li>
+<li>24 modules pass all their tests; 3 modules (<code>sorting</code>, <code>bitsets</code>, <code>stats</code>) do not pass all tests yet, but simple examples that use the modules work</li>
+</ul>
+<p>This is sixth third-party production-grade code that LFortran can compile after <a href="https://lfortran.org/blog/2024/01/lfortran-compiles-60-of-scipy/">SciPy</a>. The <a href="https://lfortran.org">progress bar towards beta</a> has thus reached 6/10.</p>
                   <a href="https://lfortran.org/blog/2024/04/lfortran-compiles-fortran-stdlib/" class="post-read-more">[Read More]</a>
                 
               </div>
@@ -531,9 +531,10 @@ MNIST  We cloned the original authors code and just swapped-in two of our genera
 
               <div class="post-entry">
                 
-                  LFortran Compiles 60% of SciPy With successful compilation of dftatom in October 2023, embarking to the new year with a remarkable stride, we are delighted to announce that LFortran can now successfully compile 9 out of the 15 Fortran packages within the SciPy library without requiring any modifications.
-This is the fifth third-party production-grade code that LFortran can compile. The progress bar towards beta has thus reached 5/10.
-LFortran can now compile and pass tests written for scipy.
+                  <h1 id="lfortran-compiles-60-of-scipy">LFortran Compiles 60% of SciPy</h1>
+<p>With successful compilation of <a href="https://lfortran.org/blog/2023/10/lfortran-compiles-dftatom/">dftatom</a> in October 2023, embarking to the new year with a remarkable stride, we are delighted to announce that LFortran can now successfully compile 9 out of the 15 Fortran packages within the SciPy library without requiring any modifications.</p>
+<p>This is the fifth third-party production-grade code that LFortran can compile. The <a href="https://lfortran.org">progress bar towards beta</a> has thus reached 5/10.</p>
+<p>LFortran can now compile and pass tests written for <code>scipy.special.specfun</code>, <code>scipy.special.cdflib</code>, <code>scipy.special.amos</code>, <code>scipy.special.mach</code>, <code>scipy.optimize.minpack</code>, <code>scipy.optimize.minpack2</code>, <code>scipy.interpolate.fitpack</code>, <code>scipy.integrate.quadpack</code>,  and <code>scipy.integrate.mach</code>.</p>
                   <a href="https://lfortran.org/blog/2024/01/lfortran-compiles-60-of-scipy/" class="post-read-more">[Read More]</a>
                 
               </div>
@@ -578,9 +579,9 @@ LFortran can now compile and pass tests written for scipy.
 
               <div class="post-entry">
                 
-                  After compiling fastGPT in September 2023, today we are happy to announce that LFortran can compile and run dftatom without any modifications, and dftatom&rsquo;s continuous integration (CI) now tests every commit with LFortran, along side GFortran.
-This is the fourth full third-party production-grade code that LFortran can compile. The progress bar towards beta has thus reached 4/10.
-It can compile the main application in Debug mode twice faster than GFortran. In Release mode the runtime performance is within a factor of 2x slower than GFortran&rsquo;s Release mode (all optimizations on).
+                  <p><a href="https://lfortran.org/blog/2023/09/lfortran-compiles-fastgpt/">After compiling fastGPT</a> in September 2023, today we are happy to announce that LFortran can compile and run <a href="https://github.com/certik/dftatom">dftatom</a> without any modifications, and <code>dftatom</code>&rsquo;s continuous integration (CI) now <a href="https://github.com/certik/dftatom/blob/3815c86b0144fd69981dc7dfd7e28adf671c64ac/.github/workflows/ci.yml#L58-L109">tests every commit</a> with LFortran, along side GFortran.</p>
+<p>This is the fourth full third-party production-grade code that LFortran can compile. The <a href="https://lfortran.org">progress bar towards beta</a> has thus reached 4/10.</p>
+<p>It can compile the main application in Debug mode twice faster than GFortran. In Release mode the runtime performance is within a factor of 2x slower than GFortran&rsquo;s Release mode (all optimizations on).</p>
                   <a href="https://lfortran.org/blog/2023/10/lfortran-compiles-dftatom/" class="post-read-more">[Read More]</a>
                 
               </div>
@@ -625,9 +626,13 @@ It can compile the main application in Debug mode twice faster than GFortran. In
 
               <div class="post-entry">
                 
-                  In our last blog post from May 2023, we announced that LFortran can compile legacy and modern Minpack. Today, we are happy to announce that LFortran can compile and run fastGPT.
-This is the third code that LFortran can compile. The progress bar toward beta has progressed to 3/10.
-LFortran is still alpha, meaning that users expect frequent bugs and breaking changes. Alpha users are enthusiastic partners in the effort to reach beta and they dilligently report issues.
+                  <p>In our last <a href="https://lfortran.org/blog/2023/05/lfortran-breakthrough-now-building-legacy-and-modern-minpack/">blog post</a> from May 2023, we announced that <a href="https://lfortran.org/">LFortran</a> can compile legacy and modern Minpack. Today, we are happy to announce that LFortran can compile and run <a href="https://github.com/certik/fastGPT">fastGPT</a>.</p>
+<p>This is the third code that LFortran can compile. The <a href="https://lfortran.org/">progress bar toward beta</a> has progressed to 3/10.</p>
+<p>LFortran is still alpha, meaning that users expect frequent bugs and breaking
+changes. Alpha users are enthusiastic partners in the effort to reach beta and
+they dilligently report issues. In beta, users will expect
+LFortran to compile their codes, but users will still be partners in reporting
+remaining issues.</p>
                   <a href="https://lfortran.org/blog/2023/09/lfortran-compiles-fastgpt/" class="post-read-more">[Read More]</a>
                 
               </div>
@@ -672,8 +677,14 @@ LFortran is still alpha, meaning that users expect frequent bugs and breaking ch
 
               <div class="post-entry">
                 
-                  Two days ago on April 30, 2023 was the 4th anniversary of LFortran&rsquo;s initial release. Our initial prototype in 2019 was in Python. Since then we have rewritten to C++ for speed and robustness. In 2021 we announced an MVP.
-In this update, we are happy to announce that LFortran can compile and run both legacy and modern Minpack. We&rsquo;ll start off by taking a look at the current compilation status and benchmarks of minpack.
+                  <p>Two days ago on April 30, 2023 was the 4th anniversary of LFortran&rsquo;s
+<a href="https://lfortran.org/blog/2019/04/why-we-created-lfortran/">initial release</a>. Our initial prototype in 2019 was in Python. Since then we
+have rewritten to C++ for speed and robustness. In 2021 we announced an <a href="https://lfortran.org/blog/2021/09/lfortran-minimum-viable-product-mvp/">MVP</a>.</p>
+<p>In this update, we are happy to announce that <a href="https://github.com/lfortran/lfortran">LFortran</a> can compile and run both
+legacy and modern Minpack. We&rsquo;ll start off by taking a look at the current
+compilation status and benchmarks of minpack. From there, we&rsquo;ll provide an
+overview of where LFortran is currently at and share our next steps going
+forward.</p>
                   <a href="https://lfortran.org/blog/2023/05/lfortran-breakthrough-now-building-legacy-and-modern-minpack/" class="post-read-more">[Read More]</a>
                 
               </div>
@@ -716,8 +727,20 @@ In this update, we are happy to announce that LFortran can compile and run both 
 
               <div class="post-entry">
                 
-                  LFortran has evolved rapidly since its inception and is now close to beta status. Several key project progress goals are on track with the help of external support; and the recent GSoD support will galvanize the documentation and ease the onboarding of new contributors to the language and LFortran&rsquo;s unique tooling.
-At the heart of the L-family of compilers (LFortran, LPython) lies the idea that there are invariants across languages which can be documented and worked with.
+                  <p>LFortran has evolved rapidly since its inception and is now close to beta
+status. Several key project progress goals are on track with the help of
+external support; and the recent <a href="https://opensource.googleblog.com/2022/04/season-of-docs-announces-participating-organizations-for-2022.html">GSoD support</a> will galvanize the documentation
+and ease the onboarding of new contributors to the language and LFortran&rsquo;s
+unique tooling.</p>
+<p>At the heart of the L-family of compilers (LFortran, LPython)
+lies the idea that there are invariants across languages which can be
+documented and worked with. To this end, LFortran has decided to kick-start a
+sustained period of documentation generation for both the Fortran language (in
+terms of compiler implementation records) and the ASR itself. The relatively
+higher technical debt required for the task at the moment made it inefficient
+to look too far away from the existing community, and Rohit Goswami and
+Tapasweni Pathak will be the two technical writers for this 2022 season of
+documentation. You can look at our GSoD <a href="https://gitlab.com/lfortran/lfortran/-/wikis/GSoD%20Proposal%202022%20-%20LFortran%20Compiler%20Developer%20Documentation">proposal</a> for more details.</p>
                   <a href="https://lfortran.org/blog/2022/05/lfortran-google-season-of-docs-gsod/" class="post-read-more">[Read More]</a>
                 
               </div>
@@ -760,8 +783,15 @@ At the heart of the L-family of compilers (LFortran, LPython) lies the idea that
 
               <div class="post-entry">
                 
-                  After a little over 2 years from our initial announcement, we are releasing LFortran MVP today.
-We have set our goal to release MVP in September 2021. We were initially hoping to compile at least some production codes for MVP. While we did not quite get there yet, after wrapping up and documenting where we are and writing a demo Fortran project that works with the MVP, it turns out LFortran is already quite usable and it can compile quite a lot of computational Fortran code if you are willing to work around some of the current limitations.
+                  <p>After a little over 2 years from our initial <a href="https://lfortran.org/blog/2019/04/why-we-created-lfortran/">announcement</a>, we are releasing
+LFortran MVP today.</p>
+<p>We have set our goal to release MVP in September 2021. We were initially hoping
+to compile at least some production codes for MVP. While we did not quite get
+there yet, after wrapping up and documenting where we are and writing a demo
+Fortran project that works with the MVP, it turns out LFortran is already quite
+usable and it can compile quite a lot of computational Fortran code if you are
+willing to work around some of the current limitations. In this blog post we
+will describe in detail the current status of LFortran.</p>
                   <a href="https://lfortran.org/blog/2021/09/lfortran-minimum-viable-product-mvp/" class="post-read-more">[Read More]</a>
                 
               </div>
@@ -804,8 +834,17 @@ We have set our goal to release MVP in September 2021. We were initially hoping 
 
               <div class="post-entry">
                 
-                  We received a lot of positive feedback on our LFortran announcement. Most generally like the idea and tool, and expressed interest to hear a bit more on why we think Fortran is a superior language in its domain and why it makes sense to use Fortran for new projects.
-Why Fortran? Fortran was designed from the ground up to naturally and simply translate mathematics to code that compiles and runs at maximum speed.
+                  <p>We received a lot of positive feedback on our LFortran <a href="https://lfortran.org/blog/2019/04/why-we-created-lfortran/">announcement</a>. Most
+generally like the idea and tool, and expressed interest to hear a bit more on
+why we think Fortran is a superior language in its domain and why it makes
+sense to use Fortran for new projects.</p>
+<h2 id="why-fortran">Why Fortran?</h2>
+<p>Fortran was designed from the ground up to naturally and simply translate
+mathematics to code that compiles and runs at maximum speed. And being
+specifically targeted for such fundamentally computational tasks, it contains a
+broad range of key functionality within the language itself, standard across
+all platforms, with no need for external libraries that may or may not be well
+optimized or maintained, at present or down the road.</p>
                   <a href="https://lfortran.org/blog/2019/05/why-to-use-fortran-for-new-projects/" class="post-read-more">[Read More]</a>
                 
               </div>
@@ -848,9 +887,14 @@ Why Fortran? Fortran was designed from the ground up to naturally and simply tra
 
               <div class="post-entry">
                 
-                  We recently open sourced LFortran, an interactive Fortran compiler built on top of LLVM that we have been developing for the last 1.5 years. It is a work in progress and at the link you can find what works already, what is planned and a roadmap.
-Here is our motivation.
-Why are almost no new scientific or engineering software projects started in Fortran? Usually (in our neck of the woods) C++ is chosen instead.
+                  <p>We recently open sourced <a href="https://lfortran.org/" title="LFortran Webpage">LFortran</a>, an interactive Fortran compiler built on
+top of LLVM that we have been developing for the last 1.5 years. It is a work
+in progress and at the link you can find what works already, what is planned
+and a roadmap.</p>
+<p>Here is our motivation.</p>
+<h1 id="why-are-almost-no-new-scientific-or-engineering-software-projects-started-in-fortran">Why are almost no new scientific or engineering software projects started in Fortran?</h1>
+<p>Usually (in our neck of the woods) C++ is chosen instead. The following are the
+most cited reasons for such a choice:</p>
                   <a href="https://lfortran.org/blog/2019/04/why-we-created-lfortran/" class="post-read-more">[Read More]</a>
                 
               </div>
@@ -880,9 +924,9 @@ Why are almost no new scientific or engineering software projects started in For
 </div>
 
 
-  
-<footer>
+  <footer>
   <div class="container">
+    
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <ul class="list-inline text-center footer-links">
@@ -910,13 +954,14 @@ Why are almost no new scientific or engineering software projects started in For
       </div>
     </div>
   </div>
-</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
-<script src="https://lfortran.org/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://lfortran.org/js/main.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://lfortran.org/js/load-photoswipe.js"></script>
+
 
 
 
