@@ -6,27 +6,34 @@
     <description>Recent content in Tags on LFortran</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 Nov 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://lfortran.org/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Announcement</title>
       <link>https://lfortran.org/tags/announcement/</link>
-      <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate>
       <guid>https://lfortran.org/tags/announcement/</guid>
       <description></description>
     </item>
     <item>
       <title>Fortran</title>
       <link>https://lfortran.org/tags/fortran/</link>
-      <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate>
       <guid>https://lfortran.org/tags/fortran/</guid>
       <description></description>
     </item>
     <item>
       <title>Fortran-Lang</title>
       <link>https://lfortran.org/tags/fortran-lang/</link>
-      <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate>
       <guid>https://lfortran.org/tags/fortran-lang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IntrinsicFunctions</title>
+      <link>https://lfortran.org/tags/intrinsicfunctions/</link>
+      <pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://lfortran.org/tags/intrinsicfunctions/</guid>
       <description></description>
     </item>
     <item>

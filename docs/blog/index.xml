@@ -6,8 +6,15 @@
     <description>Recent content in LFortran Blog on LFortran</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 Nov 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://lfortran.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LFortran supports all intrinsic functions</title>
+      <link>https://lfortran.org/blog/2024/11/lfortran-supports-all-intrinsic-functions/</link>
+      <pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://lfortran.org/blog/2024/11/lfortran-supports-all-intrinsic-functions/</guid>
+      <description>&lt;p&gt;We are thrilled to announce that LFortran supports all intrinsic functions&#xA;listed in &lt;a href=&#34;https://j3-fortran.org/doc/year/18/18-007r1.pdf&#34;&gt;F2018 Interpretation Document (Table 16.1 Pg: 332)&lt;/a&gt; (also shown by this nice &lt;a href=&#34;https://gcc.gnu.org/onlinedocs/gfortran/Intrinsic-Procedures.html&#34;&gt;list&lt;/a&gt; online at GFortran&amp;rsquo;s documentation).&#xA;This comprehensive list of almost 200 intrinsics encompasses a broad array of&#xA;functions and subroutines essential to Fortran&amp;rsquo;s functionality, including&#xA;elemental, inquiry, transformational, array operations, and more. For each&#xA;function we support both compile-time and runtime evaluation.&lt;/p&gt;&#xA;&lt;p&gt;The functions are implemented in an ASR (Abstract Semantic Representation)&#xA;pass, which means they get &amp;ldquo;instantiated&amp;rdquo; and specialized for the argument&#xA;types and then the compiler can optimize it, so using any intrinsic function is&#xA;at least as fast as implementing the same operation yourself, there is no&#xA;runtime overhead.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>LFortran now compiles SNAP</title>
       <link>https://lfortran.org/blog/2024/08/lfortran-now-compiles-snap/</link>
