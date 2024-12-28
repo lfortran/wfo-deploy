@@ -16,12 +16,11 @@
             "name": "Compiling Production Level Fortran Packages",
             "description": "We employ a test-driven development approach to rapidly identify and resolve bugs in the compiler by compiling third-party, production-level Fortran packages. Currently in its alpha stage, the compiler can successfully compile seven third-party packages, details of which are available on our website. Our goal is to compile more packages to make the compiler robust and deliver a reliable beta version.",
             "webpageUrl": {
-                "url": "https://www.lfortran.org/",
-                "wellKnown": ""
+                "url": "https://www.lfortran.org/"
             },
             "repositoryUrl": {
-                "url": "https://www.github.com/lfortran/lfortran",
-                "wellKnown": ""
+                "url": "https://www.github.com/lfortran/lfortran/",
+                "wellKnown": "https://www.github.com/lfortran/lfortran/blob/main/.well-known/funding-manifest-urls/"
             },
             "licenses": [
                 "BSD 3-Clause"
@@ -38,12 +37,11 @@
             "name": "General Feature Development",
             "description": "LFortran is under active development aimed at adding critical features to improve its functionality, compatibility, and usability. Our focus is on supporting modern Fortran standards, integrating interactive tools like Jupyter Notebooks, and performance optimizations.",
             "webpageUrl": {
-                "url": "https://www.lfortran.org/",
-                "wellKnown": ""
+                "url": "https://www.lfortran.org/"
             },
             "repositoryUrl": {
-                "url": "https://www.github.com/lfortran/lfortran",
-                "wellKnown": ""
+                "url": "https://www.github.com/lfortran/lfortran/",
+                "wellKnown": "https://www.github.com/lfortran/lfortran/blob/main/.well-known/funding-manifest-urls/"
             },
             "licenses": [
                 "BSD 3-Clause"
