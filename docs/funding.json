@@ -1,0 +1,176 @@
+{
+    "version": "v1.0.0",
+    "entity": {
+        "type": "organisation",
+        "role": "owner",
+        "name": "LFortran",
+        "email": "ondrej@certik.us",
+        "description": "LFortran is a modern open-source interactive Fortran compiler built on top of LLVM. It can execute user's code interactively to allow exploratory work (much like Python, MATLAB or Julia) as well as compile to binaries with the goal to run user's code on modern architectures such as multi-core CPUs and GPUs. It is currently in alpha stage.",
+        "webpageUrl": {
+            "url": "https://www.lfortran.org/"
+        }
+    },
+    "projects": [
+        {
+            "guid": "compiling-codes",
+            "name": "Compiling Production Level Fortran Packages",
+            "description": "We employ a test-driven development approach to rapidly identify and resolve bugs in the compiler by compiling third-party, production-level Fortran packages. Currently in its alpha stage, the compiler can successfully compile seven third-party packages, details of which are available on our website. Our goal is to compile more packages to make the compiler robust and deliver a reliable beta version.",
+            "webpageUrl": {
+                "url": "https://www.lfortran.org/",
+                "wellKnown": ""
+            },
+            "repositoryUrl": {
+                "url": "https://www.github.com/lfortran/lfortran",
+                "wellKnown": ""
+            },
+            "licenses": [
+                "BSD 3-Clause"
+            ],
+            "tags": [
+                "fortran",
+                "compiler",
+                "scientific-computing",
+                "high-performance-computing"
+            ]
+        },
+        {
+            "guid": "general-development",
+            "name": "General Feature Development",
+            "description": "LFortran is under active development aimed at adding critical features to improve its functionality, compatibility, and usability. Our focus is on supporting modern Fortran standards, integrating interactive tools like Jupyter Notebooks, and performance optimizations.",
+            "webpageUrl": {
+                "url": "https://www.lfortran.org/",
+                "wellKnown": ""
+            },
+            "repositoryUrl": {
+                "url": "https://www.github.com/lfortran/lfortran",
+                "wellKnown": ""
+            },
+            "licenses": [
+                "BSD 3-Clause"
+            ],
+            "tags": [
+                "fortran",
+                "compiler",
+                "scientific-computing",
+                "high-performance-computing"
+            ]
+        }
+    ],
+    "funding": {
+        "channels": [
+            {
+                "guid": "numfocus",
+                "type": "payment-provider",
+                "address": "https://numfocus.org/donate-to-lfortran",
+                "description": "LFortran is a NumFOCUS sponsored project. This is the recommended mode of payment."
+            },
+            {
+                "guid": "github-sponsors",
+                "type": "payment-provider",
+                "address": "https://github.com/sponsors/lfortran"
+            },
+            {
+                "guid": "opencollective",
+                "type": "payment-provider",
+                "address": "https://opencollective.com/lfortran"
+            }
+        ],
+        "plans": [
+            {
+                "guid": "general",
+                "status": "active",
+                "name": "Support Beta Development",
+                "amount": 50000,
+                "currency": "USD",
+                "frequency": "yearly",
+                "channels": [
+                    "numfocus",
+                    "github-sponsors",
+                    "opencollective"
+                ]
+            }
+        ],
+        "history": [
+            {
+                "year": 2021,
+                "income": 2400,
+                "expenses": 2400,
+                "taxes": 0,
+                "currency": "USD",
+                "description": "Google Summer of Code 2021"
+            },
+            {
+                "year": 2021,
+                "income": 2400,
+                "expenses": 2400,
+                "taxes": 0,
+                "currency": "USD",
+                "description": "NumFOCUS Small Development Grant for 'Improving LFortran to compile stdlib and fpm'. 100% of the amount was used for paying independent contractors."
+            },
+            {
+                "year": 2021,
+                "income": 5000,
+                "expenses": 5000,
+                "taxes": 0,
+                "currency": "USD",
+                "description": "NumFOCUS Small Development Grant for 'Improving LFortran to Generate Optimized Code'. 100% of the amount was used for paying independent contractors."
+            },
+            {
+                "year": 2022,
+                "income": 4600,
+                "expenses": 4600,
+                "taxes": 0,
+                "currency": "USD",
+                "description": "NumFOCUS Small Development Grant for 'Compiling SciPy with LFortran'. 100% of the amount was used for paying independent contractors."
+            },
+            {
+                "year": 2022,
+                "income": 2500,
+                "expenses": 2500,
+                "taxes": 0,
+                "currency": "USD",
+                "description": "Google Summer of Code 2022"
+            },
+            {
+                "year": 2022,
+                "income": 10000,
+                "expenses": 10000,
+                "taxes": 0,
+                "currency": "USD",
+                "description": "Google Season of Docs 2022"
+            },
+            {
+                "year": 2023,
+                "income": 70836,
+                "expenses": 57608,
+                "taxes": 0,
+                "currency": "USD",
+                "description": "Sovereign Tech Fund Grant 1. See https://www.sovereign.tech/tech/fortran. 85% of the amount was used for paying independent contractors, the rest 15% was paid to NumFOCUS as a fiscal sponsor."
+            },
+            {
+                "year": 2023,
+                "income": 1500,
+                "expenses": 1500,
+                "taxes": 0,
+                "currency": "USD",
+                "description": "Google Summer of Code 2023"
+            },
+            {
+                "year": 2023,
+                "income": 10000,
+                "expenses": 10000,
+                "taxes": 0,
+                "currency": "USD",
+                "description": "NumFOCUS Small Development Grant for 'Compiling SciPy's Fortran packages with LFortran'. 100% of the amount was used for paying independent contractors."
+            },
+            {
+                "year": 2024,
+                "income": 272548,
+                "expenses": 189745,
+                "taxes": 0,
+                "currency": "USD",
+                "description": "Sovereign Tech Fund Grant 2. See https://www.sovereign.tech/tech/fortran. 85% of the amount was used for paying independent contractors, the rest 15% was paid to NumFOCUS as a fiscal sponsor."
+            }
+        ]
+    }
+}
