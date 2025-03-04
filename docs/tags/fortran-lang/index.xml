@@ -6,8 +6,15 @@
     <description>Recent content in Fortran-Lang on LFortran</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://lfortran.org/tags/fortran-lang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LFortran compiles Prima</title>
+      <link>https://lfortran.org/blog/2025/03/lfortran-compiles-prima/</link>
+      <pubDate>Tue, 04 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://lfortran.org/blog/2025/03/lfortran-compiles-prima/</guid>
+      <description>&lt;p&gt;We&amp;rsquo;re thrilled to share that &lt;a href=&#34;https://github.com/lfortran/lfortran&#34;&gt;LFortran&lt;/a&gt; can now successfully compile and execute &lt;a href=&#34;https://github.com/libprima/prima&#34;&gt;libprima/PRIMA&lt;/a&gt;. PRIMA marks the eighth production-grade, third-party code that LFortran has compiled with bit-for-bit alignment to GFortran&amp;rsquo;s output. This milestone brings us closer to our goal of compiling 10 such codes—an essential step toward achieving a beta-quality compiler.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;about-prima&#34;&gt;About PRIMA&lt;/h1&gt;&#xA;&lt;p&gt;PRIMA is a package for solving general nonlinear optimization problems without using derivatives. It provides the reference implementation for Powell&amp;rsquo;s derivative-free optimization methods, i.e., COBYLA, UOBYQA, NEWUOA, BOBYQA, and LINCOA. PRIMA means Reference Implementation for Powell&amp;rsquo;s methods with Modernization and Amelioration, P for Powell. The package is written in Fortran and is widely used in the scientific community for solving optimization problems.&#xA;It utilizes a range of Modern Fortran features, including extensive use of optional variables, function pointer passing, and a randomized test driver, among others. Successfully compiling PRIMA requires a compiler with a robust and mature backend, as well as well-developed intermediate passes and a capable parser.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>LFortran supports all intrinsic functions</title>
       <link>https://lfortran.org/blog/2024/11/lfortran-supports-all-intrinsic-functions/</link>
