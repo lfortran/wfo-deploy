@@ -1,0 +1,36 @@
+/* Default (Light Mode) */
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222; /* Darker for better contrast */
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    h2 {
+        color: #eee; /* Light text for dark mode */
+    }
+
+    h3 {
+        color: #eee; /* Slightly dimmer for contrast */
+    }
+}
+
+/* If using a manual toggle (dark class on <html>) */
+.dark h2 {
+    color: #eee;
+}
+
+.dark h3 {
+    color: #eee;
+}

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138613977-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-138613977-1');
+</script>
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>LFortran compiles POT3D - </title>
+
+  <meta name="description" content="We are thrilled to announce that LFortran can now successfully compile and run predsci/POT3D, marking a significant milestone in our journey to beta. POT3D is the ninth production-grade, third-party code that LFortran can compile, bringing us closer to our goal of compiling 10 such codes—a critical step toward a beta-quality compiler.
+About POT3D
+POT3D: High Performance Potential Field Solver is a package developed by Predictive Science Inc., written in Fortran that computes potential field solutions to approximate the solar coronal magnetic field using observed photospheric magnetic fields as a boundary condition. It can be used to generate potential field source surface (PFSS), potential field current sheet (PFCS), and open field (OF) models. It has been (and continues to be) used for numerous studies of coronal structure and dynamics. The code is highly parallelized using MPI and is GPU-accelerated using Fortran standard parallelism (do concurrent) and OpenMP Target for data movement and device selection, along with an option to use the NVIDIA cuSparse library. The HDF5 file format is used for input/output."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "LFortran",
+    
+    "url": "https:\/\/lfortran.org\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/lfortran.org\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/lfortran.org\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/lfortran.org\/blog\/2025\/03\/lfortran-compiles-pot3d\/",
+          "name": "Lfortran compiles pot3 d"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "[Gaurav Dhingra](https:\/\/github.com\/gxyd), [Aditya Trivedi](https:\/\/github.com\/adit4443ya), [Jinang Shah](https:\/\/github.com\/jinangshah21), [Pranav Goswami](https:\/\/www.linkedin.com\/in\/pranavgoswami1\/), [Saurabh Kumar](https:\/\/github.com\/kmr-srbh), [Ansh Mehta](https:\/\/github.com\/AnshMehta1), [Assem Medhat](https:\/\/github.com\/assem2002), [Harshita Kalani](https:\/\/github.com\/HarshitaKalani), [Parth Mistry](https:\/\/www.linkedin.com\/in\/parth-mistry-86b884229\/), [Gagandeep Singh](https:\/\/github.com\/czgdp1807), [Ubaid Shaikh](https:\/\/github.com\/Shaikh-Ubaid), [Thirumalai Shaktivel](https:\/\/www.linkedin.com\/in\/thirumalai-shaktivel\/), [Vipul Cariappa](https:\/\/github.com\/Vipul-Cariappa), [Shivi Mathur](https:\/\/github.com\/shivimathur), [Kerim Birgi](https:\/\/github.com\/KGB99), [Serge Sans Paille](https:\/\/github.com\/serge-sans-paille), [Advik Kabra](https:\/\/github.com\/advikkabra), [Brian Beckman](https:\/\/www.linkedin.com\/in\/brianbeckman), [Dylon Edwards](https:\/\/www.linkedin.com\/in\/dylon-edwards-0936bb39\/), [Naman Gera](https:\/\/uk.linkedin.com\/in\/namannimmo), [Rohit Goswami](https:\/\/gitlab.com\/HaoZeke), [Dominic Poerio](https:\/\/github.com\/dpoerio), [Akshānsh Bhatt](https:\/\/github.com\/akshanshbhatt), [Virendra Kabra](https:\/\/www.linkedin.com\/in\/virendrakabra\/), [Anutosh Bhat](https:\/\/github.com\/anutosh491), [Luthfan Lubis](https:\/\/github.com\/ansharlubis), [Zihua Wu](https:\/\/github.com\/lucifer1004), [Khushi Agrawal](https:\/\/khushi-411.github.io\/), [Christoph Junghans](https:\/\/github.com\/junghans), [Tanay Manerikar](https:\/\/github.com\/tanay-man), [Wolf Vollprecht](https:\/\/github.com\/wolfv), [Smit Lunagariya](https:\/\/www.linkedin.com\/in\/smit-lunagariya-356b93179\/), [Paul Henning](https:\/\/github.com\/pjh40), [Ondřej Čertík](https:\/\/ondrejcertik.com\/), [Jaysukh Makvana](https:\/\/github.com\/Jaysukh-409), [Harshil Shah](https:\/\/github.com\/HarshilShah1804), [Gauravsingh Sisodia](https:\/\/github.com\/xaerru), [Karna Pardheev Sai](https:\/\/github.com\/saikarna913), [Shoaib Samim](https:\/\/github.com\/samimshoaib01)"
+  },
+  "headline": "LFortran compiles POT3D",
+  "description" : "We are thrilled to announce that LFortran can now successfully compile and run predsci\/POT3D, marking a significant milestone in our journey to beta. POT3D is the ninth production-grade, third-party code that LFortran can compile, bringing us closer to our goal of compiling 10 such codes—a critical step toward a beta-quality compiler.\nAbout POT3D POT3D: High Performance Potential Field Solver is a package developed by Predictive Science Inc., written in Fortran that computes potential field solutions to approximate the solar coronal magnetic field using observed photospheric magnetic fields as a boundary condition. It can be used to generate potential field source surface (PFSS), potential field current sheet (PFCS), and open field (OF) models. It has been (and continues to be) used for numerous studies of coronal structure and dynamics. The code is highly parallelized using MPI and is GPU-accelerated using Fortran standard parallelism (do concurrent) and OpenMP Target for data movement and device selection, along with an option to use the NVIDIA cuSparse library. The HDF5 file format is used for input\/output.\n",
+  "inLanguage" : "en",
+  "wordCount":  1393 ,
+  "datePublished" : "2025-03-18T00:00:00\u002b00:00",
+  "dateModified" : "2025-03-18T00:00:00\u002b00:00",
+  "image" : "https:\/\/lfortran.org\/",
+  "keywords" : [ "Fortran, Announcement, Fortran-lang, POT3D, MPI" ],
+  "mainEntityOfPage" : "https:\/\/lfortran.org\/blog\/2025\/03\/lfortran-compiles-pot3d\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/lfortran.org\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/lfortran.org\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+
+<meta property="og:title" content="LFortran compiles POT3D" />
+<meta property="og:description" content="We are thrilled to announce that LFortran can now successfully compile and run predsci/POT3D, marking a significant milestone in our journey to beta. POT3D is the ninth production-grade, third-party code that LFortran can compile, bringing us closer to our goal of compiling 10 such codes—a critical step toward a beta-quality compiler.
+About POT3D
+POT3D: High Performance Potential Field Solver is a package developed by Predictive Science Inc., written in Fortran that computes potential field solutions to approximate the solar coronal magnetic field using observed photospheric magnetic fields as a boundary condition. It can be used to generate potential field source surface (PFSS), potential field current sheet (PFCS), and open field (OF) models. It has been (and continues to be) used for numerous studies of coronal structure and dynamics. The code is highly parallelized using MPI and is GPU-accelerated using Fortran standard parallelism (do concurrent) and OpenMP Target for data movement and device selection, along with an option to use the NVIDIA cuSparse library. The HDF5 file format is used for input/output.">
+<meta property="og:url" content="https://lfortran.org/blog/2025/03/lfortran-compiles-pot3d/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="LFortran" />
+
+  <meta name="twitter:title" content="LFortran compiles POT3D" />
+  <meta name="twitter:description" content="We are thrilled to announce that LFortran can now successfully compile and run predsci/POT3D, marking a significant milestone in our journey to beta. POT3D is the ninth production-grade, third-party …">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="generator" content="Hugo 0.138.0">
+  <link rel="alternate" href="https://lfortran.org/index.xml" type="application/rss+xml" title="LFortran"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://lfortran.org/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://lfortran.org/css/syntax.css" /><link rel="stylesheet" href="https://lfortran.org/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://lfortran.org/css/custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+
+
+<style>
+h2 {
+    font-size: 20px;
+}
+p, li {
+    text-align: justify;
+}
+img {
+    display: inline;
+}
+h1.h1heading {
+    text-align: center;
+}
+h2.h2heading {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    margin: 0 0 0;
+}
+#benefit i {
+    margin-right: 20px;
+}
+#benefit {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#benefits {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.post-heading .post-meta a {
+  color: #008AFF;
+}
+.post-heading .post-meta a:hover, a:focus {
+  color: #0085a1;
+  text-decoration: underline;
+}
+
+[data-toggle="collapse"].collapsed .if-not-collapsed {
+  display: none;
+}
+[data-toggle="collapse"]:not(.collapsed) .if-collapsed {
+  display: none;
+}
+</style>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://lfortran.org/">LFortran</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Download" href="/download/">Download</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Documentation" href="https://docs.lfortran.org/">Documentation</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Blog" href="/blog/">Blog</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>LFortran compiles POT3D</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on March 18, 2025
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;7&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1393&nbsp;words
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;<a href="https://github.com/gxyd">Gaurav Dhingra</a>, <a href="https://github.com/adit4443ya">Aditya Trivedi</a>, <a href="https://github.com/jinangshah21">Jinang Shah</a>, <a href="https://www.linkedin.com/in/pranavgoswami1/">Pranav Goswami</a>, <a href="https://github.com/kmr-srbh">Saurabh Kumar</a>, <a href="https://github.com/AnshMehta1">Ansh Mehta</a>, <a href="https://github.com/assem2002">Assem Medhat</a>, <a href="https://github.com/HarshitaKalani">Harshita Kalani</a>, <a href="https://www.linkedin.com/in/parth-mistry-86b884229/">Parth Mistry</a>, <a href="https://github.com/czgdp1807">Gagandeep Singh</a>, <a href="https://github.com/Shaikh-Ubaid">Ubaid Shaikh</a>, <a href="https://www.linkedin.com/in/thirumalai-shaktivel/">Thirumalai Shaktivel</a>, <a href="https://github.com/Vipul-Cariappa">Vipul Cariappa</a>, <a href="https://github.com/shivimathur">Shivi Mathur</a>, <a href="https://github.com/KGB99">Kerim Birgi</a>, <a href="https://github.com/serge-sans-paille">Serge Sans Paille</a>, <a href="https://github.com/advikkabra">Advik Kabra</a>, <a href="https://www.linkedin.com/in/brianbeckman">Brian Beckman</a>, <a href="https://www.linkedin.com/in/dylon-edwards-0936bb39/">Dylon Edwards</a>, <a href="https://uk.linkedin.com/in/namannimmo">Naman Gera</a>, <a href="https://gitlab.com/HaoZeke">Rohit Goswami</a>, <a href="https://github.com/dpoerio">Dominic Poerio</a>, <a href="https://github.com/akshanshbhatt">Akshānsh Bhatt</a>, <a href="https://www.linkedin.com/in/virendrakabra/">Virendra Kabra</a>, <a href="https://github.com/anutosh491">Anutosh Bhat</a>, <a href="https://github.com/ansharlubis">Luthfan Lubis</a>, <a href="https://github.com/lucifer1004">Zihua Wu</a>, <a href="https://khushi-411.github.io/">Khushi Agrawal</a>, <a href="https://github.com/junghans">Christoph Junghans</a>, <a href="https://github.com/tanay-man">Tanay Manerikar</a>, <a href="https://github.com/wolfv">Wolf Vollprecht</a>, <a href="https://www.linkedin.com/in/smit-lunagariya-356b93179/">Smit Lunagariya</a>, <a href="https://github.com/pjh40">Paul Henning</a>, <a href="https://ondrejcertik.com/">Ondřej Čertík</a>, <a href="https://github.com/Jaysukh-409">Jaysukh Makvana</a>, <a href="https://github.com/HarshilShah1804">Harshil Shah</a>, <a href="https://github.com/xaerru">Gauravsingh Sisodia</a>, <a href="https://github.com/saikarna913">Karna Pardheev Sai</a>, <a href="https://github.com/samimshoaib01">Shoaib Samim</a>
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>We are thrilled to announce that LFortran can now successfully compile and run <a href="https://github.com/predsci/POT3D">predsci/POT3D</a>, marking a significant milestone in our journey to beta. POT3D is the ninth production-grade, third-party code that LFortran can compile, bringing us closer to our goal of compiling 10 such codes—a critical step toward a beta-quality compiler.</p>
+<h1 id="about-pot3d">About POT3D</h1>
+<p>POT3D: High Performance Potential Field Solver is a package developed by <a href="https://www.predsci.com/">Predictive Science Inc.</a>, written in Fortran that computes potential field solutions to approximate the solar coronal magnetic field using observed photospheric magnetic fields as a boundary condition. It can be used to generate potential field source surface (PFSS), potential field current sheet (PFCS), and open field (OF) models. It has been (and continues to be) used for numerous studies of coronal structure and dynamics. The code is highly parallelized using MPI and is GPU-accelerated using Fortran standard parallelism (do concurrent) and OpenMP Target for data movement and device selection, along with an option to use the NVIDIA cuSparse library. The HDF5 file format is used for input/output.</p>
+<h1 id="how-to-compile-pot3d-with-lfortran">How to compile POT3D with LFortran</h1>
+<p>Follow the steps shown below to build, compile and run POT3D with a validation example.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>conda create -n lf-mpi lfortran<span style="color:#f92672">=</span>0.49.0 make cmake openmpi<span style="color:#f92672">=</span>5.0.6
+</span></span><span style="display:flex;"><span>conda activate lf-mpi
+</span></span><span style="display:flex;"><span>git clone https://github.com/gxyd/pot3d.git
+</span></span><span style="display:flex;"><span>cd pot3d
+</span></span><span style="display:flex;"><span>git checkout -t origin/lf_hdf5_mpi_namelist_global_workarounds
+</span></span><span style="display:flex;"><span>git checkout 337546b13502ed1c07a0a38cba3afe1a9f35fb27
+</span></span></code></pre></div><p>To build and run <code>pot3d</code>, please execute the following script, which compiles the binaries and runs the program for ranks 1 and 2:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>FC<span style="color:#f92672">=</span>lfortran ./build_and_run.sh
+</span></span></code></pre></div><p>It will take about 1.5 minutes to run on Apple M4.</p>
+<p>To build and run with optimisations:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>FC<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;lfortran --fast --skip-pass=dead_code_removal&#34;</span> ./build_and_run.sh
+</span></span></code></pre></div><p>This script will initiate the process of building the binaries and subsequently use <code>mpiexec</code> to test
+the application, first running it sequentially and then running it with two parallel processes.</p>
+<h1 id="compilation-benchmarks">Compilation benchmarks</h1>
+<p>We have benchmarked speed of compilation on MacBook Air M2 8GB RAM, with LFortran version <code>0.49.0</code> and GFortran version <code>13.2.0</code>:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Files</th>
+          <th>LFortran (s)</th>
+          <th>GFortran (s)</th>
+          <th>LFortran / GFortran</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>mpi_c_bindings.f90</code></td>
+          <td>0.016</td>
+          <td>0.033</td>
+          <td>0.484</td>
+      </tr>
+      <tr>
+          <td><code>mpi.f90</code></td>
+          <td>0.015</td>
+          <td>0.058</td>
+          <td>0.258</td>
+      </tr>
+      <tr>
+          <td><code>psi_io.f90</code></td>
+          <td>0.018</td>
+          <td>0.100</td>
+          <td>0.18</td>
+      </tr>
+      <tr>
+          <td><code>pot3d.F90</code></td>
+          <td>0.862</td>
+          <td>0.697</td>
+          <td>1.23</td>
+      </tr>
+      <tr>
+          <td><code>mpi_wrapper.o mpi_c_bindings.o mpi.o psi_io.o pot3d.o -o pot3d -L$CONDA_PREFIX/lib -lmpi -Wl,-rpath,$CONDA_PREFIX/lib</code></td>
+          <td>0.052</td>
+          <td>0.025</td>
+          <td>2.08</td>
+      </tr>
+      <tr>
+          <td>Total</td>
+          <td>0.963</td>
+          <td>0.913</td>
+          <td>1.054</td>
+      </tr>
+  </tbody>
+</table>
+<p>The compilation to object code via LLVM happens in the step <code>pot3d.F90</code>, and
+the majority of time is spent in LLVM compiling the IR to a binary. After we
+reach beta we plan to get our direct ASR-&gt;WASM backend working well, for very
+fast Debug compilation, it seems an order of magnitude speedup is possible from
+our preliminary benchmarks.</p>
+<p>Evaluating the performance of compiled binaries with various optimization flags. The following compiler options are utilized for benchmarking purposes:</p>
+<ul>
+<li>LFortran: <code>--fast --skip-pass=dead_code_removal</code></li>
+<li>GFortran: <code>-O3 -march=native</code></li>
+</ul>
+<table>
+  <thead>
+      <tr>
+          <th>MPI rank</th>
+          <th>LFortran (&ndash;fast) (s)</th>
+          <th>GFortran (-O3 -march=native)</th>
+          <th>LFortran (&ndash;fast) / GFortran (-O3 -march=native)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>19.565044</td>
+          <td>12.087742</td>
+          <td>1.61</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>11.213420</td>
+          <td>8.373604</td>
+          <td>1.34</td>
+      </tr>
+  </tbody>
+</table>
+<p>We are within a factor of 2x from GFortran, which is good enough for now. After
+we reach beta, we will focus more on performance: our goal is to be at least as fast
+as other compilers. Credit here goes to LLVM, which is very slow to compile in
+Debug mode, but is able to optimize code really well in Release mode, even the
+LLVM IR that we currently generate. We do not generate any obviously slow code,
+but in order to match the performance of production compilers, after we reach
+beta we will take individual benchmarks and ensure our generated LLVM IR
+matches, e.g., what Clang would generate for equivalent code.</p>
+<h1 id="development-overview">Development Overview</h1>
+<p>LFortran does not yet work with HDF5 and OpenMPI, so we have created our own
+Fortran wrappers for MPI and we removed HDF5 and instead load the data using a
+custom binary format, so that we can compile POT3D with LFortran today. We will
+tackle direct compiling of HDF5 and OpenMPI later.</p>
+<p>The follow three workarounds are currently needed in order to compile POT3D:</p>
+<ul>
+<li>HDF5 read support replaced with binary file read: <a href="https://github.com/lfortran/lfortran/issues/6561">issue#6561</a></li>
+<li>Namelist reading isn&rsquo;t supported yet with LFortran: <a href="https://github.com/lfortran/lfortran/issues/1999">issue#1999</a></li>
+<li>Wrap a global subroutine into a module: <a href="https://github.com/lfortran/lfortran/issues/4175">issue#4175</a></li>
+</ul>
+<p>We will implement <code>namelist</code>&rsquo;s and the global subroutine issue later. The workaround however could be argued is an improvement to the original code, since a compiler cannot in general check argument types when calling global subroutines, while it checks everything if they are inside a module.</p>
+<p>In addition, one has to use our own <code>mpi.f90</code> implementation (described below in
+more details), but no changes are needed to the POT3D Fortran code itself.</p>
+<h2 id="mpi-wrappers">MPI wrappers</h2>
+<h3 id="1-c-wrapper-implementation">1. C Wrapper Implementation</h3>
+<p>The C wrapper (<code>mpi_wrapper.c</code>) serves as the primary interface to the native MPI implementation. Its key responsibilities include:</p>
+<ul>
+<li>Handle Management: Converting between Fortran and C representations of MPI communicators, data types, and operation handles</li>
+<li>Buffer Management: Managing the differences in memory layout and alignment requirements</li>
+<li>Error Code Translation: Mapping C-style MPI error codes to their Fortran equivalents</li>
+</ul>
+<p>The wrapper is compiled separately using the platform-specific C compiler:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#e6db74">${</span>CC<span style="color:#e6db74">}</span> -I$CONDA_PREFIX/include -c mpi_wrapper.c
+</span></span></code></pre></div><p>We will try to later move all this implementation into pure Fortran, so that no
+C wrappers are needed.</p>
+<h3 id="2-fortran-c-interoperability-layer">2. Fortran-C Interoperability Layer</h3>
+<p>The binding layer (<code>mpi_c_bindings.f90</code>) utilizes Fortran 2003&rsquo;s ISO_C_BINDING module to establish rigorous type correspondence between languages. This includes:</p>
+<ul>
+<li>Procedure Interface Declarations: Defining explicit interfaces with the <code>BIND(C)</code> attribute</li>
+<li>Memory Management Interoperability: Handling differences in array descriptors and pointer semantics</li>
+</ul>
+<p>This component is compiled with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#e6db74">${</span>FC<span style="color:#e6db74">}</span> -c mpi_c_bindings.f90
+</span></span></code></pre></div><h3 id="3-fortran-api-layer">3. Fortran API Layer</h3>
+<p>The top-level Fortran MPI module (<code>mpi.f90</code>) presents a standard Fortran MPI
+interface to the user code, including:</p>
+<ul>
+<li>MPI Constants: Defined using PARAMETER attributes</li>
+<li>Procedure Interfaces: Following standard MPI procedure signatures</li>
+<li>Optional Argument Handling: Managing Fortran&rsquo;s optional argument semantics</li>
+</ul>
+<p>The compilation command is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#e6db74">${</span>FC<span style="color:#e6db74">}</span> -c mpi.f90
+</span></span></code></pre></div><h2 id="mpi-subroutines-implemented-in-lfortran">MPI Subroutines Implemented in LFortran</h2>
+<p>Currently, we only have those procedures in Fortran API layer which are actually used in POT3D repository, that includes:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Category</th>
+          <th>Subroutines</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Environment Management</strong></td>
+          <td><code>MPI_Init</code>, <code>MPI_Init_thread</code>, <code>MPI_Finalize</code>, <code>MPI_Wtime</code>, <code>MPI_Barrier</code></td>
+      </tr>
+      <tr>
+          <td><strong>Communicator Management</strong></td>
+          <td><code>MPI_Comm_size</code>, <code>MPI_Comm_rank</code>, <code>MPI_Comm_split_type</code></td>
+      </tr>
+      <tr>
+          <td><strong>Point-to-Point Communication</strong></td>
+          <td><code>MPI_Isend</code>, <code>MPI_IRecv</code>, <code>MPI_Recv</code>, <code>MPI_Ssend</code>, <code>MPI_Waitall</code></td>
+      </tr>
+      <tr>
+          <td><strong>Collective Communication</strong></td>
+          <td><code>MPI_Bcast</code>, <code>MPI_Allgather</code>, <code>MPI_Allreduce</code></td>
+      </tr>
+      <tr>
+          <td><strong>Cartesian Topology</strong></td>
+          <td><code>MPI_Cart_create</code>, <code>MPI_Cart_sub</code>, <code>MPI_Cart_shift</code>, <code>MPI_Dims_create</code>, <code>MPI_Cart_coords</code></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="bug-in-cshift-intrinsic">Bug in <code>cshift</code> intrinsic</h2>
+<p>While running POT3D, we encountered a sporadic segmentation fault—occurring roughly once in 20 runs, accompanied by an obscure error message. The issue was reproducible only on macOS and appeared to be linked to our MPI wrappers, making debugging particularly challenging.</p>
+<p>We eventually managed to construct a minimal reproducible example (MRE), though
+it still relied on our MPI wrappers. To further diagnose the issue, we analyzed
+the LFortran&rsquo;s ASR dump from our Fortran backend and compiled them using
+GFortran. Running <code>gfortran -fcheck=all -g -c pot3d.f90</code> helped pinpoint the
+root cause: a bug in the <code>cshift</code> intrinsic. Ultimately, the fix required just
+a one-line correction in our cshift implementation. More details on bug-fix can
+be found at <a href="https://github.com/lfortran/lfortran/pull/6372">PR#6372</a>.</p>
+<h2 id="arraybounds-tampered-with---fast">ArrayBounds tampered with <code>--fast</code></h2>
+<p>After successfully compiling and running POT3D without optimizations, we
+decided to evaluate its performance using LFortran&rsquo;s optimization flag
+<code>--fast</code>. However, upon testing, the resulting binary encountered a
+segmentation fault during execution. Identifying the root cause required
+considerable engineering effort to develop an MRE. Eventually, we managed to create a concise example, which was
+documented in <a href="https://github.com/lfortran/lfortran/issues/6611">issue#6611</a>.
+This issue was subsequently resolved through
+<a href="https://github.com/lfortran/lfortran/pull/6618">PR#6618</a>.</p>
+<h1 id="whats-next">What&rsquo;s Next?</h1>
+<p>As of this writing, LFortran compiles nine third-party codes:</p>
+<ul>
+<li><a href="https://github.com/scipy/scipy/tree/f797ac7721310c7bd98bae416be1bed9975b4203/scipy/optimize/minpack">Legacy Minpack</a> (part of SciPy) and several more SciPy packages</li>
+<li><a href="https://github.com/fortran-lang/minpack">Modern Minpack</a></li>
+<li><a href="https://github.com/certik/fastGPT">fastGPT</a></li>
+<li><a href="https://github.com/certik/dftatom">dftatom</a></li>
+<li><a href="https://github.com/scipy/scipy">SciPy</a> (60%)</li>
+<li><a href="https://github.com/fortran-lang/stdlib">stdlib</a> (85%)</li>
+<li><a href="https://github.com/lanl/SNAP">SNAP</a></li>
+<li><a href="https://github.com/libprima/prima">PRIMA</a></li>
+<li><a href="https://github.com/predsci/POT3D">POT3D</a></li>
+</ul>
+<p><a href="https://github.com/lfortran/lfortran/issues/3806">Here</a> is our issue to track priorities to reach beta quality.</p>
+<p>The primary goal is to advance LFortran from alpha to beta by successfully
+compiling ten third-party codes, such as POT3D, Fortran Package Manager (fpm),
+LAPACK, and components of Fortran stdlib and SciPy, with progress measured by
+the ability to compile and run these codes without modifications. Feature
+development is being prioritized based on the language constructs needed for
+these codes, and milestones will be announced as full compatibility is
+achieved. Once this objective is met, community input will help determine the
+next steps toward beta status, defined as a compiler that is expected to work
+on user code (but it will still have minor bugs).</p>
+<h1 id="join-us">Join Us</h1>
+<p>We welcome new contributors to join our journey. If you&rsquo;re interested, please reach out on <a href="https://lfortran.zulipchat.com/">Zulip</a>. Working on LFortran is both challenging and rewarding, offering ample opportunities for learning and growth.</p>
+<h1 id="acknowledgements">Acknowledgements</h1>
+<p>We want to thank:</p>
+<ul>
+<li><a href="https://sovereigntechfund.de/en/">Sovereign Tech Fund (STF)</a></li>
+<li><a href="https://numfocus.org/">NumFOCUS</a></li>
+<li><a href="https://quantstack.net/">QuantStack</a></li>
+<li><a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a></li>
+<li><a href="https://www.johndcook.com/blog/expert-hipaa-deidentification/">John D. Cook</a></li>
+<li><a href="https://lanl.gov/">LANL</a></li>
+<li><a href="https://gsitechnology.com/">GSI Technology</a></li>
+<li>Our GitHub, OpenCollective and NumFOCUS sponsors</li>
+<li>All our contributors (109 so far!)</li>
+</ul>
+<h1 id="discussions">Discussions</h1>
+<ul>
+<li>Fortran Discourse:</li>
+<li>Twitter/X:</li>
+</ul>
+
+
+        
+          <div class="blog-tags">
+            
+              
+              <a href="https://lfortran.org/tags/fortran/">Fortran</a>&nbsp;
+            
+              
+              <a href="https://lfortran.org/tags/announcement/">Announcement</a>&nbsp;
+            
+              
+              <a href="https://lfortran.org/tags/fortran-lang/">Fortran-lang</a>&nbsp;
+            
+              
+              <a href="https://lfortran.org/tags/pot3d/">POT3D</a>&nbsp;
+            
+              
+              <a href="https://lfortran.org/tags/mpi/">MPI</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://lfortran.org/blog/2025/03/lfortran-compiles-prima/" data-toggle="tooltip" data-placement="top" title="LFortran compiles PRIMA">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      <footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2025
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://lfortran.org/">LFortran</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+           
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="https://lfortran.org/js/main.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://lfortran.org/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+

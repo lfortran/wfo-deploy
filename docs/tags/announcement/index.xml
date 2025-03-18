@@ -6,8 +6,15 @@
     <description>Recent content in Announcement on LFortran</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://lfortran.org/tags/announcement/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LFortran compiles POT3D</title>
+      <link>https://lfortran.org/blog/2025/03/lfortran-compiles-pot3d/</link>
+      <pubDate>Tue, 18 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://lfortran.org/blog/2025/03/lfortran-compiles-pot3d/</guid>
+      <description>&lt;p&gt;We are thrilled to announce that LFortran can now successfully compile and run &lt;a href=&#34;https://github.com/predsci/POT3D&#34;&gt;predsci/POT3D&lt;/a&gt;, marking a significant milestone in our journey to beta. POT3D is the ninth production-grade, third-party code that LFortran can compile, bringing us closer to our goal of compiling 10 such codes—a critical step toward a beta-quality compiler.&lt;/p&gt;&#xA;&lt;h1 id=&#34;about-pot3d&#34;&gt;About POT3D&lt;/h1&gt;&#xA;&lt;p&gt;POT3D: High Performance Potential Field Solver is a package developed by &lt;a href=&#34;https://www.predsci.com/&#34;&gt;Predictive Science Inc.&lt;/a&gt;, written in Fortran that computes potential field solutions to approximate the solar coronal magnetic field using observed photospheric magnetic fields as a boundary condition. It can be used to generate potential field source surface (PFSS), potential field current sheet (PFCS), and open field (OF) models. It has been (and continues to be) used for numerous studies of coronal structure and dynamics. The code is highly parallelized using MPI and is GPU-accelerated using Fortran standard parallelism (do concurrent) and OpenMP Target for data movement and device selection, along with an option to use the NVIDIA cuSparse library. The HDF5 file format is used for input/output.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>LFortran compiles PRIMA</title>
       <link>https://lfortran.org/blog/2025/03/lfortran-compiles-prima/</link>
