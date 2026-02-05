@@ -3,18 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://lfortran.org/</loc>
-    <lastmod>2025-03-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-02-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lfortran.org/tags/announcement/</loc>
-    <lastmod>2025-03-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-02-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lfortran.org/tags/fortran/</loc>
-    <lastmod>2025-03-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://lfortran.org/tags/fortran-lang/</loc>
-    <lastmod>2025-03-18T00:00:00+00:00</lastmod>
+    <loc>https://lfortran.org/tags/lapack/</loc>
+    <lastmod>2026-02-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lfortran.org/blog/</loc>
+    <lastmod>2026-02-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lfortran.org/blog/2026/02/lfortran-compiles-lapack/</loc>
+    <lastmod>2026-02-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lfortran.org/tags/</loc>
+    <lastmod>2026-02-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lfortran.org/tags/fortran-lang/</loc>
     <lastmod>2025-03-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lfortran.org/blog/2025/03/lfortran-compiles-pot3d/</loc>
@@ -24,9 +33,6 @@
     <lastmod>2025-03-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lfortran.org/tags/pot3d/</loc>
-    <lastmod>2025-03-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://lfortran.org/tags/</loc>
     <lastmod>2025-03-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lfortran.org/blog/2025/03/lfortran-compiles-prima/</loc>

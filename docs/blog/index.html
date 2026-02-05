@@ -42,11 +42,13 @@
 </script>
 
 <meta property="og:title" content="LFortran Blog" />
+<meta property="og:image" content="https://lfortran.org/images/lfortran_logo.svg" />
 <meta property="og:url" content="https://lfortran.org/blog/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="LFortran" />
 
   <meta name="twitter:title" content="LFortran Blog" />
+  <meta name="twitter:image" content="https://lfortran.org/images/lfortran_logo.svg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="generator" content="Hugo 0.138.0">
   <link rel="alternate" href="https://lfortran.org/index.xml" type="application/rss+xml" title="LFortran"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
@@ -150,6 +152,15 @@ h2.h2heading {
     </div>
 
     
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="LFortran" href="https://lfortran.org/">
+            <img class="avatar-img" src="https://lfortran.org/images/lfortran_logo.svg" alt="LFortran" />
+           
+          </a>
+        </div>
+      </div>
+    
 
   </div>
 </nav>
@@ -248,6 +259,58 @@ h2.h2heading {
         
 
         <div class="posts-list">
+          
+            <article class="post-preview">
+              <a href="https://lfortran.org/blog/2026/02/lfortran-compiles-lapack/">
+                <h2 class="post-title">LFortran compiles LAPACK</h2>
+                
+                
+              </a>
+
+              <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on February 5, 2026
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;438&nbsp;words
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;<a href="https://krystophny.github.io/">Christopher Albert</a>, <a href="https://github.com/gxyd">Gaurav Dhingra</a>, <a href="https://github.com/adit4443ya">Aditya Trivedi</a>, <a href="https://github.com/jinangshah21">Jinang Shah</a>, <a href="https://www.linkedin.com/in/pranavgoswami1/">Pranav Goswami</a>, <a href="https://github.com/kmr-srbh">Saurabh Kumar</a>, <a href="https://github.com/AnshMehta1">Ansh Mehta</a>, <a href="https://github.com/assem2002">Assem Medhat</a>, <a href="https://github.com/HarshitaKalani">Harshita Kalani</a>, <a href="https://www.linkedin.com/in/parth-mistry-86b884229/">Parth Mistry</a>, <a href="https://github.com/czgdp1807">Gagandeep Singh</a>, <a href="https://github.com/Shaikh-Ubaid">Ubaid Shaikh</a>, <a href="https://www.linkedin.com/in/thirumalai-shaktivel/">Thirumalai Shaktivel</a>, <a href="https://github.com/Vipul-Cariappa">Vipul Cariappa</a>, <a href="https://github.com/shivimathur">Shivi Mathur</a>, <a href="https://github.com/KGB99">Kerim Birgi</a>, <a href="https://github.com/serge-sans-paille">Serge Sans Paille</a>, <a href="https://github.com/advikkabra">Advik Kabra</a>, <a href="https://www.linkedin.com/in/brianbeckman">Brian Beckman</a>, <a href="https://www.linkedin.com/in/dylon-edwards-0936bb39/">Dylon Edwards</a>, <a href="https://uk.linkedin.com/in/namannimmo">Naman Gera</a>, <a href="https://gitlab.com/HaoZeke">Rohit Goswami</a>, <a href="https://github.com/dpoerio">Dominic Poerio</a>, <a href="https://github.com/akshanshbhatt">Akshānsh Bhatt</a>, <a href="https://www.linkedin.com/in/virendrakabra/">Virendra Kabra</a>, <a href="https://github.com/anutosh491">Anutosh Bhat</a>, <a href="https://github.com/ansharlubis">Luthfan Lubis</a>, <a href="https://github.com/lucifer1004">Zihua Wu</a>, <a href="https://khushi-411.github.io/">Khushi Agrawal</a>, <a href="https://github.com/junghans">Christoph Junghans</a>, <a href="https://github.com/tanay-man">Tanay Manerikar</a>, <a href="https://github.com/wolfv">Wolf Vollprecht</a>, <a href="https://www.linkedin.com/in/smit-lunagariya-356b93179/">Smit Lunagariya</a>, <a href="https://github.com/pjh40">Paul Henning</a>, <a href="https://ondrejcertik.com/">Ondřej Čertík</a>, <a href="https://github.com/Jaysukh-409">Jaysukh Makvana</a>, <a href="https://github.com/HarshilShah1804">Harshil Shah</a>, <a href="https://github.com/xaerru">Gauravsingh Sisodia</a>, <a href="https://github.com/saikarna913">Karna Pardheev Sai</a>, <a href="https://github.com/samimshoaib01">Shoaib Samim</a>
+  
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  <p>Every respectable Fortran compiler must be able to compile
+<a href="https://github.com/Reference-LAPACK/lapack">LAPACK</a>, probably the
+most famous and influential Fortran library.</p>
+<p><a href="https://krystophny.github.io/">Christopher Albert</a> spent most of December 2025
+to get it working, it took about 70 PRs (pull requests). For context, LFortran
+is composed of about 4,500 merged PRs at GitHub plus another 1,800 merged PRs
+at GitLab (before we switched to GitHub), total of 6,300 PRs. So 70 PRs is
+about 1% of all the PRs, very impressive effort!</p>
+                  <a href="https://lfortran.org/blog/2026/02/lfortran-compiles-lapack/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <div class="blog-tags">
+                  
+                    <a href="https://lfortran.org//tags/fortran/">Fortran</a>&nbsp;
+                  
+                    <a href="https://lfortran.org//tags/announcement/">Announcement</a>&nbsp;
+                  
+                    <a href="https://lfortran.org//tags/lapack/">LAPACK</a>&nbsp;
+                  
+                </div>
+              
+            </article>
           
             <article class="post-preview">
               <a href="https://lfortran.org/blog/2025/03/lfortran-compiles-pot3d/">
@@ -1104,7 +1167,7 @@ most cited reasons for such a choice:</p>
 
           &nbsp;&bull;&nbsp;&copy;
           
-            2025
+            2026
           
 
           

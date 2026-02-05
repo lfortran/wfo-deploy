@@ -6,8 +6,15 @@
     <description>Recent content in Fortran on LFortran</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://lfortran.org/tags/fortran/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LFortran compiles LAPACK</title>
+      <link>https://lfortran.org/blog/2026/02/lfortran-compiles-lapack/</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://lfortran.org/blog/2026/02/lfortran-compiles-lapack/</guid>
+      <description>&lt;p&gt;Every respectable Fortran compiler must be able to compile&#xA;&lt;a href=&#34;https://github.com/Reference-LAPACK/lapack&#34;&gt;LAPACK&lt;/a&gt;, probably the&#xA;most famous and influential Fortran library.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://krystophny.github.io/&#34;&gt;Christopher Albert&lt;/a&gt; spent most of December 2025&#xA;to get it working, it took about 70 PRs (pull requests). For context, LFortran&#xA;is composed of about 4,500 merged PRs at GitHub plus another 1,800 merged PRs&#xA;at GitLab (before we switched to GitHub), total of 6,300 PRs. So 70 PRs is&#xA;about 1% of all the PRs, very impressive effort!&lt;/p&gt;</description>
+    </item>
     <item>
       <title>LFortran compiles POT3D</title>
       <link>https://lfortran.org/blog/2025/03/lfortran-compiles-pot3d/</link>
