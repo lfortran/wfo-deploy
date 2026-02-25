@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fpm on LFortran</title>
+    <link>https://lfortran.org/tags/fpm/</link>
+    <description>Recent content in Fpm on LFortran</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lfortran.org/tags/fpm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LFortran compiles fpm</title>
+      <link>https://lfortran.org/blog/2026/02/lfortran-compiles-fpm/</link>
+      <pubDate>Wed, 25 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://lfortran.org/blog/2026/02/lfortran-compiles-fpm/</guid>
+      <description>&lt;p&gt;LFortran can now compile &lt;code&gt;fpm&lt;/code&gt;, the Fortran Package Manager. We opened up an&#xA;&lt;a href=&#34;https://github.com/lfortran/lfortran/issues/6840&#34;&gt;issue for it&lt;/a&gt; in April&#xA;2025, when we started focusing on it as a priority. We closed it on&#xA;February 7, 2026. &lt;code&gt;fpm&lt;/code&gt; is the most complex project that we now successfully&#xA;built and run. It is an interesting project: it is not computational, but&#xA;rather a system project which exercises running other programs, reading&#xA;environment variables, command-line argument parsing, reading and writing&#xA;files, directories, parsing enough Fortran to understand dependencies, etc. It&#xA;uses almost all modern Fortran features: classes, inheritance, allocatable&#xA;components, constructors, arrays of classes, select type, associate, automatic&#xA;LHS (left-hand side) reallocation, strings, arrays of strings and it exposed&#xA;dozens and dozens of bugs and missing features in LFortran. And we have now&#xA;implemented them all. As a result, LFortran is really close to beta, and we are&#xA;advancing our progress bar to 9/10.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

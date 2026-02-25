@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138613977-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-138613977-1');
+</script>
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>LFortran compiles fpm - </title>
+
+  <meta name="description" content="LFortran can now compile fpm, the Fortran Package Manager. We opened up an
+issue for it in April
+2025, when we started focusing on it as a priority. We closed it on
+February 7, 2026. fpm is the most complex project that we now successfully
+built and run. It is an interesting project: it is not computational, but
+rather a system project which exercises running other programs, reading
+environment variables, command-line argument parsing, reading and writing
+files, directories, parsing enough Fortran to understand dependencies, etc. It
+uses almost all modern Fortran features: classes, inheritance, allocatable
+components, constructors, arrays of classes, select type, associate, automatic
+LHS (left-hand side) reallocation, strings, arrays of strings and it exposed
+dozens and dozens of bugs and missing features in LFortran. And we have now
+implemented them all. As a result, LFortran is really close to beta, and we are
+advancing our progress bar to 9/10."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "LFortran",
+    
+    "url": "https:\/\/lfortran.org\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/lfortran.org\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/lfortran.org\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/lfortran.org\/blog\/2026\/02\/lfortran-compiles-fpm\/",
+          "name": "Lfortran compiles fpm"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "[Jinang Shah](https:\/\/github.com\/jinangshah21), [Pranav Goswami](https:\/\/www.linkedin.com\/in\/pranavgoswami1\/), [Harshita Kalani](https:\/\/github.com\/HarshitaKalani), [Christopher Albert](https:\/\/krystophny.github.io\/), [Harshil Shah](https:\/\/github.com\/HarshilShah1804), [Gaurav Dhingra](https:\/\/github.com\/gxyd), [Gauravsingh Sisodia](https:\/\/github.com\/xaerru), [Sri Ganesh Thota](https:\/\/github.com\/sriganeshres), [Assem Medhat](https:\/\/github.com\/assem2002), [Gagandeep Singh](https:\/\/github.com\/czgdp1807), [Aditya Trivedi](https:\/\/github.com\/adit4443ya), [Ansh Mehta](https:\/\/github.com\/AnshMehta1), [Akram Hany](https:\/\/github.com\/akramhany), [Saurabh Kumar](https:\/\/github.com\/kmr-srbh), [Swaminath Shiju](https:\/\/github.com\/swamishiju), [Parth Mistry](https:\/\/www.linkedin.com\/in\/parth-mistry-86b884229\/), [Dylon Edwards](https:\/\/www.linkedin.com\/in\/dylon-edwards-0936bb39\/), [Atharva Waghmare](https:\/\/github.com\/opixdown), [Yash Nagda](https:\/\/github.com\/YashNagda17), [Ubaid Shaikh](https:\/\/github.com\/Shaikh-Ubaid), [Yuvraj Singh](https:\/\/github.com\/yuvrajsinghgmx), [Jainam Shah](https:\/\/github.com\/Jainam-not-a-robot), [Jatin Agarwal](https:\/\/github.com\/Jatinagarwal24), [Jaysukh Makvana](https:\/\/github.com\/Jaysukh-409), [Thirumalai Shaktivel](https:\/\/www.linkedin.com\/in\/thirumalai-shaktivel\/), [Vipul Cariappa](https:\/\/github.com\/Vipul-Cariappa), [Shivi Mathur](https:\/\/github.com\/shivimathur), [Kerim Birgi](https:\/\/github.com\/KGB99), [Serge Sans Paille](https:\/\/github.com\/serge-sans-paille), [Advik Kabra](https:\/\/github.com\/advikkabra), [Brian Beckman](https:\/\/www.linkedin.com\/in\/brianbeckman), [Naman Gera](https:\/\/uk.linkedin.com\/in\/namannimmo), [Rohit Goswami](https:\/\/gitlab.com\/HaoZeke), [Dominic Poerio](https:\/\/github.com\/dpoerio), [Akshānsh Bhatt](https:\/\/github.com\/akshanshbhatt), [Virendra Kabra](https:\/\/www.linkedin.com\/in\/virendrakabra\/), [Anutosh Bhat](https:\/\/github.com\/anutosh491), [Luthfan Lubis](https:\/\/github.com\/ansharlubis), [Zihua Wu](https:\/\/github.com\/lucifer1004), [Khushi Agrawal](https:\/\/khushi-411.github.io\/), [Christoph Junghans](https:\/\/github.com\/junghans), [Tanay Manerikar](https:\/\/github.com\/tanay-man), [Wolf Vollprecht](https:\/\/github.com\/wolfv), [Smit Lunagariya](https:\/\/www.linkedin.com\/in\/smit-lunagariya-356b93179\/), [Paul Henning](https:\/\/github.com\/pjh40), [Karna Pardheev Sai](https:\/\/github.com\/saikarna913), [Shoaib Samim](https:\/\/github.com\/samimshoaib01), [Ondřej Čertík](https:\/\/ondrejcertik.com\/)"
+  },
+  "headline": "LFortran compiles fpm",
+  "description" : "LFortran can now compile fpm, the Fortran Package Manager. We opened up an issue for it in April 2025, when we started focusing on it as a priority. We closed it on February 7, 2026. fpm is the most complex project that we now successfully built and run. It is an interesting project: it is not computational, but rather a system project which exercises running other programs, reading environment variables, command-line argument parsing, reading and writing files, directories, parsing enough Fortran to understand dependencies, etc. It uses almost all modern Fortran features: classes, inheritance, allocatable components, constructors, arrays of classes, select type, associate, automatic LHS (left-hand side) reallocation, strings, arrays of strings and it exposed dozens and dozens of bugs and missing features in LFortran. And we have now implemented them all. As a result, LFortran is really close to beta, and we are advancing our progress bar to 9\/10.\n",
+  "inLanguage" : "en",
+  "wordCount":  1399 ,
+  "datePublished" : "2026-02-25T00:00:00\u002b00:00",
+  "dateModified" : "2026-02-25T00:00:00\u002b00:00",
+  "image" : "https:\/\/lfortran.org\/images\/lfortran_logo.svg",
+  "keywords" : [ "Fortran, Announcement, fpm" ],
+  "mainEntityOfPage" : "https:\/\/lfortran.org\/blog\/2026\/02\/lfortran-compiles-fpm\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/lfortran.org\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/lfortran.org\/images\/lfortran_logo.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+
+<meta property="og:title" content="LFortran compiles fpm" />
+<meta property="og:description" content="LFortran can now compile fpm, the Fortran Package Manager. We opened up an
+issue for it in April
+2025, when we started focusing on it as a priority. We closed it on
+February 7, 2026. fpm is the most complex project that we now successfully
+built and run. It is an interesting project: it is not computational, but
+rather a system project which exercises running other programs, reading
+environment variables, command-line argument parsing, reading and writing
+files, directories, parsing enough Fortran to understand dependencies, etc. It
+uses almost all modern Fortran features: classes, inheritance, allocatable
+components, constructors, arrays of classes, select type, associate, automatic
+LHS (left-hand side) reallocation, strings, arrays of strings and it exposed
+dozens and dozens of bugs and missing features in LFortran. And we have now
+implemented them all. As a result, LFortran is really close to beta, and we are
+advancing our progress bar to 9/10.">
+<meta property="og:image" content="https://lfortran.org/images/lfortran_logo.svg" />
+<meta property="og:url" content="https://lfortran.org/blog/2026/02/lfortran-compiles-fpm/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="LFortran" />
+
+  <meta name="twitter:title" content="LFortran compiles fpm" />
+  <meta name="twitter:description" content="LFortran can now compile fpm, the Fortran Package Manager. We opened up an
+issue for it in April
+2025, when we started focusing on it as a priority. We closed it on
+February 7, 2026. fpm is the most …">
+  <meta name="twitter:image" content="https://lfortran.org/images/lfortran_logo.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="generator" content="Hugo 0.138.0">
+  <link rel="alternate" href="https://lfortran.org/index.xml" type="application/rss+xml" title="LFortran"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://lfortran.org/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://lfortran.org/css/syntax.css" /><link rel="stylesheet" href="https://lfortran.org/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://lfortran.org/css/custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+
+
+<style>
+h2 {
+    font-size: 20px;
+}
+p, li {
+    text-align: justify;
+}
+img {
+    display: inline;
+}
+h1.h1heading {
+    text-align: center;
+}
+h2.h2heading {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    margin: 0 0 0;
+}
+#benefit i {
+    margin-right: 20px;
+}
+#benefit {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#benefits {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.post-heading .post-meta a {
+  color: #008AFF;
+}
+.post-heading .post-meta a:hover, a:focus {
+  color: #0085a1;
+  text-decoration: underline;
+}
+
+[data-toggle="collapse"].collapsed .if-not-collapsed {
+  display: none;
+}
+[data-toggle="collapse"]:not(.collapsed) .if-collapsed {
+  display: none;
+}
+</style>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://lfortran.org/">LFortran</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Download" href="/download/">Download</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Documentation" href="https://docs.lfortran.org/">Documentation</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Blog" href="/blog/">Blog</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="LFortran" href="https://lfortran.org/">
+            <img class="avatar-img" src="https://lfortran.org/images/lfortran_logo.svg" alt="LFortran" />
+           
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>LFortran compiles fpm</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on February 25, 2026
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;7&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1399&nbsp;words
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;<a href="https://github.com/jinangshah21">Jinang Shah</a>, <a href="https://www.linkedin.com/in/pranavgoswami1/">Pranav Goswami</a>, <a href="https://github.com/HarshitaKalani">Harshita Kalani</a>, <a href="https://krystophny.github.io/">Christopher Albert</a>, <a href="https://github.com/HarshilShah1804">Harshil Shah</a>, <a href="https://github.com/gxyd">Gaurav Dhingra</a>, <a href="https://github.com/xaerru">Gauravsingh Sisodia</a>, <a href="https://github.com/sriganeshres">Sri Ganesh Thota</a>, <a href="https://github.com/assem2002">Assem Medhat</a>, <a href="https://github.com/czgdp1807">Gagandeep Singh</a>, <a href="https://github.com/adit4443ya">Aditya Trivedi</a>, <a href="https://github.com/AnshMehta1">Ansh Mehta</a>, <a href="https://github.com/akramhany">Akram Hany</a>, <a href="https://github.com/kmr-srbh">Saurabh Kumar</a>, <a href="https://github.com/swamishiju">Swaminath Shiju</a>, <a href="https://www.linkedin.com/in/parth-mistry-86b884229/">Parth Mistry</a>, <a href="https://www.linkedin.com/in/dylon-edwards-0936bb39/">Dylon Edwards</a>, <a href="https://github.com/opixdown">Atharva Waghmare</a>, <a href="https://github.com/YashNagda17">Yash Nagda</a>, <a href="https://github.com/Shaikh-Ubaid">Ubaid Shaikh</a>, <a href="https://github.com/yuvrajsinghgmx">Yuvraj Singh</a>, <a href="https://github.com/Jainam-not-a-robot">Jainam Shah</a>, <a href="https://github.com/Jatinagarwal24">Jatin Agarwal</a>, <a href="https://github.com/Jaysukh-409">Jaysukh Makvana</a>, <a href="https://www.linkedin.com/in/thirumalai-shaktivel/">Thirumalai Shaktivel</a>, <a href="https://github.com/Vipul-Cariappa">Vipul Cariappa</a>, <a href="https://github.com/shivimathur">Shivi Mathur</a>, <a href="https://github.com/KGB99">Kerim Birgi</a>, <a href="https://github.com/serge-sans-paille">Serge Sans Paille</a>, <a href="https://github.com/advikkabra">Advik Kabra</a>, <a href="https://www.linkedin.com/in/brianbeckman">Brian Beckman</a>, <a href="https://uk.linkedin.com/in/namannimmo">Naman Gera</a>, <a href="https://gitlab.com/HaoZeke">Rohit Goswami</a>, <a href="https://github.com/dpoerio">Dominic Poerio</a>, <a href="https://github.com/akshanshbhatt">Akshānsh Bhatt</a>, <a href="https://www.linkedin.com/in/virendrakabra/">Virendra Kabra</a>, <a href="https://github.com/anutosh491">Anutosh Bhat</a>, <a href="https://github.com/ansharlubis">Luthfan Lubis</a>, <a href="https://github.com/lucifer1004">Zihua Wu</a>, <a href="https://khushi-411.github.io/">Khushi Agrawal</a>, <a href="https://github.com/junghans">Christoph Junghans</a>, <a href="https://github.com/tanay-man">Tanay Manerikar</a>, <a href="https://github.com/wolfv">Wolf Vollprecht</a>, <a href="https://www.linkedin.com/in/smit-lunagariya-356b93179/">Smit Lunagariya</a>, <a href="https://github.com/pjh40">Paul Henning</a>, <a href="https://github.com/saikarna913">Karna Pardheev Sai</a>, <a href="https://github.com/samimshoaib01">Shoaib Samim</a>, <a href="https://ondrejcertik.com/">Ondřej Čertík</a>
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>LFortran can now compile <code>fpm</code>, the Fortran Package Manager. We opened up an
+<a href="https://github.com/lfortran/lfortran/issues/6840">issue for it</a> in April
+2025, when we started focusing on it as a priority. We closed it on
+February 7, 2026. <code>fpm</code> is the most complex project that we now successfully
+built and run. It is an interesting project: it is not computational, but
+rather a system project which exercises running other programs, reading
+environment variables, command-line argument parsing, reading and writing
+files, directories, parsing enough Fortran to understand dependencies, etc. It
+uses almost all modern Fortran features: classes, inheritance, allocatable
+components, constructors, arrays of classes, select type, associate, automatic
+LHS (left-hand side) reallocation, strings, arrays of strings and it exposed
+dozens and dozens of bugs and missing features in LFortran. And we have now
+implemented them all. As a result, LFortran is really close to beta, and we are
+advancing our progress bar to 9/10.</p>
+<p>When we started our progress bar towards beta, we thought that compiling 10
+codes with increasing complexity and ending with <code>fpm</code> would be enough for beta.
+But when we got close to compiling <code>fpm</code>, we realized we are still not quite
+there. Beta quality to us means that when you use LFortran on your code of N
+lines (say N=10,000), it will compile and run it correctly in about 90% of
+the cases. We are estimating that we are there with N=500 or maybe N=1,000,
+but not for larger codes yet. However the bugs are very small, and so we are
+sprinting by compiling more and more codes and fixing all bugs, which are now
+simple to fix.</p>
+<p>So we decided to cheat a little bit and did not progress the bar on
+<a href="/blog/2026/02/lfortran-compiles-lapack/">compiling LAPACK</a>,
+which allows us to progress the bar now and still have one step left
+and we will progress it to beta once we are confident that we can compile
+medium-sized codes with high probability.</p>
+<p>One of the big subprojects was to completely refactor how we handle classes,
+virtual functions and inheritance. We studied how Clang handles classes in C++
+and implemented a similar approach with some Fortran-specific additions.</p>
+<p>As with any big projects that we compile, we got it working a few weeks ago,
+we set up testing that compiles and runs all <code>fpm</code> tests at our CI (Continuous
+Integration) for every commit and then we keep fixing bugs from other projects
+and watch the CI if it ever fails in <code>fpm</code> with flaky bugs. If it does not
+after lots of other PRs (Pull Requests) are merged, we know that it is working
+and that it does not have simple flaky bugs. It might still have some bugs that
+do not show up easily, but all the things that we can see are rock solid, so we
+are comfortable announcing it.</p>
+<p>We also added support for <code>fpm</code>&rsquo;s five key dependencies:
+<code>M_CLI2</code> command-line argument parsing),
+<code>toml-f</code> (reads TOML configuration files),
+<code>fortran-regex</code> (handles pattern matching),
+<code>fortran-shlex</code> (processes shell-like syntax),
+and <code>Jonquil</code> (manages JSON data).</p>
+<h1 id="build">Build</h1>
+<p>To build, do:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>git clone https://github.com/fortran-lang/fpm
+</span></span><span style="display:flex;"><span>git checkout d0f89957541bdcc354da8e11422f5efcf9fedd0e  # latest main
+</span></span><span style="display:flex;"><span>conda create -n fpm lfortran=0.60.0 fpm gfortran
+</span></span><span style="display:flex;"><span>conda activate fpm
+</span></span><span style="display:flex;"><span>fpm --compiler=lfortran test --flag --cpp --flag --realloc-lhs-arrays --flag --use-loop-variable-after-loop
+</span></span></code></pre></div><p>You can also append <code>--fast</code> or <code>--separate-compilation</code> options, both work as
+well. The <code>gfortran</code> compiler is necessary to pass tests, it is <em>not</em>
+being used to build any source code. Upstream would need to be improved to not
+have gfortran hard-coded in testing.</p>
+<p>LFortran by default has bounds checking on, and it will give runtime errors
+when an incorrect shape or an unallocated array is used. This found a genuine
+upstream bug that we fixed by submitting a
+<a href="https://github.com/fortran-lang/fpm/pull/1229">PR</a> upstream. Over time we will
+harden our compile-time and runtime checks so that your code either works or
+gives an error at compile-time or runtime, but never segfaults or has other
+undefined behavior.</p>
+<h1 id="speed-of-compilation">Speed of Compilation</h1>
+<p>To get some idea about the speed of compilation, here are the times on Apple M4
+MacBook Pro:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ time fpm build --compiler<span style="color:#f92672">=</span>gfortran
+</span></span><span style="display:flex;"><span>[...]
+</span></span><span style="display:flex;"><span>libfpm.a                               done.
+</span></span><span style="display:flex;"><span>main.f90                               done.
+</span></span><span style="display:flex;"><span>fpm                                    done.
+</span></span><span style="display:flex;"><span>[100%] Project compiled successfully.
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>real    42.342s
+</span></span><span style="display:flex;"><span>user    39.902s
+</span></span><span style="display:flex;"><span>sys     2.050s
+</span></span><span style="display:flex;"><span>cpu     99.1%
+</span></span><span style="display:flex;"><span>$ time fpm --compiler<span style="color:#f92672">=</span>lfortran build --flag --cpp --flag --realloc-lhs-arrays --flag --use-loop-variable-after-loop
+</span></span><span style="display:flex;"><span>[...]
+</span></span><span style="display:flex;"><span>real    16.641s
+</span></span><span style="display:flex;"><span>user    15.533s
+</span></span><span style="display:flex;"><span>sys     0.968s
+</span></span><span style="display:flex;"><span>cpu     99.2%
+</span></span></code></pre></div><p>The exact compiler versions are:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ gfortran --version
+</span></span><span style="display:flex;"><span>GNU Fortran (conda-forge gcc 15.2.0-18) 15.2.0
+</span></span><span style="display:flex;"><span>$ lfortran --version
+</span></span><span style="display:flex;"><span>LFortran version: 0.60.0
+</span></span><span style="display:flex;"><span>Platform: macOS ARM
+</span></span><span style="display:flex;"><span>LLVM: 19.1.1
+</span></span><span style="display:flex;"><span>Default target: arm64-apple-darwin24.6.0
+</span></span><span style="display:flex;"><span>LSP Version: 3.17.0
+</span></span><span style="display:flex;"><span>JSON_RPC Version: 2.0
+</span></span></code></pre></div><p>Both are single-core compilation of the <code>fpm</code> binary. Overall, not bad for a
+start.</p>
+<p>To get a better idea where LFortran is spending compilation time, you can
+rerun <code>fpm</code> with <code>--verbose</code> and then manually run longest compilation command,
+which happens to be:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>lfortran -c app/main.f90  --cpp --cpp --realloc-lhs-arrays --use-loop-variable-after-loop -DFPM_RELEASE_VERSION=0.12.0 -Ibuild/dependencies/fortran-regex/src -J build/lfortran_29F2E0FA2D75FE0A -Ibuild/lfortran_29F2E0FA2D75FE0A -Ibuild/lfortran_5D5DD1C987059777 -o build/lfortran_29F2E0FA2D75FE0A/fpm/app_main.f90.o --time-report
+</span></span></code></pre></div><p>Notice the <code>--time-report</code> option that we added at the end. This prints:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>Allocator usage of last chunk (MB)                     0.284
+</span></span><span style="display:flex;"><span>Allocator chunks                                       7.000
+</span></span><span style="display:flex;"><span>------------------------------------------------------------
+</span></span><span style="display:flex;"><span>Component name                                     Time (ms)
+</span></span><span style="display:flex;"><span>------------------------------------------------------------
+</span></span><span style="display:flex;"><span>File reading                                           0.450
+</span></span><span style="display:flex;"><span>Src -&gt; ASR                                            93.267
+</span></span><span style="display:flex;"><span>ASR passes (total)                                   178.630
+</span></span><span style="display:flex;"><span>    global_stmts                                       0.000
+</span></span><span style="display:flex;"><span>    init_expr                                          1.885
+</span></span><span style="display:flex;"><span>    function_call_in_declaration                       2.686
+</span></span><span style="display:flex;"><span>    openmp                                             0.000
+</span></span><span style="display:flex;"><span>    implied_do_loops                                   4.687
+</span></span><span style="display:flex;"><span>    array_struct_temporary                            13.439
+</span></span><span style="display:flex;"><span>    transform_optional_argument_functions             11.940
+</span></span><span style="display:flex;"><span>    nested_vars                                        8.111
+</span></span><span style="display:flex;"><span>    forall                                             1.281
+</span></span><span style="display:flex;"><span>    class_constructor                                  4.553
+</span></span><span style="display:flex;"><span>    pass_list_expr                                     4.867
+</span></span><span style="display:flex;"><span>    where                                              1.652
+</span></span><span style="display:flex;"><span>    array_op                                           4.886
+</span></span><span style="display:flex;"><span>    symbolic                                           0.708
+</span></span><span style="display:flex;"><span>    intrinsic_function                                29.437
+</span></span><span style="display:flex;"><span>    intrinsic_subroutine                               5.336
+</span></span><span style="display:flex;"><span>    subroutine_from_function                           7.500
+</span></span><span style="display:flex;"><span>    array_op                                           5.352
+</span></span><span style="display:flex;"><span>    pass_array_by_data                                16.393
+</span></span><span style="display:flex;"><span>    array_passed_in_function_call                      6.463
+</span></span><span style="display:flex;"><span>    print_list_tuple                                   1.797
+</span></span><span style="display:flex;"><span>    array_dim_intrinsics_update                        6.731
+</span></span><span style="display:flex;"><span>    do_loops                                           6.631
+</span></span><span style="display:flex;"><span>    while_else                                         3.165
+</span></span><span style="display:flex;"><span>    select_case                                        3.459
+</span></span><span style="display:flex;"><span>    unused_functions                                  21.647
+</span></span><span style="display:flex;"><span>    unique_symbols                                     0.000
+</span></span><span style="display:flex;"><span>    insert_deallocate                                  3.432
+</span></span><span style="display:flex;"><span>    other processing time                              0.026
+</span></span><span style="display:flex;"><span>ASR -&gt; mod                                             0.410
+</span></span><span style="display:flex;"><span>LLVM IR creation                                     329.712
+</span></span><span style="display:flex;"><span>LLVM opt                                               0.000
+</span></span><span style="display:flex;"><span>LLVM -&gt; BIN                                        12539.240
+</span></span><span style="display:flex;"><span>------------------------------------------------------------
+</span></span><span style="display:flex;"><span>Total time                                         13204.171
+</span></span><span style="display:flex;"><span>------------------------------------------------------------
+</span></span></code></pre></div><p>Here, ASR means Abstract Semantic Representation, the main internal
+representation (IR) that LFortran uses. We then run a similar line to figure
+out how long it takes to link.</p>
+<p>So here is the breakdown:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Task</th>
+          <th>Time [s]</th>
+          <th>Percentage</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Compiling all files to one ASR</td>
+          <td>3.5s</td>
+          <td>21.1%</td>
+      </tr>
+      <tr>
+          <td>ASR-&gt;ASR passes</td>
+          <td>0.2s</td>
+          <td>1.2%</td>
+      </tr>
+      <tr>
+          <td>ASR-&gt;LLVM IR</td>
+          <td>0.3s</td>
+          <td>1.8%</td>
+      </tr>
+      <tr>
+          <td>LLVM IR -&gt; object file</td>
+          <td>12.5s</td>
+          <td>75.3 %</td>
+      </tr>
+      <tr>
+          <td>Linking</td>
+          <td>0.1s</td>
+          <td>0.6%</td>
+      </tr>
+      <tr>
+          <td><strong>Total</strong></td>
+          <td>16.6</td>
+          <td>100%</td>
+      </tr>
+  </tbody>
+</table>
+<p>The main bottleneck is LLVM IR compilation to binary object code (over 3/4 of
+all the time). This excludes creating the LLVM IR from ASR as well as linking
+(both counted on separate lines above). To speed this up, we plan to create our
+own backend later, we think it might be possible to make it compile about 10x
+faster, which would bring the total time down to about 5s.</p>
+<p>After that, we can start optimizing the other parts.
+The first line, compilation of all files to one ASR, includes parsing all
+files, doing semantic analysis, loading all dependent Fortran modules&rsquo; <code>.mod</code>
+files, and saving a <code>.mod</code> file for a given module.</p>
+<p>That is not the most efficient way to compile it: a better way would be for the
+build system (<code>fpm</code> in this case) to give LFortran the dependency graph and
+files to compile and compiler options for each file and LFortran would compile
+all the files at once, never saving or loading <code>.mod</code> files from the disk,
+assembling the final ASR step by step.</p>
+<p>It is a very interesting computational problem of taking source code and
+emitting a binary as fast as we can, and we are excited to start working on
+that after we reach beta.</p>
+<h1 id="going-forward">Going Forward</h1>
+<p>Now that we reached this big milestone, we are working on other third-party codes
+and fixing all bugs that we encounter. We are still in alpha stage. When we
+feel comfortable expecting LFortran to just work on medium-sized codes, we will
+announce beta quality. It is becoming easier and easier to compile a new
+third-party code, the bugs are getting smaller and less frequent. As far as we
+know, all Fortran features are implemented, except coarrays and parametrized
+derived types (PDT), which we will tackle after beta. It is hard to predict a
+timeline, but our best guess is a timeframe of several months (so not weeks,
+but also not years). We will see if we were right.</p>
+<p>We will keep announcing every new significant third-party code that we can
+compile.</p>
+<h1 id="join-us">Join Us</h1>
+<p>We welcome new contributors to join our journey. If you&rsquo;re interested, please
+reach out on <a href="https://lfortran.zulipchat.com/">Zulip</a>. Working on LFortran is
+both challenging and rewarding, offering great opportunities for learning and
+growth.</p>
+<h1 id="acknowledgements">Acknowledgements</h1>
+<p>We want to thank:</p>
+<ul>
+<li><a href="https://sovereigntechfund.de/en/">Sovereign Tech Fund (STF)</a></li>
+<li><a href="https://numfocus.org/">NumFOCUS</a></li>
+<li><a href="https://quantstack.net/">QuantStack</a></li>
+<li><a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a></li>
+<li><a href="https://floss.fund/">FLOSS/fund</a></li>
+<li><a href="https://www.johndcook.com/blog/expert-hipaa-deidentification/">John D. Cook</a></li>
+<li><a href="https://lanl.gov/">LANL</a></li>
+<li><a href="https://gsitechnology.com/">GSI Technology</a></li>
+<li>Our GitHub, OpenCollective and NumFOCUS sponsors</li>
+<li>All our contributors (131 so far!)</li>
+</ul>
+<h1 id="discussions">Discussions</h1>
+<ul>
+<li>Fortran Discourse:</li>
+<li>X:</li>
+</ul>
+
+
+        
+          <div class="blog-tags">
+            
+              
+              <a href="https://lfortran.org/tags/fortran/">Fortran</a>&nbsp;
+            
+              
+              <a href="https://lfortran.org/tags/announcement/">Announcement</a>&nbsp;
+            
+              
+              <a href="https://lfortran.org/tags/fpm/">fpm</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://lfortran.org/blog/2026/02/lfortran-compiles-lapack/" data-toggle="tooltip" data-placement="top" title="LFortran compiles LAPACK">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      <footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://lfortran.org/">LFortran</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+           
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="https://lfortran.org/js/main.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://lfortran.org/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+
